@@ -1,2 +1,2 @@
-# djipcam
+# DjipAV
 To be completed.

@@ -23,10 +23,14 @@
       "outputSourceFiles": true
     },
 
-    "dateFormat": "MMMM Do YYYY, h:mm:ss a",
+    "dateFormat": "MMMM Do YYYY, H:mm:ss",
 
-    "systemName": "djipcam",
-    "collapseSymbols": true
+    "systemName": "DjipAV",
+    "systemSummary": "A library to simplify working with video and audio inputs (a.k.a. webcams and microphones).",
+    "copyright": "DjipAV is a creation of Jean-Philippe Côté and is released under the MIT license.",
+    "collapseSymbols": true,
+
+    "sort": "longname, linenum, version, since"
 
   }
 
