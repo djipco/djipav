@@ -11,16 +11,18 @@ me.
 
 ## Basic usage
 
-Here's an example of how to open a webcam and display the video feed via a `<video>` tag:
+Here's an example of how to open a webcam and display the video feed via an automatically-created 
+`<video>` tag:
 
 ```javascript
-import * as djipav from "../djipav.js";
+import {VideoInput} from "./djipav.js";
 
-let cam = new djipav.VideoInput({element: "create"});
+let cam = new VideoInput({element: "create"});
 cam.start();
 ```
-You can fetch the available inputs in this way: 
+You can fetch available inputs in this way: 
 
 ```javascript
+import * as djipav from "./djipav.js";
 djipav.getInputs().then(inputs => console.log(inputs));
 ```
