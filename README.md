@@ -7,8 +7,6 @@ DjipAV uses the very last APIs (such as MediaDevices and ImageCapture) and will 
 subset of browsers. Since I'm using it in projects based on NW.js and Electron, this works fine for
 me.
 
-[API documentation](https://djipco.github.io/djipav/)
-
 ## Basic usage
 
 Here's an example of how to open a webcam and display the video feed via an automatically-created 
@@ -26,3 +24,7 @@ You can fetch available inputs in this way:
 import * as djipav from "./djipav.js";
 djipav.getInputs().then(inputs => console.log(inputs));
 ```
+
+## API Reference
+
+This library is documented via its [API Reference](https://djipco.github.io/djipav/).
