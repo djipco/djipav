@@ -9,6 +9,8 @@ me.
 
 ## Basic usage
 
+### Webcam
+
 Here's an example of how to open a webcam and display the video feed via an automatically-created 
 `<video>` tag:
 
@@ -23,6 +25,16 @@ You can fetch available inputs in this way:
 ```javascript
 import * as djipav from "./djipav.js";
 djipav.getInputs().then(inputs => console.log(inputs));
+```
+
+### Microphone
+
+```javascript
+import {AudioInput} from "./djipav.js";
+
+let mic = new djipav.AudioInput();
+mic.addListener("volume", e => console.log(e));
+mic.start();
 ```
 
 ## API Reference
