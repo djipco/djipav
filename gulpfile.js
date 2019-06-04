@@ -2,6 +2,7 @@ const gulp = require("gulp");
 const concat = require("gulp-concat");
 const minify = require("gulp-minify");
 const jsdoc = require("gulp-jsdoc3");
+const ghPages = require('gulp-gh-pages');
 
 function doc(cb) {
 
@@ -22,5 +23,11 @@ function bundle() {
 
 }
 
+function uploadDocs() {
+  return gulp.src('./docs/**/*')
+    .pipe(ghPages());
+}
+
 exports.doc = doc;
-exports.build = gulp.series(bundle, doc);
+exports.uploadDocs = uploadDocs;
+exports.build = gulp.series(bundle, doc, uploadDocs);
