@@ -9,6 +9,7 @@
  * @private
  */
 
+
 /**
  * The `Listener` class represents a single event listener object. Such objects store the callback
  * (listener) function, the context to execute the function in (often `this`) and whether or not
@@ -42,7 +43,7 @@ class Listener {
  * @private
  * @mixin
  */
-class EventEmitter {
+export class EventEmitter {
 
   /**
    * Creates an `EventEmitter` instance
@@ -321,6 +322,12 @@ class EventEmitter {
 
 }
 
+
+
+
+
+
+
 /**
  * @module djipav
  */
@@ -337,15 +344,11 @@ export class VideoInput extends EventEmitter {
    * must be specified in the `constraints` parameter.
    *
    * @param {{}} [options]
-   * @param {{}} [options.element] The `<video>` element to attach the stream to. If none is
-   * supplied, the video feed will not be visible. If the special value `"create"` is used, a new
-   * `<video>` element will be created and appended to the body.
-   * @param {string} [options.id] The `id` attribute of the new `<video>` element (if a new
+   * @param {HTMLVideoElement|"create"} [options.element] The `<video>` element to attach the video
+   * stream to. If none is supplied, the video feed will not be visible. If the special value
+   * `"create"` is used, a new `<video>` element will be created and appended to the body.
+   * @param {string} [options.elementId] The `id` attribute of the new `<video>` element (if a new
    * `<video>` element is created).
-   * @param {MediaTrackConstraints} [options.constraints] The constraints to apply when finding a
-   * specific video track (see
-   * [MediaTrackConstraints](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints)
-   * for more info).
    */
   constructor(options = {}) {
 
@@ -359,10 +362,11 @@ export class VideoInput extends EventEmitter {
 
     /**
      * The [constraints](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints)
-     * which must be met by the video track.
+     * which must be met by the video track. At the minimum, the value `true` is used which means
+     * all input video streams.
      * @type {MediaTrackConstraints}
      */
-    this.constraints = options.constraints ? options.constraints : true;
+    this.constraints = true;
 
     /**
      * The actual media stream that is currently being used.
@@ -405,12 +409,19 @@ export class VideoInput extends EventEmitter {
   }
 
   /**
-   * Starts the camera and plays the video stream in the `<video>` element specified upon
-   * construction of the `VideoInput` object (if any).
+   * Tries to find a video stream matching the specified constraints. If one is found, the stream is
+   * attached to the `<video>` element specified upon construction of the `VideoInput` object (if
+   * any).
    *
    * @param {Object} [options]
+   * @param {boolean} [options.deviceId] The id of a specific device to connect to. Device IDs
+   * can be viewed by calling the `getInputs()` method.
    * @param {boolean} [options.visible=true] Whether the `<video>` element should initially be
    * visible or not.
+   * @param {MediaTrackConstraints} [options.constraints] The video constraints to apply when
+   * looking for an input video track (see
+   * [MediaTrackConstraints](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints)
+   * for more info).
    * @returns {Promise<void>}
    */
   async start(options = {}) {
@@ -419,7 +430,14 @@ export class VideoInput extends EventEmitter {
     if (!navigator.mediaDevices) return Promise.reject("MediaDevices API not supported.");
     this.opacity = 0;
 
-    this.stream = await navigator.mediaDevices.getUserMedia({video: this.constraints});
+    if (options.constraints) this.constraints = options.constraints;
+
+    // DO WE NEED TO DO SOMETHING WHEN NO STREAM IS FOUND?!
+
+    this.stream = await navigator.mediaDevices.getUserMedia({
+      deviceId: options.deviceId,
+      video: this.constraints
+    });
 
     if (!ImageCapture) return Promise.reject("ImageCapture API not supported.");
     this.capture = new ImageCapture(this.track);
@@ -542,7 +560,7 @@ export class VideoInput extends EventEmitter {
 
     if (options.element === "create") {
       let element = document.createElement("video");
-      if (options.id) element.setAttribute("id", options.id);
+      if (options.elementId) element.setAttribute("id", options.elementId);
       element.setAttribute("data-djipav", "true");
       document.body.append(element);
       return element;
@@ -715,16 +733,174 @@ export class VideoInput extends EventEmitter {
 
 }
 
-/**
- * To do!
- */
+
+
+
+
+
+
 export class AudioInput extends EventEmitter {
 
   constructor() {
 
+    super();
+
+    this.constraints = true;
+    this.context = new AudioContext();
+    this.meter = null;
+
+  }
+
+  destroy() {
+    this.stop();
+  }
+
+  async start(options = {}) {
+
+    if (!navigator.mediaDevices) return Promise.reject("MediaDevices API not supported.");
+
+    if (options.constraints) this.constraints = options.constraints;
+
+    // Without a deviceId, it is entirely possible that the constraints will match an audio output
+    // which is not what we want. In this case, we grab all the inputs and keep the first audio
+    // input found.
+    if (!options.deviceId) {
+
+      // Since we may stumble upon an "audiooutput" device and there's no way to add a constraint
+      // for that, we must first query the inputs and get the first found id.
+      let inputs = await getInputs("audio");
+      let filtered = inputs.filter(input => input.kind === "audioinput");
+      options.deviceId = filtered[0].deviceId;
+
+    }
+
+    this.stream = await navigator.mediaDevices.getUserMedia({
+      deviceId: options.deviceId,
+      audio: this.constraints
+    });
+
+
+    // This is the source AudioNode whose media is obtained from the specified input audio stream
+    this.source = this.context.createMediaStreamSource(this.stream);
+
+    // Add audio meter
+    // this.meter = new AudioMeter(this.source);
+    this.meter = new AudioMeter(this.context);
+    this.source.connect(this.meter.input);
+    this.meter.addListener("change", e => this.emit("volume", e));
+
+
+
+
+
+    // this.analyzer = new AnalyserNode(this.source.context);
+    // this.analyzer.fftSize = 2048;
+
+    // var tailleMemoireTampon = this.analyzer.frequencyBinCount;
+    // var tableauDonnees = new Uint8Array(tailleMemoireTampon);
+    // this.analyzer.getByteTimeDomainData(tableauDonnees);
+
+    // this.source.connect(this.analyzer);
+
+    // dessiner();
+    //
+    //
+    // var canvas = document.getElementById("oscilloscope");
+    // var contexteCanvas = canvas.getContext("2d");
+    //
+    //
+    // function dessiner() {
+    //
+    //   dessin = requestAnimationFrame(dessiner);
+    //
+    //   analyseur.getByteTimeDomainData(tableauDonnees);
+    //
+    //   contexteCanvas.fillStyle = 'rgb(200, 200, 200)';
+    //   contexteCanvas.fillRect(0, 0, WIDTH, HEIGHT);
+    //
+    //   contexteCanvas.lineWidth = 2;
+    //   contexteCanvas.strokeStyle = 'rgb(0, 0, 0)';
+    //
+    //   contexteCanvas.beginPath();
+    //
+    //   var sliceWidth = WIDTH * 1.0 / tailleMemoireTampon;
+    //   var x = 0;
+    //
+    //   for(var i = 0; i < tailleMemoireTampon; i++) {
+    //
+    //     var v = tableauDonnees[i] / 128.0;
+    //     var y = v * HEIGHT/2;
+    //
+    //     if(i === 0) {
+    //       contexteCanvas.moveTo(x, y);
+    //     } else {
+    //       contexteCanvas.lineTo(x, y);
+    //     }
+    //
+    //     x += sliceWidth;
+    //   }
+    //
+    //   contexteCanvas.lineTo(canvas.width, canvas.height/2);
+    //   contexteCanvas.stroke();
+    // };
+    //
+    //
+
+
+
+
+
+
+
+
+
+
+
+  }
+
+  stop() {
+
+    this.stream.getTracks().forEach(track => track.stop());
+    this.stream = null;
+    this.constraints = true;
+
+
+
+    // This is the source AudioNode whose media is obtained from the specified input audio stream
+    this.source = this.context.createMediaStreamSource(this.stream);
+
+    // Add audio meter
+    this.meter.destroy();
+    this.meter = null;
+
+    this.meter.addListener("change", e => this.emit("volume", e));
+
+
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * Returns an object whose properties identify which constraints are supported by the current
@@ -781,6 +957,96 @@ export async function getInputs(type) {
 
   } else {
     return inputDevices;
+  }
+
+}
+
+/**
+ * @class AudioMeter
+ */
+export class AudioMeter extends EventEmitter {
+
+  /**
+   *
+   * Creates an `AudioMeter`object. The resulting object can then be used in an audio chain by
+   * connecting a source node to its `input` property:
+   *
+   *  let am = new AudioMeter(context);
+   *  someSourceAudioNode.connect(am.input);
+   *
+   * @todo when there is wider support, this should be rewritten as an AudioWorklet
+   *
+   * @param {AudioContext} context The `AudioContext` that this object belongs to.
+   * @param {number} clippingLevel The threshold above which a sound is considered to clip (float
+   * between 0 and 1). The default is 0.98.
+   * @param {number} averaging
+   * @param {number} clippingDelay The number of milliseconds to hold the clipping indicator after a
+   * clipping event.
+   */
+  constructor(context, clippingLevel = 0.98, averaging = 0.95, clippingDelay = 750) {
+
+    super();
+
+    this.clippingLevel = clippingLevel;
+    this.clippingDelay = clippingDelay;
+    this.averaging = averaging;
+
+    this.clipping = false;
+    this.lastClip = 0;
+    this.volume = 0;
+
+    this.context = context;
+    this.input = this.context.createScriptProcessor(512);
+    this.input.onaudioprocess = this.processAudioVolumeEvent.bind(this);
+
+    // This fixes a still-standing bug in Chrome!
+    this.input.connect(this.context.destination);
+
+  }
+
+  destroy() {
+    this.input.disconnect();
+    this.input.onaudioprocess = null;
+    this.removeAllListeners();
+  }
+
+  processAudioVolumeEvent(e) {
+
+    let buf = e.inputBuffer.getChannelData(0);
+    let bufLength = buf.length;
+    let sum = 0;
+    let x;
+
+    // Do a root-mean-square on the samples: sum up the squares...
+    for (let i = 0; i < bufLength; i++) {
+
+      x = buf[i];
+
+      if (Math.abs(x) >= this.clippingLevel) {
+        this.clipping = true;
+        this.lastClip = window.performance.now();
+      }
+
+      sum += x * x;
+
+    }
+
+    // Reset clipping if clipping delay expired
+    if (!this.clipping && this.lastClip + this.clippingDelay < window.performance.now()) {
+      this.clipping = false;
+    }
+
+    // Calculate RMS and smooth it out with the averaging factor. We use the max to have a fast
+    // attack and a slow release.
+    let rms = Math.sqrt(sum / bufLength);
+    this.volume = Math.max(rms, this.volume * this.averaging);
+
+    // Emit a `change` event when new data is received
+    this.emit(
+      "change",
+      {type: "change", target: this, volume: this.volume, clipping: this.clipping}
+    );
+
   }
 
 }
