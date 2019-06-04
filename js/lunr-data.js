@@ -69,11 +69,14 @@ window.lunrData = {
           "audioinput",
           "avail",
           "class",
-          "connext",
+          "devic",
           "facilit",
           "input",
           "microphon",
-          "such"
+          "physic",
+          "such",
+          "us",
+          "virtual"
         ],
         "AudioInput.html#start": [
           "audio",
@@ -99,6 +102,7 @@ window.lunrData = {
           "connect",
           "input",
           "level",
+          "meter'",
           "new",
           "node",
           "properti",
@@ -452,7 +456,7 @@ window.lunrData = {
                     },
                     "AudioInput.html": {
                       "ref": "AudioInput.html",
-                      "tf": 5.555555555555555
+                      "tf": 7.142857142857142
                     },
                     "AudioInput.html#start": {
                       "ref": "AudioInput.html#start",
@@ -460,7 +464,7 @@ window.lunrData = {
                     },
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.631578947368421
+                      "tf": 4.761904761904762
                     }
                   },
                   "i": {
@@ -475,7 +479,7 @@ window.lunrData = {
                             "docs": {
                               "AudioInput.html": {
                                 "ref": "AudioInput.html",
-                                "tf": 1905.5555555555557
+                                "tf": 1903.5714285714287
                               }
                             },
                             "#": {
@@ -514,7 +518,7 @@ window.lunrData = {
                         "docs": {
                           "AudioMeter.html": {
                             "ref": "AudioMeter.html",
-                            "tf": 1902.6315789473683
+                            "tf": 1902.3809523809523
                           }
                         },
                         "e": {
@@ -539,7 +543,7 @@ window.lunrData = {
                                             "docs": {
                                               "AudioMeter.html": {
                                                 "ref": "AudioMeter.html",
-                                                "tf": 2.631578947368421
+                                                "tf": 2.380952380952381
                                               }
                                             }
                                           }
@@ -569,7 +573,7 @@ window.lunrData = {
                   "docs": {
                     "AudioInput.html": {
                       "ref": "AudioInput.html",
-                      "tf": 5.555555555555555
+                      "tf": 3.571428571428571
                     }
                   }
                 }
@@ -588,7 +592,7 @@ window.lunrData = {
                     "docs": {
                       "AudioMeter.html": {
                         "ref": "AudioMeter.html",
-                        "tf": 2.631578947368421
+                        "tf": 2.380952380952381
                       }
                     }
                   }
@@ -782,6 +786,20 @@ window.lunrData = {
           },
           "e": {
             "docs": {},
+            "v": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "c": {
+                  "docs": {
+                    "AudioInput.html": {
+                      "ref": "AudioInput.html",
+                      "tf": 3.571428571428571
+                    }
+                  }
+                }
+              }
+            },
             "f": {
               "docs": {},
               "a": {
@@ -980,7 +998,7 @@ window.lunrData = {
                     },
                     "AudioInput.html": {
                       "ref": "AudioInput.html",
-                      "tf": 5.555555555555555
+                      "tf": 7.142857142857142
                     },
                     "AudioInput.html#start": {
                       "ref": "AudioInput.html#start",
@@ -988,7 +1006,7 @@ window.lunrData = {
                     },
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 5.263157894736842
+                      "tf": 4.761904761904762
                     },
                     "VideoInput.html": {
                       "ref": "VideoInput.html",
@@ -1321,7 +1339,7 @@ window.lunrData = {
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.631578947368421
+                      "tf": 2.380952380952381
                     }
                   }
                 }
@@ -1353,7 +1371,7 @@ window.lunrData = {
                             },
                             "AudioInput.html": {
                               "ref": "AudioInput.html",
-                              "tf": 5.555555555555555
+                              "tf": 3.571428571428571
                             }
                           }
                         }
@@ -1407,6 +1425,42 @@ window.lunrData = {
           },
           "e": {
             "docs": {},
+            "t": {
+              "docs": {
+                "VideoInput.html#constraints": {
+                  "ref": "VideoInput.html#constraints",
+                  "tf": 4.166666666666666
+                }
+              },
+              "e": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "'": {
+                    "docs": {
+                      "AudioMeter.html": {
+                        "ref": "AudioMeter.html",
+                        "tf": 2.380952380952381
+                      }
+                    }
+                  }
+                }
+              },
+              "h": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "VideoInput.html#destroy": {
+                        "ref": "VideoInput.html#destroy",
+                        "tf": 3.8461538461538463
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "d": {
               "docs": {},
               "i": {
@@ -1606,28 +1660,6 @@ window.lunrData = {
                   }
                 }
               }
-            },
-            "t": {
-              "docs": {
-                "VideoInput.html#constraints": {
-                  "ref": "VideoInput.html#constraints",
-                  "tf": 4.166666666666666
-                }
-              },
-              "h": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "d": {
-                    "docs": {
-                      "VideoInput.html#destroy": {
-                        "ref": "VideoInput.html#destroy",
-                        "tf": 3.8461538461538463
-                      }
-                    }
-                  }
-                }
-              }
             }
           },
           "o": {
@@ -1679,7 +1711,7 @@ window.lunrData = {
                     "docs": {
                       "AudioMeter.html": {
                         "ref": "AudioMeter.html",
-                        "tf": 2.631578947368421
+                        "tf": 2.380952380952381
                       }
                     }
                   }
@@ -1759,7 +1791,7 @@ window.lunrData = {
                 "docs": {
                   "AudioInput.html": {
                     "ref": "AudioInput.html",
-                    "tf": 5.555555555555555
+                    "tf": 3.571428571428571
                   }
                 }
               }
@@ -1918,7 +1950,7 @@ window.lunrData = {
                                                                                 "docs": {
                                                                                   "AudioMeter.html": {
                                                                                     "ref": "AudioMeter.html",
-                                                                                    "tf": 2.631578947368421
+                                                                                    "tf": 2.380952380952381
                                                                                   }
                                                                                 }
                                                                               }
@@ -1963,7 +1995,7 @@ window.lunrData = {
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.631578947368421
+                      "tf": 2.380952380952381
                     }
                   }
                 }
@@ -2456,6 +2488,26 @@ window.lunrData = {
                 }
               }
             },
+            "r": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "l": {
+                      "docs": {
+                        "AudioInput.html": {
+                          "ref": "AudioInput.html",
+                          "tf": 3.571428571428571
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "a": {
               "docs": {
                 "VideoInput.html": {
@@ -2503,7 +2555,7 @@ window.lunrData = {
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.631578947368421
+                      "tf": 2.380952380952381
                     }
                   }
                 }
@@ -2566,7 +2618,7 @@ window.lunrData = {
                         "docs": {
                           "AudioMeter.html": {
                             "ref": "AudioMeter.html",
-                            "tf": 2.631578947368421
+                            "tf": 2.380952380952381
                           }
                         }
                       }
@@ -2688,11 +2740,11 @@ window.lunrData = {
                     },
                     "AudioInput.html": {
                       "ref": "AudioInput.html",
-                      "tf": 115.55555555555556
+                      "tf": 113.57142857142857
                     },
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 112.63157894736842
+                      "tf": 112.38095238095238
                     },
                     "VideoInput.html": {
                       "ref": "VideoInput.html",
@@ -2715,17 +2767,6 @@ window.lunrData = {
                 "docs": {},
                 "e": {
                   "docs": {},
-                  "x": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "AudioInput.html": {
-                          "ref": "AudioInput.html",
-                          "tf": 5.555555555555555
-                        }
-                      }
-                    }
-                  },
                   "c": {
                     "docs": {},
                     "t": {
@@ -2736,7 +2777,7 @@ window.lunrData = {
                         },
                         "AudioMeter.html": {
                           "ref": "AudioMeter.html",
-                          "tf": 2.631578947368421
+                          "tf": 2.380952380952381
                         }
                       }
                     }
@@ -2824,7 +2865,7 @@ window.lunrData = {
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.631578947368421
+                      "tf": 2.380952380952381
                     }
                   }
                 }
@@ -2980,7 +3021,7 @@ window.lunrData = {
                       "docs": {
                         "AudioInput.html": {
                           "ref": "AudioInput.html",
-                          "tf": 5.555555555555555
+                          "tf": 3.571428571428571
                         }
                       }
                     }
@@ -3209,147 +3250,28 @@ window.lunrData = {
             }
           }
         },
-        "o": {
-          "docs": {},
-          "p": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "i": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "AudioInput.html#start": {
-                        "ref": "AudioInput.html#start",
-                        "tf": 25
-                      },
-                      "VideoInput.html#grabFrame": {
-                        "ref": "VideoInput.html#grabFrame",
-                        "tf": 25
-                      },
-                      "VideoInput.html#start": {
-                        "ref": "VideoInput.html#start",
-                        "tf": 25
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "e": {
-              "docs": {},
-              "n": {
-                "docs": {
-                  "VideoInput.html#capabilities": {
-                    "ref": "VideoInput.html#capabilities",
-                    "tf": 4.166666666666666
-                  },
-                  "VideoInput.html#settings": {
-                    "ref": "VideoInput.html#settings",
-                    "tf": 5
-                  }
-                }
-              }
-            },
-            "a": {
-              "docs": {},
-              "c": {
-                "docs": {
-                  "VideoInput.html#opacity": {
-                    "ref": "VideoInput.html#opacity",
-                    "tf": 705
-                  }
-                }
-              }
-            }
-          },
-          "b": {
-            "docs": {},
-            "j": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "c": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "VideoInput.html": {
-                        "ref": "VideoInput.html",
-                        "tf": 1.1111111111111112
-                      },
-                      "VideoInput.html#capabilities": {
-                        "ref": "VideoInput.html#capabilities",
-                        "tf": 4.166666666666666
-                      },
-                      "VideoInput.html#capture": {
-                        "ref": "VideoInput.html#capture",
-                        "tf": 6.25
-                      },
-                      "VideoInput.html#settings": {
-                        "ref": "VideoInput.html#settings",
-                        "tf": 5
-                      },
-                      "VideoInput.html#timeouts": {
-                        "ref": "VideoInput.html#timeouts",
-                        "tf": 55.55555555555556
-                      },
-                      "VideoInput.html#destroy": {
-                        "ref": "VideoInput.html#destroy",
-                        "tf": 7.6923076923076925
-                      },
-                      "VideoInput.html#start": {
-                        "ref": "VideoInput.html#start",
-                        "tf": 2.7777777777777777
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "n": {
-            "docs": {
-              "VideoInput.html#start": {
-                "ref": "VideoInput.html#start",
-                "tf": 2.7777777777777777
-              }
-            },
-            "g": {
-              "docs": {},
-              "o": {
-                "docs": {
-                  "VideoInput.html#cancelFade": {
-                    "ref": "VideoInput.html#cancelFade",
-                    "tf": 7.142857142857142
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "t": {
-              "docs": {
-                "VideoInput.html#cancelFade": {
-                  "ref": "VideoInput.html#cancelFade",
-                  "tf": 7.142857142857142
-                },
-                "VideoInput.html#fade": {
-                  "ref": "VideoInput.html#fade",
-                  "tf": 8.333333333333332
-                },
-                "VideoInput.html#fadeOut": {
-                  "ref": "VideoInput.html#fadeOut",
-                  "tf": 6.25
-                }
-              }
-            }
-          }
-        },
         "p": {
           "docs": {},
+          "h": {
+            "docs": {},
+            "y": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "c": {
+                    "docs": {
+                      "AudioInput.html": {
+                        "ref": "AudioInput.html",
+                        "tf": 3.571428571428571
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "r": {
             "docs": {},
             "o": {
@@ -3647,7 +3569,7 @@ window.lunrData = {
                         "docs": {
                           "AudioMeter.html": {
                             "ref": "AudioMeter.html",
-                            "tf": 2.631578947368421
+                            "tf": 2.380952380952381
                           },
                           "VideoInput.html": {
                             "ref": "VideoInput.html",
@@ -3741,6 +3663,214 @@ window.lunrData = {
             }
           }
         },
+        "u": {
+          "docs": {},
+          "s": {
+            "docs": {
+              "AudioInput.html": {
+                "ref": "AudioInput.html",
+                "tf": 3.571428571428571
+              },
+              "AudioMeter.html": {
+                "ref": "AudioMeter.html",
+                "tf": 2.380952380952381
+              },
+              "VideoInput.html": {
+                "ref": "VideoInput.html",
+                "tf": 2.2222222222222223
+              },
+              "VideoInput.html#capture": {
+                "ref": "VideoInput.html#capture",
+                "tf": 6.25
+              },
+              "VideoInput.html#constraints": {
+                "ref": "VideoInput.html#constraints",
+                "tf": 4.166666666666666
+              },
+              "VideoInput.html#opacity": {
+                "ref": "VideoInput.html#opacity",
+                "tf": 5
+              },
+              "VideoInput.html#stream": {
+                "ref": "VideoInput.html#stream",
+                "tf": 8.333333333333332
+              },
+              "VideoInput.html#timeouts": {
+                "ref": "VideoInput.html#timeouts",
+                "tf": 11.11111111111111
+              },
+              "VideoInput.html#track": {
+                "ref": "VideoInput.html#track",
+                "tf": 6.25
+              },
+              "VideoInput.html#video": {
+                "ref": "VideoInput.html#video",
+                "tf": 11.11111111111111
+              },
+              "VideoInput.html#fadeIn": {
+                "ref": "VideoInput.html#fadeIn",
+                "tf": 7.142857142857142
+              },
+              "VideoInput.html#fadeOut": {
+                "ref": "VideoInput.html#fadeOut",
+                "tf": 6.25
+              }
+            }
+          },
+          "p": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "n": {
+                "docs": {
+                  "VideoInput.html#start": {
+                    "ref": "VideoInput.html#start",
+                    "tf": 2.7777777777777777
+                  }
+                }
+              }
+            }
+          }
+        },
+        "o": {
+          "docs": {},
+          "p": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "AudioInput.html#start": {
+                        "ref": "AudioInput.html#start",
+                        "tf": 25
+                      },
+                      "VideoInput.html#grabFrame": {
+                        "ref": "VideoInput.html#grabFrame",
+                        "tf": 25
+                      },
+                      "VideoInput.html#start": {
+                        "ref": "VideoInput.html#start",
+                        "tf": 25
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "e": {
+              "docs": {},
+              "n": {
+                "docs": {
+                  "VideoInput.html#capabilities": {
+                    "ref": "VideoInput.html#capabilities",
+                    "tf": 4.166666666666666
+                  },
+                  "VideoInput.html#settings": {
+                    "ref": "VideoInput.html#settings",
+                    "tf": 5
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "c": {
+                "docs": {
+                  "VideoInput.html#opacity": {
+                    "ref": "VideoInput.html#opacity",
+                    "tf": 705
+                  }
+                }
+              }
+            }
+          },
+          "b": {
+            "docs": {},
+            "j": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "VideoInput.html": {
+                        "ref": "VideoInput.html",
+                        "tf": 1.1111111111111112
+                      },
+                      "VideoInput.html#capabilities": {
+                        "ref": "VideoInput.html#capabilities",
+                        "tf": 4.166666666666666
+                      },
+                      "VideoInput.html#capture": {
+                        "ref": "VideoInput.html#capture",
+                        "tf": 6.25
+                      },
+                      "VideoInput.html#settings": {
+                        "ref": "VideoInput.html#settings",
+                        "tf": 5
+                      },
+                      "VideoInput.html#timeouts": {
+                        "ref": "VideoInput.html#timeouts",
+                        "tf": 55.55555555555556
+                      },
+                      "VideoInput.html#destroy": {
+                        "ref": "VideoInput.html#destroy",
+                        "tf": 7.6923076923076925
+                      },
+                      "VideoInput.html#start": {
+                        "ref": "VideoInput.html#start",
+                        "tf": 2.7777777777777777
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "n": {
+            "docs": {
+              "VideoInput.html#start": {
+                "ref": "VideoInput.html#start",
+                "tf": 2.7777777777777777
+              }
+            },
+            "g": {
+              "docs": {},
+              "o": {
+                "docs": {
+                  "VideoInput.html#cancelFade": {
+                    "ref": "VideoInput.html#cancelFade",
+                    "tf": 7.142857142857142
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {
+                "VideoInput.html#cancelFade": {
+                  "ref": "VideoInput.html#cancelFade",
+                  "tf": 7.142857142857142
+                },
+                "VideoInput.html#fade": {
+                  "ref": "VideoInput.html#fade",
+                  "tf": 8.333333333333332
+                },
+                "VideoInput.html#fadeOut": {
+                  "ref": "VideoInput.html#fadeOut",
+                  "tf": 6.25
+                }
+              }
+            }
+          }
+        },
         "n": {
           "docs": {},
           "e": {
@@ -3749,7 +3879,7 @@ window.lunrData = {
               "docs": {
                 "AudioMeter.html": {
                   "ref": "AudioMeter.html",
-                  "tf": 2.631578947368421
+                  "tf": 2.380952380952381
                 },
                 "VideoInput.html": {
                   "ref": "VideoInput.html",
@@ -3766,7 +3896,7 @@ window.lunrData = {
                 "docs": {
                   "AudioMeter.html": {
                     "ref": "AudioMeter.html",
-                    "tf": 2.631578947368421
+                    "tf": 2.380952380952381
                   }
                 }
               }
@@ -3821,71 +3951,6 @@ window.lunrData = {
                         "tf": 50
                       }
                     }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "u": {
-          "docs": {},
-          "s": {
-            "docs": {
-              "AudioMeter.html": {
-                "ref": "AudioMeter.html",
-                "tf": 2.631578947368421
-              },
-              "VideoInput.html": {
-                "ref": "VideoInput.html",
-                "tf": 2.2222222222222223
-              },
-              "VideoInput.html#capture": {
-                "ref": "VideoInput.html#capture",
-                "tf": 6.25
-              },
-              "VideoInput.html#constraints": {
-                "ref": "VideoInput.html#constraints",
-                "tf": 4.166666666666666
-              },
-              "VideoInput.html#opacity": {
-                "ref": "VideoInput.html#opacity",
-                "tf": 5
-              },
-              "VideoInput.html#stream": {
-                "ref": "VideoInput.html#stream",
-                "tf": 8.333333333333332
-              },
-              "VideoInput.html#timeouts": {
-                "ref": "VideoInput.html#timeouts",
-                "tf": 11.11111111111111
-              },
-              "VideoInput.html#track": {
-                "ref": "VideoInput.html#track",
-                "tf": 6.25
-              },
-              "VideoInput.html#video": {
-                "ref": "VideoInput.html#video",
-                "tf": 11.11111111111111
-              },
-              "VideoInput.html#fadeIn": {
-                "ref": "VideoInput.html#fadeIn",
-                "tf": 7.142857142857142
-              },
-              "VideoInput.html#fadeOut": {
-                "ref": "VideoInput.html#fadeOut",
-                "tf": 6.25
-              }
-            }
-          },
-          "p": {
-            "docs": {},
-            "o": {
-              "docs": {},
-              "n": {
-                "docs": {
-                  "VideoInput.html#start": {
-                    "ref": "VideoInput.html#start",
-                    "tf": 2.7777777777777777
                   }
                 }
               }
@@ -4184,7 +4249,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 308
+      "length": 312
     },
     "corpusTokens": [
       "0",
@@ -4215,7 +4280,6 @@ window.lunrData = {
       "chain",
       "class",
       "connect",
-      "connext",
       "constraint",
       "construct",
       "contain",
@@ -4225,6 +4289,7 @@ window.lunrData = {
       "default",
       "destroy",
       "detail",
+      "devic",
       "disconnect",
       "display",
       "djipav",
@@ -4273,6 +4338,7 @@ window.lunrData = {
       "mediatrackset",
       "member",
       "met",
+      "meter'",
       "method",
       "microphon",
       "minimum",
@@ -4291,6 +4357,7 @@ window.lunrData = {
       "out",
       "paramet",
       "per",
+      "physic",
       "precis",
       "process",
       "promise.&lt;(imagebitmap|domstring|blob)&gt",
@@ -4343,6 +4410,7 @@ window.lunrData = {
       "videoinput#track",
       "videoinput#video",
       "view",
+      "virtual",
       "visibl",
       "volum",
       "web",
@@ -4399,7 +4467,7 @@ window.lunrData = {
       "name": "AudioInput",
       "tags": "AudioInput",
       "summary": "",
-      "description": "The AudioInput class facilitates the connextion to available audio inputs such as microphones.",
+      "description": "The AudioInput class facilitates the use of available audio inputs such as physical microphones or other virtual audio input devices.",
       "body": ""
     },
     "AudioInput.html#start": {
@@ -4420,7 +4488,7 @@ window.lunrData = {
       "name": "AudioMeter",
       "tags": "AudioMeter",
       "summary": "",
-      "description": "The AudioMeter class analyzes audio an input and reports on its level (volume). It can be used in a WebAudio chain by connecting a source node to its input property: let am = new AudioMeter(context); someSourceAudioNode.connect(am.input);",
+      "description": "The AudioMeter class analyzes audio input and reports on its level (volume). It can be used in a WebAudio chain by connecting a source node to the audio meter's input property: let am = new AudioMeter(context); someSourceAudioNode.connect(am.input);",
       "body": ""
     },
     "VideoInput.html": {
