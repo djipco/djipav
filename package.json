@@ -1,7 +1,7 @@
 {
   "name": "djipav",
   "version": "0.0.1",
-  "description": "A simple library to simplify working with WebRTC video input devices (a.k.a. webcams)",
+  "description": "A simple library to simplify working with WebRTC audio/video input devices (a.k.a. mics and webcams)",
   "scripts": {
     "lint": "eslint ./src/*.js"
   },
