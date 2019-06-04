@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Classes</title>
+		<title>AudioMeter</title>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -65,39 +65,117 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">list</span>
-				<h1><span class="name">Classes</span></h1>
-				<div class="summary"><p>All documented classes.</p></div>			</div>
+				<span class="kind">class</span>
+				<h1><span class="name">AudioMeter</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
 			<div class="col-md-9 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li class="active">Classes</li>
+							<li><a href="list_class.html">Classes</a></li>
+							<li class="active">AudioMeter</li>
 						</ol>
 					<section>
-		<h2><span class="name">Classes</span></h2>
-		<article class="secondary">
-				<dl class="symbol">
-						
-						<dt class="symbol-title class public">
-			<h4 id="AudioMeter" class="class public"><a href="AudioMeter_AudioMeter.html"><span class="signature-new">new&nbsp;</span><span class="name">AudioMeter</span><span class="signature-params">( <span class="signature-param">context</span>, <span class="signature-param">clippingLevel</span>, <span class="signature-param">averaging</span>, <span class="signature-param">clippingDelay</span>&nbsp;)</span><span class="signature-type"></span></a></h4>
+							<dl class="symbol primary">
+								<dt class="symbol-title class collapsible-symbol expanded">
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">AudioMeter</span><span class="signature-params">( <span class="signature-param">context</span>, <span class="signature-param">clippingLevel</span>, <span class="signature-param">averaging</span>, <span class="signature-param">clippingDelay</span>&nbsp;)</span><span class="signature-type"></span></h2>
 </dt>
-<dd class="symbol-details class public">
+<dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-	</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Creates an <code>AudioMeter</code>object. The resulting object can then be used in an audio chain by
+			connecting a source node to its <code>input</code> property:</p>
+			<p>let am = new AudioMeter(context);
+			someSourceAudioNode.connect(am.input);</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>context</code></td>
+							<td><span class="param-type">AudioContext</span></td>
+								<td></td>
+							<td class="last">
+									<p>The <code>AudioContext</code> that this object belongs to.</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>clippingLevel</code></td>
+							<td><span class="param-type">number</span></td>
+								<td>0.98</td>
+							<td class="last">
+									<p>The threshold above which a sound is considered to clip (float
+			between 0 and 1). The default is 0.98.</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>averaging</code></td>
+							<td><span class="param-type">number</span></td>
+								<td>0.95</td>
+							<td class="last">
+							</td>
+						</tr>
+						<tr>
+								<td><code>clippingDelay</code></td>
+							<td><span class="param-type">number</span></td>
+								<td>750</td>
+							<td class="last">
+									<p>The number of milliseconds to hold the clipping indicator after a
+			clipping event.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-652">line 652</a></p>
+								</div>
+							</div>
+			
+			
+			
+							<!-- todo -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">To Do</label>
+								<div class="col-sm-9">
+										<p class="form-control-static">when there is wider support, this should be rewritten as an AudioWorklet</p>
+								</div>
+							</div>
+			
+					</form>
+			</div>	</div>
 </dd>
-						<hr/>
-						<dt class="symbol-title class public">
-			<h4 id="VideoInput" class="class public"><a href="VideoInput.html"><span class="signature-new">new&nbsp;</span><span class="name">VideoInput</span><span class="signature-params">( [&nbsp;<span class="signature-param">options</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></a></h4>
-</dt>
-<dd class="symbol-details class public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-				</dl>
-		</article>
+							</dl>
+							<article class="secondary">
+							</article>
 					</section>
 			</div>
 				<div class="col-md-3 side-content">

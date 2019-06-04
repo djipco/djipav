@@ -63,24 +63,17 @@ window.lunrData = {
           "list",
           "list:class"
         ],
-        "list_module.html": [
-          "document",
-          "list",
-          "list:modul",
-          "modul"
-        ],
-        "module-djipav.AudioMeter.html": [
+        "AudioMeter_AudioMeter.html": [
           "audio",
           "audiomet",
+          "audiometer#audiomet",
           "audiometer(context",
           "audiometerobject",
           "chain",
           "class",
           "connect",
           "creat",
-          "djipav.audiomet",
           "input",
-          "module:djipav.audiomet",
           "new",
           "node",
           "object",
@@ -90,7 +83,7 @@ window.lunrData = {
           "sourc",
           "us"
         ],
-        "module-djipav.VideoInput.html": [
+        "VideoInput.html": [
           "access",
           "append",
           "attach",
@@ -98,7 +91,6 @@ window.lunrData = {
           "constraint",
           "creat",
           "default",
-          "djipav.videoinput",
           "element",
           "find",
           "first",
@@ -106,7 +98,6 @@ window.lunrData = {
           "lt;body&gt",
           "lt;video&gt",
           "mediatrackconstraint",
-          "module:djipav.videoinput",
           "new",
           "object",
           "paramet",
@@ -125,14 +116,13 @@ window.lunrData = {
           "view",
           "visibl"
         ],
-        "module-djipav.VideoInput.html#capabilities": [
+        "VideoInput.html#capabilities": [
           "capabl",
           "current",
           "detail",
           "exact",
           "mediatrackcap",
           "member",
-          "module:djipav.videoinput#cap",
           "null",
           "object",
           "open",
@@ -140,20 +130,19 @@ window.lunrData = {
           "video",
           "videoinput#cap"
         ],
-        "module-djipav.VideoInput.html#capture": [
+        "VideoInput.html#capture": [
           "api",
           "captur",
           "frame",
           "grab",
           "imagecaptur",
           "member",
-          "module:djipav.videoinput#captur",
           "object",
           "per",
           "us",
           "videoinput#captur"
         ],
-        "module-djipav.VideoInput.html#constraints": [
+        "VideoInput.html#constraints": [
           "constraint",
           "input",
           "mean",
@@ -161,7 +150,6 @@ window.lunrData = {
           "member",
           "met",
           "minimum",
-          "module:djipav.videoinput#constraint",
           "stream",
           "track",
           "true",
@@ -170,7 +158,7 @@ window.lunrData = {
           "video",
           "videoinput#constraint"
         ],
-        "module-djipav.VideoInput.html#opacity": [
+        "VideoInput.html#opacity": [
           "0",
           "1",
           "between",
@@ -178,7 +166,6 @@ window.lunrData = {
           "element",
           "lt;video&gt",
           "member",
-          "module:djipav.videoinput#opac",
           "number",
           "opac",
           "stream",
@@ -186,11 +173,10 @@ window.lunrData = {
           "video",
           "videoinput#opac"
         ],
-        "module-djipav.VideoInput.html#settings": [
+        "VideoInput.html#settings": [
           "detail",
           "mediatrackset",
           "member",
-          "module:djipav.videoinput#set",
           "null",
           "object",
           "open",
@@ -201,35 +187,32 @@ window.lunrData = {
           "video",
           "videoinput#set"
         ],
-        "module-djipav.VideoInput.html#started": [
+        "VideoInput.html#started": [
           "boolean",
           "current",
           "input",
           "member",
-          "module:djipav.videoinput#start",
           "start",
           "video",
           "videoinput#start",
           "whether"
         ],
-        "module-djipav.VideoInput.html#stream": [
+        "VideoInput.html#stream": [
           "actual",
           "be",
           "current",
           "media",
           "mediastream",
           "member",
-          "module:djipav.videoinput#stream",
           "stream",
           "us",
           "videoinput#stream"
         ],
-        "module-djipav.VideoInput.html#timeouts": [
+        "VideoInput.html#timeouts": [
           "class",
           "contain",
           "intern",
           "member",
-          "module:djipav.videoinput#timeout",
           "mostli",
           "object",
           "throughout",
@@ -237,13 +220,12 @@ window.lunrData = {
           "us",
           "videoinput#timeout"
         ],
-        "module-djipav.VideoInput.html#track": [
+        "VideoInput.html#track": [
           "activ",
           "be",
           "current",
           "mediastreamtrack",
           "member",
-          "module:djipav.videoinput#track",
           "null",
           "stream",
           "track",
@@ -251,33 +233,31 @@ window.lunrData = {
           "video",
           "videoinput#track"
         ],
-        "module-djipav.VideoInput.html#video": [
+        "VideoInput.html#video": [
           "display",
           "element",
           "feed",
           "htmlmediael",
           "lt;video&gt",
           "member",
-          "module:djipav.videoinput#video",
           "none",
           "null",
           "us",
           "video",
           "videoinput#video"
         ],
-        "module-djipav.VideoInput.html#cancelFade": [
+        "VideoInput.html#cancelFade": [
           "cancel",
           "cancelfad",
           "current",
           "fade",
           "function",
           "in",
-          "module:djipav.videoinput#cancelfad",
           "ongo",
           "out",
           "videoinput#cancelfad"
         ],
-        "module-djipav.VideoInput.html#destroy": [
+        "VideoInput.html#destroy": [
           "call",
           "destroy",
           "done",
@@ -288,7 +268,6 @@ window.lunrData = {
           "listen",
           "lt;async&gt",
           "method",
-          "module:djipav.videoinput#destroy",
           "object",
           "process",
           "promise.&lt;void&gt",
@@ -296,21 +275,20 @@ window.lunrData = {
           "refer",
           "videoinput#destroy"
         ],
-        "module-djipav.VideoInput.html#fade": [
+        "VideoInput.html#fade": [
           "durat",
           "element",
           "fade",
           "function",
           "lt;async&gt",
           "lt;video&gt",
-          "module:djipav.videoinput#fad",
           "out",
           "promise.&lt;void&gt",
           "specifi",
           "type",
           "videoinput#fad"
         ],
-        "module-djipav.VideoInput.html#fadeIn": [
+        "VideoInput.html#fadeIn": [
           "display",
           "durat",
           "element",
@@ -320,13 +298,12 @@ window.lunrData = {
           "function",
           "lt;async&gt",
           "lt;video&gt",
-          "module:djipav.videoinput#fadein",
           "promise.&lt;void&gt",
           "us",
           "video",
           "videoinput#fadein"
         ],
-        "module-djipav.VideoInput.html#fadeOut": [
+        "VideoInput.html#fadeOut": [
           "display",
           "durat",
           "element",
@@ -336,14 +313,13 @@ window.lunrData = {
           "function",
           "lt;async&gt",
           "lt;video&gt",
-          "module:djipav.videoinput#fadeout",
           "out",
           "promise.&lt;void&gt",
           "us",
           "video",
           "videoinput#fadeout"
         ],
-        "module-djipav.VideoInput.html#grabFrame": [
+        "VideoInput.html#grabFrame": [
           "data",
           "format",
           "frame",
@@ -351,7 +327,6 @@ window.lunrData = {
           "grab",
           "grabfram",
           "lt;async&gt",
-          "module:djipav.videoinput#grabfram",
           "option",
           "promise.&lt;(imagebitmap|domstring|blob)&gt",
           "return",
@@ -360,7 +335,7 @@ window.lunrData = {
           "video",
           "videoinput#grabfram"
         ],
-        "module-djipav.VideoInput.html#start": [
+        "VideoInput.html#start": [
           "attach",
           "constraint",
           "construct",
@@ -371,7 +346,6 @@ window.lunrData = {
           "lt;async&gt",
           "lt;video&gt",
           "match",
-          "module:djipav.videoinput#start",
           "object",
           "on",
           "option",
@@ -385,47 +359,35 @@ window.lunrData = {
           "videoinput",
           "videoinput#start"
         ],
-        "module-djipav.VideoInput.html#stop": [
+        "VideoInput.html#stop": [
           "associ",
           "disconnect",
           "function",
           "input",
           "lt;async&gt",
-          "module:djipav.videoinput#stop",
           "promise.&lt;void&gt",
           "stop",
           "track",
           "video",
           "videoinput#stop"
-        ],
-        "module-djipav-AudioMeter.html": [
-          "audiomet",
-          "class",
-          "djipav~audiomet",
-          "module:djipav~audiomet"
-        ],
-        "module-djipav.html": [
-          "djipav",
-          "modul",
-          "module:djipav"
         ]
       },
-      "length": 26
+      "length": 23
     },
     "tokenStore": {
       "root": {
         "0": {
           "docs": {
-            "module-djipav.VideoInput.html#opacity": {
-              "ref": "module-djipav.VideoInput.html#opacity",
+            "VideoInput.html#opacity": {
+              "ref": "VideoInput.html#opacity",
               "tf": 5
             }
           }
         },
         "1": {
           "docs": {
-            "module-djipav.VideoInput.html#opacity": {
-              "ref": "module-djipav.VideoInput.html#opacity",
+            "VideoInput.html#opacity": {
+              "ref": "VideoInput.html#opacity",
               "tf": 5
             }
           }
@@ -462,8 +424,8 @@ window.lunrData = {
                       "ref": "index.html",
                       "tf": 7.777777777777778
                     },
-                    "module-djipav.AudioMeter.html": {
-                      "ref": "module-djipav.AudioMeter.html",
+                    "AudioMeter_AudioMeter.html": {
+                      "ref": "AudioMeter_AudioMeter.html",
                       "tf": 3.3333333333333335
                     }
                   },
@@ -473,19 +435,47 @@ window.lunrData = {
                       "docs": {},
                       "t": {
                         "docs": {
-                          "module-djipav.AudioMeter.html": {
-                            "ref": "module-djipav.AudioMeter.html",
-                            "tf": 650
-                          },
-                          "module-djipav-AudioMeter.html": {
-                            "ref": "module-djipav-AudioMeter.html",
-                            "tf": 500
+                          "AudioMeter_AudioMeter.html": {
+                            "ref": "AudioMeter_AudioMeter.html",
+                            "tf": 750
                           }
                         },
                         "e": {
                           "docs": {},
                           "r": {
                             "docs": {},
+                            "#": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "m": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {
+                                                "AudioMeter_AudioMeter.html": {
+                                                  "ref": "AudioMeter_AudioMeter.html",
+                                                  "tf": 1150
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
                             "(": {
                               "docs": {},
                               "c": {
@@ -502,8 +492,8 @@ window.lunrData = {
                                           "docs": {},
                                           "t": {
                                             "docs": {
-                                              "module-djipav.AudioMeter.html": {
-                                                "ref": "module-djipav.AudioMeter.html",
+                                              "AudioMeter_AudioMeter.html": {
+                                                "ref": "AudioMeter_AudioMeter.html",
                                                 "tf": 3.3333333333333335
                                               }
                                             }
@@ -527,8 +517,8 @@ window.lunrData = {
                                       "docs": {},
                                       "t": {
                                         "docs": {
-                                          "module-djipav.AudioMeter.html": {
-                                            "ref": "module-djipav.AudioMeter.html",
+                                          "AudioMeter_AudioMeter.html": {
+                                            "ref": "AudioMeter_AudioMeter.html",
                                             "tf": 3.3333333333333335
                                           }
                                         }
@@ -557,8 +547,8 @@ window.lunrData = {
                   "docs": {},
                   "s": {
                     "docs": {
-                      "module-djipav.VideoInput.html": {
-                        "ref": "module-djipav.VideoInput.html",
+                      "VideoInput.html": {
+                        "ref": "VideoInput.html",
                         "tf": 1.1111111111111112
                       }
                     }
@@ -574,8 +564,8 @@ window.lunrData = {
                   "docs": {},
                   "l": {
                     "docs": {
-                      "module-djipav.VideoInput.html#stream": {
-                        "ref": "module-djipav.VideoInput.html#stream",
+                      "VideoInput.html#stream": {
+                        "ref": "VideoInput.html#stream",
                         "tf": 8.333333333333332
                       }
                     }
@@ -586,8 +576,8 @@ window.lunrData = {
                 "docs": {},
                 "v": {
                   "docs": {
-                    "module-djipav.VideoInput.html#track": {
-                      "ref": "module-djipav.VideoInput.html#track",
+                    "VideoInput.html#track": {
+                      "ref": "VideoInput.html#track",
                       "tf": 6.25
                     }
                   }
@@ -605,8 +595,8 @@ window.lunrData = {
                   "docs": {},
                   "d": {
                     "docs": {
-                      "module-djipav.VideoInput.html": {
-                        "ref": "module-djipav.VideoInput.html",
+                      "VideoInput.html": {
+                        "ref": "VideoInput.html",
                         "tf": 1.1111111111111112
                       }
                     }
@@ -616,8 +606,8 @@ window.lunrData = {
             },
             "i": {
               "docs": {
-                "module-djipav.VideoInput.html#capture": {
-                  "ref": "module-djipav.VideoInput.html#capture",
+                "VideoInput.html#capture": {
+                  "ref": "VideoInput.html#capture",
                   "tf": 6.25
                 }
               }
@@ -633,12 +623,12 @@ window.lunrData = {
                   "docs": {},
                   "h": {
                     "docs": {
-                      "module-djipav.VideoInput.html": {
-                        "ref": "module-djipav.VideoInput.html",
+                      "VideoInput.html": {
+                        "ref": "VideoInput.html",
                         "tf": 1.1111111111111112
                       },
-                      "module-djipav.VideoInput.html#start": {
-                        "ref": "module-djipav.VideoInput.html#start",
+                      "VideoInput.html#start": {
+                        "ref": "VideoInput.html#start",
                         "tf": 2.7777777777777777
                       }
                     }
@@ -657,8 +647,8 @@ window.lunrData = {
                   "docs": {},
                   "i": {
                     "docs": {
-                      "module-djipav.VideoInput.html#stop": {
-                        "ref": "module-djipav.VideoInput.html#stop",
+                      "VideoInput.html#stop": {
+                        "ref": "VideoInput.html#stop",
                         "tf": 8.333333333333332
                       }
                     }
@@ -683,109 +673,6 @@ window.lunrData = {
                       "index.html": {
                         "ref": "index.html",
                         "tf": 600
-                      },
-                      "module-djipav.html": {
-                        "ref": "module-djipav.html",
-                        "tf": 600
-                      }
-                    },
-                    ".": {
-                      "docs": {},
-                      "a": {
-                        "docs": {},
-                        "u": {
-                          "docs": {},
-                          "d": {
-                            "docs": {},
-                            "i": {
-                              "docs": {},
-                              "o": {
-                                "docs": {},
-                                "m": {
-                                  "docs": {},
-                                  "e": {
-                                    "docs": {},
-                                    "t": {
-                                      "docs": {
-                                        "module-djipav.AudioMeter.html": {
-                                          "ref": "module-djipav.AudioMeter.html",
-                                          "tf": 100
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "v": {
-                        "docs": {},
-                        "i": {
-                          "docs": {},
-                          "d": {
-                            "docs": {},
-                            "e": {
-                              "docs": {},
-                              "o": {
-                                "docs": {},
-                                "i": {
-                                  "docs": {},
-                                  "n": {
-                                    "docs": {},
-                                    "p": {
-                                      "docs": {},
-                                      "u": {
-                                        "docs": {},
-                                        "t": {
-                                          "docs": {
-                                            "module-djipav.VideoInput.html": {
-                                              "ref": "module-djipav.VideoInput.html",
-                                              "tf": 100
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "~": {
-                      "docs": {},
-                      "a": {
-                        "docs": {},
-                        "u": {
-                          "docs": {},
-                          "d": {
-                            "docs": {},
-                            "i": {
-                              "docs": {},
-                              "o": {
-                                "docs": {},
-                                "m": {
-                                  "docs": {},
-                                  "e": {
-                                    "docs": {},
-                                    "t": {
-                                      "docs": {
-                                        "module-djipav-AudioMeter.html": {
-                                          "ref": "module-djipav-AudioMeter.html",
-                                          "tf": 100
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
                       }
                     }
                   }
@@ -814,10 +701,6 @@ window.lunrData = {
                           "list_class.html": {
                             "ref": "list_class.html",
                             "tf": 35
-                          },
-                          "list_module.html": {
-                            "ref": "list_module.html",
-                            "tf": 35
                           }
                         }
                       }
@@ -830,8 +713,8 @@ window.lunrData = {
               "docs": {},
               "e": {
                 "docs": {
-                  "module-djipav.VideoInput.html#destroy": {
-                    "ref": "module-djipav.VideoInput.html#destroy",
+                  "VideoInput.html#destroy": {
+                    "ref": "VideoInput.html#destroy",
                     "tf": 3.8461538461538463
                   }
                 }
@@ -850,8 +733,8 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-djipav.VideoInput.html": {
-                          "ref": "module-djipav.VideoInput.html",
+                        "VideoInput.html": {
+                          "ref": "VideoInput.html",
                           "tf": 1.1111111111111112
                         }
                       }
@@ -868,12 +751,12 @@ window.lunrData = {
                   "docs": {},
                   "l": {
                     "docs": {
-                      "module-djipav.VideoInput.html#capabilities": {
-                        "ref": "module-djipav.VideoInput.html#capabilities",
+                      "VideoInput.html#capabilities": {
+                        "ref": "VideoInput.html#capabilities",
                         "tf": 4.166666666666666
                       },
-                      "module-djipav.VideoInput.html#settings": {
-                        "ref": "module-djipav.VideoInput.html#settings",
+                      "VideoInput.html#settings": {
+                        "ref": "VideoInput.html#settings",
                         "tf": 5
                       }
                     }
@@ -891,9 +774,9 @@ window.lunrData = {
                     "docs": {},
                     "y": {
                       "docs": {
-                        "module-djipav.VideoInput.html#destroy": {
-                          "ref": "module-djipav.VideoInput.html#destroy",
-                          "tf": 637.1794871794872
+                        "VideoInput.html#destroy": {
+                          "ref": "VideoInput.html#destroy",
+                          "tf": 687.1794871794872
                         }
                       }
                     }
@@ -914,20 +797,20 @@ window.lunrData = {
                     "docs": {},
                     "y": {
                       "docs": {
-                        "module-djipav.VideoInput.html#opacity": {
-                          "ref": "module-djipav.VideoInput.html#opacity",
+                        "VideoInput.html#opacity": {
+                          "ref": "VideoInput.html#opacity",
                           "tf": 5
                         },
-                        "module-djipav.VideoInput.html#video": {
-                          "ref": "module-djipav.VideoInput.html#video",
+                        "VideoInput.html#video": {
+                          "ref": "VideoInput.html#video",
                           "tf": 5.555555555555555
                         },
-                        "module-djipav.VideoInput.html#fadeIn": {
-                          "ref": "module-djipav.VideoInput.html#fadeIn",
+                        "VideoInput.html#fadeIn": {
+                          "ref": "VideoInput.html#fadeIn",
                           "tf": 7.142857142857142
                         },
-                        "module-djipav.VideoInput.html#fadeOut": {
-                          "ref": "module-djipav.VideoInput.html#fadeOut",
+                        "VideoInput.html#fadeOut": {
+                          "ref": "VideoInput.html#fadeOut",
                           "tf": 6.25
                         }
                       }
@@ -949,8 +832,8 @@ window.lunrData = {
                           "docs": {},
                           "t": {
                             "docs": {
-                              "module-djipav.VideoInput.html#stop": {
-                                "ref": "module-djipav.VideoInput.html#stop",
+                              "VideoInput.html#stop": {
+                                "ref": "VideoInput.html#stop",
                                 "tf": 8.333333333333332
                               }
                             }
@@ -971,16 +854,16 @@ window.lunrData = {
                 "docs": {},
                 "t": {
                   "docs": {
-                    "module-djipav.VideoInput.html#fade": {
-                      "ref": "module-djipav.VideoInput.html#fade",
+                    "VideoInput.html#fade": {
+                      "ref": "VideoInput.html#fade",
                       "tf": 28.333333333333332
                     },
-                    "module-djipav.VideoInput.html#fadeIn": {
-                      "ref": "module-djipav.VideoInput.html#fadeIn",
+                    "VideoInput.html#fadeIn": {
+                      "ref": "VideoInput.html#fadeIn",
                       "tf": 25
                     },
-                    "module-djipav.VideoInput.html#fadeOut": {
-                      "ref": "module-djipav.VideoInput.html#fadeOut",
+                    "VideoInput.html#fadeOut": {
+                      "ref": "VideoInput.html#fadeOut",
                       "tf": 25
                     }
                   }
@@ -994,8 +877,8 @@ window.lunrData = {
               "docs": {},
               "a": {
                 "docs": {
-                  "module-djipav.VideoInput.html#grabFrame": {
-                    "ref": "module-djipav.VideoInput.html#grabFrame",
+                  "VideoInput.html#grabFrame": {
+                    "ref": "VideoInput.html#grabFrame",
                     "tf": 6.25
                   }
                 }
@@ -1007,8 +890,8 @@ window.lunrData = {
           "docs": {},
           "n": {
             "docs": {
-              "module-djipav.VideoInput.html#cancelFade": {
-                "ref": "module-djipav.VideoInput.html#cancelFade",
+              "VideoInput.html#cancelFade": {
+                "ref": "VideoInput.html#cancelFade",
                 "tf": 7.142857142857142
               }
             },
@@ -1036,24 +919,24 @@ window.lunrData = {
                       "ref": "index.html",
                       "tf": 7.777777777777778
                     },
-                    "module-djipav.AudioMeter.html": {
-                      "ref": "module-djipav.AudioMeter.html",
+                    "AudioMeter_AudioMeter.html": {
+                      "ref": "AudioMeter_AudioMeter.html",
                       "tf": 3.3333333333333335
                     },
-                    "module-djipav.VideoInput.html": {
-                      "ref": "module-djipav.VideoInput.html",
+                    "VideoInput.html": {
+                      "ref": "VideoInput.html",
                       "tf": 2.2222222222222223
                     },
-                    "module-djipav.VideoInput.html#constraints": {
-                      "ref": "module-djipav.VideoInput.html#constraints",
+                    "VideoInput.html#constraints": {
+                      "ref": "VideoInput.html#constraints",
                       "tf": 4.166666666666666
                     },
-                    "module-djipav.VideoInput.html#started": {
-                      "ref": "module-djipav.VideoInput.html#started",
+                    "VideoInput.html#started": {
+                      "ref": "VideoInput.html#started",
                       "tf": 10
                     },
-                    "module-djipav.VideoInput.html#stop": {
-                      "ref": "module-djipav.VideoInput.html#stop",
+                    "VideoInput.html#stop": {
+                      "ref": "VideoInput.html#stop",
                       "tf": 8.333333333333332
                     }
                   }
@@ -1068,12 +951,12 @@ window.lunrData = {
                   "docs": {},
                   "n": {
                     "docs": {
-                      "module-djipav.VideoInput.html#timeouts": {
-                        "ref": "module-djipav.VideoInput.html#timeouts",
+                      "VideoInput.html#timeouts": {
+                        "ref": "VideoInput.html#timeouts",
                         "tf": 5.555555555555555
                       },
-                      "module-djipav.VideoInput.html#destroy": {
-                        "ref": "module-djipav.VideoInput.html#destroy",
+                      "VideoInput.html#destroy": {
+                        "ref": "VideoInput.html#destroy",
                         "tf": 3.8461538461538463
                       }
                     }
@@ -1087,8 +970,8 @@ window.lunrData = {
                 "docs": {},
                 "r": {
                   "docs": {
-                    "module-djipav.VideoInput.html#destroy": {
-                      "ref": "module-djipav.VideoInput.html#destroy",
+                    "VideoInput.html#destroy": {
+                      "ref": "VideoInput.html#destroy",
                       "tf": 3.8461538461538463
                     }
                   }
@@ -1116,8 +999,8 @@ window.lunrData = {
                             "docs": {},
                             "r": {
                               "docs": {
-                                "module-djipav.VideoInput.html#capture": {
-                                  "ref": "module-djipav.VideoInput.html#capture",
+                                "VideoInput.html#capture": {
+                                  "ref": "VideoInput.html#capture",
                                   "tf": 62.5
                                 }
                               }
@@ -1163,10 +1046,6 @@ window.lunrData = {
                   "list_class.html": {
                     "ref": "list_class.html",
                     "tf": 110
-                  },
-                  "list_module.html": {
-                    "ref": "list_module.html",
-                    "tf": 110
                   }
                 },
                 ":": {
@@ -1190,34 +1069,14 @@ window.lunrData = {
                         }
                       }
                     }
-                  },
-                  "m": {
-                    "docs": {},
-                    "o": {
-                      "docs": {},
-                      "d": {
-                        "docs": {},
-                        "u": {
-                          "docs": {},
-                          "l": {
-                            "docs": {
-                              "list_module.html": {
-                                "ref": "list_module.html",
-                                "tf": 1300
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
                   }
                 },
                 "e": {
                   "docs": {},
                   "n": {
                     "docs": {
-                      "module-djipav.VideoInput.html#destroy": {
-                        "ref": "module-djipav.VideoInput.html#destroy",
+                      "VideoInput.html#destroy": {
+                        "ref": "VideoInput.html#destroy",
                         "tf": 3.8461538461538463
                       }
                     }
@@ -1233,8 +1092,8 @@ window.lunrData = {
                   "docs": {},
                   "r": {
                     "docs": {
-                      "module-djipav.VideoInput.html#destroy": {
-                        "ref": "module-djipav.VideoInput.html#destroy",
+                      "VideoInput.html#destroy": {
+                        "ref": "VideoInput.html#destroy",
                         "tf": 3.8461538461538463
                       }
                     }
@@ -1261,8 +1120,8 @@ window.lunrData = {
                           "docs": {},
                           "t": {
                             "docs": {
-                              "module-djipav.VideoInput.html": {
-                                "ref": "module-djipav.VideoInput.html",
+                              "VideoInput.html": {
+                                "ref": "VideoInput.html",
                                 "tf": 1.1111111111111112
                               }
                             }
@@ -1289,32 +1148,32 @@ window.lunrData = {
                             "docs": {},
                             "t": {
                               "docs": {
-                                "module-djipav.VideoInput.html": {
-                                  "ref": "module-djipav.VideoInput.html",
+                                "VideoInput.html": {
+                                  "ref": "VideoInput.html",
                                   "tf": 3.3333333333333335
                                 },
-                                "module-djipav.VideoInput.html#opacity": {
-                                  "ref": "module-djipav.VideoInput.html#opacity",
+                                "VideoInput.html#opacity": {
+                                  "ref": "VideoInput.html#opacity",
                                   "tf": 5
                                 },
-                                "module-djipav.VideoInput.html#video": {
-                                  "ref": "module-djipav.VideoInput.html#video",
+                                "VideoInput.html#video": {
+                                  "ref": "VideoInput.html#video",
                                   "tf": 5.555555555555555
                                 },
-                                "module-djipav.VideoInput.html#fade": {
-                                  "ref": "module-djipav.VideoInput.html#fade",
+                                "VideoInput.html#fade": {
+                                  "ref": "VideoInput.html#fade",
                                   "tf": 8.333333333333332
                                 },
-                                "module-djipav.VideoInput.html#fadeIn": {
-                                  "ref": "module-djipav.VideoInput.html#fadeIn",
+                                "VideoInput.html#fadeIn": {
+                                  "ref": "VideoInput.html#fadeIn",
                                   "tf": 7.142857142857142
                                 },
-                                "module-djipav.VideoInput.html#fadeOut": {
-                                  "ref": "module-djipav.VideoInput.html#fadeOut",
+                                "VideoInput.html#fadeOut": {
+                                  "ref": "VideoInput.html#fadeOut",
                                   "tf": 6.25
                                 },
-                                "module-djipav.VideoInput.html#start": {
-                                  "ref": "module-djipav.VideoInput.html#start",
+                                "VideoInput.html#start": {
+                                  "ref": "VideoInput.html#start",
                                   "tf": 2.7777777777777777
                                 }
                               }
@@ -1342,32 +1201,32 @@ window.lunrData = {
                             "docs": {},
                             "t": {
                               "docs": {
-                                "module-djipav.VideoInput.html#destroy": {
-                                  "ref": "module-djipav.VideoInput.html#destroy",
+                                "VideoInput.html#destroy": {
+                                  "ref": "VideoInput.html#destroy",
                                   "tf": 33.33333333333333
                                 },
-                                "module-djipav.VideoInput.html#fade": {
-                                  "ref": "module-djipav.VideoInput.html#fade",
+                                "VideoInput.html#fade": {
+                                  "ref": "VideoInput.html#fade",
                                   "tf": 20
                                 },
-                                "module-djipav.VideoInput.html#fadeIn": {
-                                  "ref": "module-djipav.VideoInput.html#fadeIn",
+                                "VideoInput.html#fadeIn": {
+                                  "ref": "VideoInput.html#fadeIn",
                                   "tf": 25
                                 },
-                                "module-djipav.VideoInput.html#fadeOut": {
-                                  "ref": "module-djipav.VideoInput.html#fadeOut",
+                                "VideoInput.html#fadeOut": {
+                                  "ref": "VideoInput.html#fadeOut",
                                   "tf": 25
                                 },
-                                "module-djipav.VideoInput.html#grabFrame": {
-                                  "ref": "module-djipav.VideoInput.html#grabFrame",
+                                "VideoInput.html#grabFrame": {
+                                  "ref": "VideoInput.html#grabFrame",
                                   "tf": 25
                                 },
-                                "module-djipav.VideoInput.html#start": {
-                                  "ref": "module-djipav.VideoInput.html#start",
+                                "VideoInput.html#start": {
+                                  "ref": "VideoInput.html#start",
                                   "tf": 25
                                 },
-                                "module-djipav.VideoInput.html#stop": {
-                                  "ref": "module-djipav.VideoInput.html#stop",
+                                "VideoInput.html#stop": {
+                                  "ref": "VideoInput.html#stop",
                                   "tf": 33.33333333333333
                                 }
                               }
@@ -1422,505 +1281,10 @@ window.lunrData = {
                     "docs": {},
                     "m": {
                       "docs": {
-                        "module-djipav.VideoInput.html#constraints": {
-                          "ref": "module-djipav.VideoInput.html#constraints",
+                        "VideoInput.html#constraints": {
+                          "ref": "VideoInput.html#constraints",
                           "tf": 4.166666666666666
                         }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "d": {
-              "docs": {},
-              "u": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "list_module.html": {
-                      "ref": "list_module.html",
-                      "tf": 635
-                    },
-                    "module-djipav.html": {
-                      "ref": "module-djipav.html",
-                      "tf": 110
-                    }
-                  },
-                  "e": {
-                    "docs": {},
-                    ":": {
-                      "docs": {},
-                      "d": {
-                        "docs": {},
-                        "j": {
-                          "docs": {},
-                          "i": {
-                            "docs": {},
-                            "p": {
-                              "docs": {},
-                              "a": {
-                                "docs": {},
-                                "v": {
-                                  "docs": {
-                                    "module-djipav.html": {
-                                      "ref": "module-djipav.html",
-                                      "tf": 1300
-                                    }
-                                  },
-                                  ".": {
-                                    "docs": {},
-                                    "a": {
-                                      "docs": {},
-                                      "u": {
-                                        "docs": {},
-                                        "d": {
-                                          "docs": {},
-                                          "i": {
-                                            "docs": {},
-                                            "o": {
-                                              "docs": {},
-                                              "m": {
-                                                "docs": {},
-                                                "e": {
-                                                  "docs": {},
-                                                  "t": {
-                                                    "docs": {
-                                                      "module-djipav.AudioMeter.html": {
-                                                        "ref": "module-djipav.AudioMeter.html",
-                                                        "tf": 1150
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    },
-                                    "v": {
-                                      "docs": {},
-                                      "i": {
-                                        "docs": {},
-                                        "d": {
-                                          "docs": {},
-                                          "e": {
-                                            "docs": {},
-                                            "o": {
-                                              "docs": {},
-                                              "i": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {},
-                                                  "p": {
-                                                    "docs": {},
-                                                    "u": {
-                                                      "docs": {},
-                                                      "t": {
-                                                        "docs": {
-                                                          "module-djipav.VideoInput.html": {
-                                                            "ref": "module-djipav.VideoInput.html",
-                                                            "tf": 1150
-                                                          }
-                                                        },
-                                                        "#": {
-                                                          "docs": {},
-                                                          "c": {
-                                                            "docs": {},
-                                                            "a": {
-                                                              "docs": {},
-                                                              "p": {
-                                                                "docs": {
-                                                                  "module-djipav.VideoInput.html#capabilities": {
-                                                                    "ref": "module-djipav.VideoInput.html#capabilities",
-                                                                    "tf": 1100
-                                                                  }
-                                                                },
-                                                                "t": {
-                                                                  "docs": {},
-                                                                  "u": {
-                                                                    "docs": {},
-                                                                    "r": {
-                                                                      "docs": {
-                                                                        "module-djipav.VideoInput.html#capture": {
-                                                                          "ref": "module-djipav.VideoInput.html#capture",
-                                                                          "tf": 1100
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              },
-                                                              "n": {
-                                                                "docs": {},
-                                                                "c": {
-                                                                  "docs": {},
-                                                                  "e": {
-                                                                    "docs": {},
-                                                                    "l": {
-                                                                      "docs": {},
-                                                                      "f": {
-                                                                        "docs": {},
-                                                                        "a": {
-                                                                          "docs": {},
-                                                                          "d": {
-                                                                            "docs": {
-                                                                              "module-djipav.VideoInput.html#cancelFade": {
-                                                                                "ref": "module-djipav.VideoInput.html#cancelFade",
-                                                                                "tf": 1100
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            "o": {
-                                                              "docs": {},
-                                                              "n": {
-                                                                "docs": {},
-                                                                "s": {
-                                                                  "docs": {},
-                                                                  "t": {
-                                                                    "docs": {},
-                                                                    "r": {
-                                                                      "docs": {},
-                                                                      "a": {
-                                                                        "docs": {},
-                                                                        "i": {
-                                                                          "docs": {},
-                                                                          "n": {
-                                                                            "docs": {},
-                                                                            "t": {
-                                                                              "docs": {
-                                                                                "module-djipav.VideoInput.html#constraints": {
-                                                                                  "ref": "module-djipav.VideoInput.html#constraints",
-                                                                                  "tf": 1100
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "o": {
-                                                            "docs": {},
-                                                            "p": {
-                                                              "docs": {},
-                                                              "a": {
-                                                                "docs": {},
-                                                                "c": {
-                                                                  "docs": {
-                                                                    "module-djipav.VideoInput.html#opacity": {
-                                                                      "ref": "module-djipav.VideoInput.html#opacity",
-                                                                      "tf": 1100
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "s": {
-                                                            "docs": {},
-                                                            "e": {
-                                                              "docs": {},
-                                                              "t": {
-                                                                "docs": {
-                                                                  "module-djipav.VideoInput.html#settings": {
-                                                                    "ref": "module-djipav.VideoInput.html#settings",
-                                                                    "tf": 1100
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            "t": {
-                                                              "docs": {},
-                                                              "a": {
-                                                                "docs": {},
-                                                                "r": {
-                                                                  "docs": {},
-                                                                  "t": {
-                                                                    "docs": {
-                                                                      "module-djipav.VideoInput.html#started": {
-                                                                        "ref": "module-djipav.VideoInput.html#started",
-                                                                        "tf": 1100
-                                                                      },
-                                                                      "module-djipav.VideoInput.html#start": {
-                                                                        "ref": "module-djipav.VideoInput.html#start",
-                                                                        "tf": 1100
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              },
-                                                              "r": {
-                                                                "docs": {},
-                                                                "e": {
-                                                                  "docs": {},
-                                                                  "a": {
-                                                                    "docs": {},
-                                                                    "m": {
-                                                                      "docs": {
-                                                                        "module-djipav.VideoInput.html#stream": {
-                                                                          "ref": "module-djipav.VideoInput.html#stream",
-                                                                          "tf": 1100
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              },
-                                                              "o": {
-                                                                "docs": {},
-                                                                "p": {
-                                                                  "docs": {
-                                                                    "module-djipav.VideoInput.html#stop": {
-                                                                      "ref": "module-djipav.VideoInput.html#stop",
-                                                                      "tf": 1100
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "t": {
-                                                            "docs": {},
-                                                            "i": {
-                                                              "docs": {},
-                                                              "m": {
-                                                                "docs": {},
-                                                                "e": {
-                                                                  "docs": {},
-                                                                  "o": {
-                                                                    "docs": {},
-                                                                    "u": {
-                                                                      "docs": {},
-                                                                      "t": {
-                                                                        "docs": {
-                                                                          "module-djipav.VideoInput.html#timeouts": {
-                                                                            "ref": "module-djipav.VideoInput.html#timeouts",
-                                                                            "tf": 1100
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            "r": {
-                                                              "docs": {},
-                                                              "a": {
-                                                                "docs": {},
-                                                                "c": {
-                                                                  "docs": {},
-                                                                  "k": {
-                                                                    "docs": {
-                                                                      "module-djipav.VideoInput.html#track": {
-                                                                        "ref": "module-djipav.VideoInput.html#track",
-                                                                        "tf": 1100
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "v": {
-                                                            "docs": {},
-                                                            "i": {
-                                                              "docs": {},
-                                                              "d": {
-                                                                "docs": {},
-                                                                "e": {
-                                                                  "docs": {},
-                                                                  "o": {
-                                                                    "docs": {
-                                                                      "module-djipav.VideoInput.html#video": {
-                                                                        "ref": "module-djipav.VideoInput.html#video",
-                                                                        "tf": 1100
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "d": {
-                                                            "docs": {},
-                                                            "e": {
-                                                              "docs": {},
-                                                              "s": {
-                                                                "docs": {},
-                                                                "t": {
-                                                                  "docs": {},
-                                                                  "r": {
-                                                                    "docs": {},
-                                                                    "o": {
-                                                                      "docs": {},
-                                                                      "y": {
-                                                                        "docs": {
-                                                                          "module-djipav.VideoInput.html#destroy": {
-                                                                            "ref": "module-djipav.VideoInput.html#destroy",
-                                                                            "tf": 1100
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "f": {
-                                                            "docs": {},
-                                                            "a": {
-                                                              "docs": {},
-                                                              "d": {
-                                                                "docs": {
-                                                                  "module-djipav.VideoInput.html#fade": {
-                                                                    "ref": "module-djipav.VideoInput.html#fade",
-                                                                    "tf": 1100
-                                                                  }
-                                                                },
-                                                                "e": {
-                                                                  "docs": {},
-                                                                  "i": {
-                                                                    "docs": {},
-                                                                    "n": {
-                                                                      "docs": {
-                                                                        "module-djipav.VideoInput.html#fadeIn": {
-                                                                          "ref": "module-djipav.VideoInput.html#fadeIn",
-                                                                          "tf": 1100
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  "o": {
-                                                                    "docs": {},
-                                                                    "u": {
-                                                                      "docs": {},
-                                                                      "t": {
-                                                                        "docs": {
-                                                                          "module-djipav.VideoInput.html#fadeOut": {
-                                                                            "ref": "module-djipav.VideoInput.html#fadeOut",
-                                                                            "tf": 1100
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "g": {
-                                                            "docs": {},
-                                                            "r": {
-                                                              "docs": {},
-                                                              "a": {
-                                                                "docs": {},
-                                                                "b": {
-                                                                  "docs": {},
-                                                                  "f": {
-                                                                    "docs": {},
-                                                                    "r": {
-                                                                      "docs": {},
-                                                                      "a": {
-                                                                        "docs": {},
-                                                                        "m": {
-                                                                          "docs": {
-                                                                            "module-djipav.VideoInput.html#grabFrame": {
-                                                                              "ref": "module-djipav.VideoInput.html#grabFrame",
-                                                                              "tf": 1100
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  },
-                                  "~": {
-                                    "docs": {},
-                                    "a": {
-                                      "docs": {},
-                                      "u": {
-                                        "docs": {},
-                                        "d": {
-                                          "docs": {},
-                                          "i": {
-                                            "docs": {},
-                                            "o": {
-                                              "docs": {},
-                                              "m": {
-                                                "docs": {},
-                                                "e": {
-                                                  "docs": {},
-                                                  "t": {
-                                                    "docs": {
-                                                      "module-djipav-AudioMeter.html": {
-                                                        "ref": "module-djipav-AudioMeter.html",
-                                                        "tf": 1300
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "s": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "l": {
-                  "docs": {},
-                  "i": {
-                    "docs": {
-                      "module-djipav.VideoInput.html#timeouts": {
-                        "ref": "module-djipav.VideoInput.html#timeouts",
-                        "tf": 5.555555555555555
                       }
                     }
                   }
@@ -1936,8 +1300,8 @@ window.lunrData = {
                 "docs": {},
                 "a": {
                   "docs": {
-                    "module-djipav.VideoInput.html#stream": {
-                      "ref": "module-djipav.VideoInput.html#stream",
+                    "VideoInput.html#stream": {
+                      "ref": "VideoInput.html#stream",
                       "tf": 8.333333333333332
                     }
                   },
@@ -1971,12 +1335,12 @@ window.lunrData = {
                                               "docs": {},
                                               "t": {
                                                 "docs": {
-                                                  "module-djipav.VideoInput.html": {
-                                                    "ref": "module-djipav.VideoInput.html",
+                                                  "VideoInput.html": {
+                                                    "ref": "VideoInput.html",
                                                     "tf": 1.1111111111111112
                                                   },
-                                                  "module-djipav.VideoInput.html#constraints": {
-                                                    "ref": "module-djipav.VideoInput.html#constraints",
+                                                  "VideoInput.html#constraints": {
+                                                    "ref": "VideoInput.html#constraints",
                                                     "tf": 50
                                                   }
                                                 }
@@ -1993,8 +1357,8 @@ window.lunrData = {
                                 "docs": {},
                                 "p": {
                                   "docs": {
-                                    "module-djipav.VideoInput.html#capabilities": {
-                                      "ref": "module-djipav.VideoInput.html#capabilities",
+                                    "VideoInput.html#capabilities": {
+                                      "ref": "VideoInput.html#capabilities",
                                       "tf": 54.166666666666664
                                     }
                                   }
@@ -2007,8 +1371,8 @@ window.lunrData = {
                                 "docs": {},
                                 "t": {
                                   "docs": {
-                                    "module-djipav.VideoInput.html#settings": {
-                                      "ref": "module-djipav.VideoInput.html#settings",
+                                    "VideoInput.html#settings": {
+                                      "ref": "VideoInput.html#settings",
                                       "tf": 55
                                     }
                                   }
@@ -2032,8 +1396,8 @@ window.lunrData = {
                             "docs": {},
                             "m": {
                               "docs": {
-                                "module-djipav.VideoInput.html#stream": {
-                                  "ref": "module-djipav.VideoInput.html#stream",
+                                "VideoInput.html#stream": {
+                                  "ref": "VideoInput.html#stream",
                                   "tf": 50
                                 }
                               },
@@ -2047,8 +1411,8 @@ window.lunrData = {
                                       "docs": {},
                                       "k": {
                                         "docs": {
-                                          "module-djipav.VideoInput.html#track": {
-                                            "ref": "module-djipav.VideoInput.html#track",
+                                          "VideoInput.html#track": {
+                                            "ref": "VideoInput.html#track",
                                             "tf": 50
                                           }
                                         }
@@ -2074,44 +1438,44 @@ window.lunrData = {
                   "docs": {},
                   "r": {
                     "docs": {
-                      "module-djipav.VideoInput.html#capabilities": {
-                        "ref": "module-djipav.VideoInput.html#capabilities",
+                      "VideoInput.html#capabilities": {
+                        "ref": "VideoInput.html#capabilities",
                         "tf": 110
                       },
-                      "module-djipav.VideoInput.html#capture": {
-                        "ref": "module-djipav.VideoInput.html#capture",
+                      "VideoInput.html#capture": {
+                        "ref": "VideoInput.html#capture",
                         "tf": 110
                       },
-                      "module-djipav.VideoInput.html#constraints": {
-                        "ref": "module-djipav.VideoInput.html#constraints",
+                      "VideoInput.html#constraints": {
+                        "ref": "VideoInput.html#constraints",
                         "tf": 110
                       },
-                      "module-djipav.VideoInput.html#opacity": {
-                        "ref": "module-djipav.VideoInput.html#opacity",
+                      "VideoInput.html#opacity": {
+                        "ref": "VideoInput.html#opacity",
                         "tf": 110
                       },
-                      "module-djipav.VideoInput.html#settings": {
-                        "ref": "module-djipav.VideoInput.html#settings",
+                      "VideoInput.html#settings": {
+                        "ref": "VideoInput.html#settings",
                         "tf": 110
                       },
-                      "module-djipav.VideoInput.html#started": {
-                        "ref": "module-djipav.VideoInput.html#started",
+                      "VideoInput.html#started": {
+                        "ref": "VideoInput.html#started",
                         "tf": 110
                       },
-                      "module-djipav.VideoInput.html#stream": {
-                        "ref": "module-djipav.VideoInput.html#stream",
+                      "VideoInput.html#stream": {
+                        "ref": "VideoInput.html#stream",
                         "tf": 110
                       },
-                      "module-djipav.VideoInput.html#timeouts": {
-                        "ref": "module-djipav.VideoInput.html#timeouts",
+                      "VideoInput.html#timeouts": {
+                        "ref": "VideoInput.html#timeouts",
                         "tf": 110
                       },
-                      "module-djipav.VideoInput.html#track": {
-                        "ref": "module-djipav.VideoInput.html#track",
+                      "VideoInput.html#track": {
+                        "ref": "VideoInput.html#track",
                         "tf": 110
                       },
-                      "module-djipav.VideoInput.html#video": {
-                        "ref": "module-djipav.VideoInput.html#video",
+                      "VideoInput.html#video": {
+                        "ref": "VideoInput.html#video",
                         "tf": 110
                       }
                     }
@@ -2123,8 +1487,8 @@ window.lunrData = {
               "docs": {},
               "n": {
                 "docs": {
-                  "module-djipav.VideoInput.html#constraints": {
-                    "ref": "module-djipav.VideoInput.html#constraints",
+                  "VideoInput.html#constraints": {
+                    "ref": "VideoInput.html#constraints",
                     "tf": 4.166666666666666
                   }
                 }
@@ -2132,8 +1496,8 @@ window.lunrData = {
             },
             "t": {
               "docs": {
-                "module-djipav.VideoInput.html#constraints": {
-                  "ref": "module-djipav.VideoInput.html#constraints",
+                "VideoInput.html#constraints": {
+                  "ref": "VideoInput.html#constraints",
                   "tf": 4.166666666666666
                 }
               },
@@ -2143,9 +1507,29 @@ window.lunrData = {
                   "docs": {},
                   "d": {
                     "docs": {
-                      "module-djipav.VideoInput.html#destroy": {
-                        "ref": "module-djipav.VideoInput.html#destroy",
+                      "VideoInput.html#destroy": {
+                        "ref": "VideoInput.html#destroy",
                         "tf": 3.8461538461538463
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "i": {
+                    "docs": {
+                      "VideoInput.html#timeouts": {
+                        "ref": "VideoInput.html#timeouts",
+                        "tf": 5.555555555555555
                       }
                     }
                   }
@@ -2161,8 +1545,8 @@ window.lunrData = {
                 "docs": {},
                 "h": {
                   "docs": {
-                    "module-djipav.VideoInput.html#start": {
-                      "ref": "module-djipav.VideoInput.html#start",
+                    "VideoInput.html#start": {
+                      "ref": "VideoInput.html#start",
                       "tf": 2.7777777777777777
                     }
                   }
@@ -2197,8 +1581,8 @@ window.lunrData = {
                   "docs": {},
                   "t": {
                     "docs": {
-                      "module-djipav.AudioMeter.html": {
-                        "ref": "module-djipav.AudioMeter.html",
+                      "AudioMeter_AudioMeter.html": {
+                        "ref": "AudioMeter_AudioMeter.html",
                         "tf": 3.3333333333333335
                       }
                     }
@@ -2212,12 +1596,12 @@ window.lunrData = {
                 "docs": {},
                 "r": {
                   "docs": {
-                    "module-djipav.VideoInput.html": {
-                      "ref": "module-djipav.VideoInput.html",
+                    "VideoInput.html": {
+                      "ref": "VideoInput.html",
                       "tf": 1.1111111111111112
                     },
-                    "module-djipav.VideoInput.html#destroy": {
-                      "ref": "module-djipav.VideoInput.html#destroy",
+                    "VideoInput.html#destroy": {
+                      "ref": "VideoInput.html#destroy",
                       "tf": 3.8461538461538463
                     }
                   }
@@ -2232,8 +1616,8 @@ window.lunrData = {
                   "docs": {},
                   "n": {
                     "docs": {
-                      "module-djipav.VideoInput.html#grabFrame": {
-                        "ref": "module-djipav.VideoInput.html#grabFrame",
+                      "VideoInput.html#grabFrame": {
+                        "ref": "VideoInput.html#grabFrame",
                         "tf": 6.25
                       }
                     }
@@ -2341,8 +1725,8 @@ window.lunrData = {
                                                                               "docs": {},
                                                                               "t": {
                                                                                 "docs": {
-                                                                                  "module-djipav.AudioMeter.html": {
-                                                                                    "ref": "module-djipav.AudioMeter.html",
+                                                                                  "AudioMeter_AudioMeter.html": {
+                                                                                    "ref": "AudioMeter_AudioMeter.html",
                                                                                     "tf": 3.3333333333333335
                                                                                   }
                                                                                 }
@@ -2386,8 +1770,8 @@ window.lunrData = {
                 "docs": {},
                 "c": {
                   "docs": {
-                    "module-djipav.AudioMeter.html": {
-                      "ref": "module-djipav.AudioMeter.html",
+                    "AudioMeter_AudioMeter.html": {
+                      "ref": "AudioMeter_AudioMeter.html",
                       "tf": 3.3333333333333335
                     }
                   }
@@ -2407,8 +1791,8 @@ window.lunrData = {
                     "docs": {},
                     "l": {
                       "docs": {
-                        "module-djipav.VideoInput.html": {
-                          "ref": "module-djipav.VideoInput.html",
+                        "VideoInput.html": {
+                          "ref": "VideoInput.html",
                           "tf": 1.1111111111111112
                         }
                       }
@@ -2416,27 +1800,27 @@ window.lunrData = {
                   },
                   "f": {
                     "docs": {
-                      "module-djipav.VideoInput.html": {
-                        "ref": "module-djipav.VideoInput.html",
+                      "VideoInput.html": {
+                        "ref": "VideoInput.html",
                         "tf": 1.1111111111111112
                       }
                     },
                     "i": {
                       "docs": {
-                        "module-djipav.VideoInput.html": {
-                          "ref": "module-djipav.VideoInput.html",
+                        "VideoInput.html": {
+                          "ref": "VideoInput.html",
                           "tf": 3.3333333333333335
                         },
-                        "module-djipav.VideoInput.html#fade": {
-                          "ref": "module-djipav.VideoInput.html#fade",
+                        "VideoInput.html#fade": {
+                          "ref": "VideoInput.html#fade",
                           "tf": 8.333333333333332
                         },
-                        "module-djipav.VideoInput.html#grabFrame": {
-                          "ref": "module-djipav.VideoInput.html#grabFrame",
+                        "VideoInput.html#grabFrame": {
+                          "ref": "VideoInput.html#grabFrame",
                           "tf": 6.25
                         },
-                        "module-djipav.VideoInput.html#start": {
-                          "ref": "module-djipav.VideoInput.html#start",
+                        "VideoInput.html#start": {
+                          "ref": "VideoInput.html#start",
                           "tf": 5.555555555555555
                         }
                       }
@@ -2456,36 +1840,36 @@ window.lunrData = {
                   "docs": {},
                   "m": {
                     "docs": {
-                      "module-djipav.VideoInput.html": {
-                        "ref": "module-djipav.VideoInput.html",
+                      "VideoInput.html": {
+                        "ref": "VideoInput.html",
                         "tf": 1.1111111111111112
                       },
-                      "module-djipav.VideoInput.html#constraints": {
-                        "ref": "module-djipav.VideoInput.html#constraints",
+                      "VideoInput.html#constraints": {
+                        "ref": "VideoInput.html#constraints",
                         "tf": 4.166666666666666
                       },
-                      "module-djipav.VideoInput.html#opacity": {
-                        "ref": "module-djipav.VideoInput.html#opacity",
+                      "VideoInput.html#opacity": {
+                        "ref": "VideoInput.html#opacity",
                         "tf": 5
                       },
-                      "module-djipav.VideoInput.html#settings": {
-                        "ref": "module-djipav.VideoInput.html#settings",
+                      "VideoInput.html#settings": {
+                        "ref": "VideoInput.html#settings",
                         "tf": 5
                       },
-                      "module-djipav.VideoInput.html#stream": {
-                        "ref": "module-djipav.VideoInput.html#stream",
-                        "tf": 658.3333333333334
+                      "VideoInput.html#stream": {
+                        "ref": "VideoInput.html#stream",
+                        "tf": 708.3333333333334
                       },
-                      "module-djipav.VideoInput.html#track": {
-                        "ref": "module-djipav.VideoInput.html#track",
+                      "VideoInput.html#track": {
+                        "ref": "VideoInput.html#track",
                         "tf": 6.25
                       },
-                      "module-djipav.VideoInput.html#grabFrame": {
-                        "ref": "module-djipav.VideoInput.html#grabFrame",
+                      "VideoInput.html#grabFrame": {
+                        "ref": "VideoInput.html#grabFrame",
                         "tf": 6.25
                       },
-                      "module-djipav.VideoInput.html#start": {
-                        "ref": "module-djipav.VideoInput.html#start",
+                      "VideoInput.html#start": {
+                        "ref": "VideoInput.html#start",
                         "tf": 5.555555555555555
                       }
                     }
@@ -2499,13 +1883,13 @@ window.lunrData = {
                 "docs": {},
                 "t": {
                   "docs": {
-                    "module-djipav.VideoInput.html#started": {
-                      "ref": "module-djipav.VideoInput.html#started",
-                      "tf": 660
+                    "VideoInput.html#started": {
+                      "ref": "VideoInput.html#started",
+                      "tf": 710
                     },
-                    "module-djipav.VideoInput.html#start": {
-                      "ref": "module-djipav.VideoInput.html#start",
-                      "tf": 625
+                    "VideoInput.html#start": {
+                      "ref": "VideoInput.html#start",
+                      "tf": 675
                     }
                   }
                 }
@@ -2515,9 +1899,9 @@ window.lunrData = {
               "docs": {},
               "p": {
                 "docs": {
-                  "module-djipav.VideoInput.html#stop": {
-                    "ref": "module-djipav.VideoInput.html#stop",
-                    "tf": 641.6666666666667
+                  "VideoInput.html#stop": {
+                    "ref": "VideoInput.html#stop",
+                    "tf": 691.6666666666667
                   }
                 }
               }
@@ -2527,9 +1911,9 @@ window.lunrData = {
             "docs": {},
             "t": {
               "docs": {
-                "module-djipav.VideoInput.html#settings": {
-                  "ref": "module-djipav.VideoInput.html#settings",
-                  "tf": 655
+                "VideoInput.html#settings": {
+                  "ref": "VideoInput.html#settings",
+                  "tf": 705
                 }
               }
             }
@@ -2549,56 +1933,56 @@ window.lunrData = {
                       "ref": "index.html",
                       "tf": 7.777777777777778
                     },
-                    "module-djipav.VideoInput.html": {
-                      "ref": "module-djipav.VideoInput.html",
+                    "VideoInput.html": {
+                      "ref": "VideoInput.html",
                       "tf": 4.444444444444445
                     },
-                    "module-djipav.VideoInput.html#capabilities": {
-                      "ref": "module-djipav.VideoInput.html#capabilities",
+                    "VideoInput.html#capabilities": {
+                      "ref": "VideoInput.html#capabilities",
                       "tf": 8.333333333333332
                     },
-                    "module-djipav.VideoInput.html#constraints": {
-                      "ref": "module-djipav.VideoInput.html#constraints",
+                    "VideoInput.html#constraints": {
+                      "ref": "VideoInput.html#constraints",
                       "tf": 8.333333333333332
                     },
-                    "module-djipav.VideoInput.html#opacity": {
-                      "ref": "module-djipav.VideoInput.html#opacity",
+                    "VideoInput.html#opacity": {
+                      "ref": "VideoInput.html#opacity",
                       "tf": 5
                     },
-                    "module-djipav.VideoInput.html#settings": {
-                      "ref": "module-djipav.VideoInput.html#settings",
+                    "VideoInput.html#settings": {
+                      "ref": "VideoInput.html#settings",
                       "tf": 5
                     },
-                    "module-djipav.VideoInput.html#started": {
-                      "ref": "module-djipav.VideoInput.html#started",
+                    "VideoInput.html#started": {
+                      "ref": "VideoInput.html#started",
                       "tf": 10
                     },
-                    "module-djipav.VideoInput.html#track": {
-                      "ref": "module-djipav.VideoInput.html#track",
+                    "VideoInput.html#track": {
+                      "ref": "VideoInput.html#track",
                       "tf": 6.25
                     },
-                    "module-djipav.VideoInput.html#video": {
-                      "ref": "module-djipav.VideoInput.html#video",
-                      "tf": 655.5555555555555
+                    "VideoInput.html#video": {
+                      "ref": "VideoInput.html#video",
+                      "tf": 705.5555555555555
                     },
-                    "module-djipav.VideoInput.html#fadeIn": {
-                      "ref": "module-djipav.VideoInput.html#fadeIn",
+                    "VideoInput.html#fadeIn": {
+                      "ref": "VideoInput.html#fadeIn",
                       "tf": 7.142857142857142
                     },
-                    "module-djipav.VideoInput.html#fadeOut": {
-                      "ref": "module-djipav.VideoInput.html#fadeOut",
+                    "VideoInput.html#fadeOut": {
+                      "ref": "VideoInput.html#fadeOut",
                       "tf": 6.25
                     },
-                    "module-djipav.VideoInput.html#grabFrame": {
-                      "ref": "module-djipav.VideoInput.html#grabFrame",
+                    "VideoInput.html#grabFrame": {
+                      "ref": "VideoInput.html#grabFrame",
                       "tf": 6.25
                     },
-                    "module-djipav.VideoInput.html#start": {
-                      "ref": "module-djipav.VideoInput.html#start",
+                    "VideoInput.html#start": {
+                      "ref": "VideoInput.html#start",
                       "tf": 2.7777777777777777
                     },
-                    "module-djipav.VideoInput.html#stop": {
-                      "ref": "module-djipav.VideoInput.html#stop",
+                    "VideoInput.html#stop": {
+                      "ref": "VideoInput.html#stop",
                       "tf": 8.333333333333332
                     }
                   },
@@ -2612,12 +1996,12 @@ window.lunrData = {
                           "docs": {},
                           "t": {
                             "docs": {
-                              "module-djipav.VideoInput.html": {
-                                "ref": "module-djipav.VideoInput.html",
-                                "tf": 651.1111111111111
+                              "VideoInput.html": {
+                                "ref": "VideoInput.html",
+                                "tf": 1901.111111111111
                               },
-                              "module-djipav.VideoInput.html#start": {
-                                "ref": "module-djipav.VideoInput.html#start",
+                              "VideoInput.html#start": {
+                                "ref": "VideoInput.html#start",
                                 "tf": 2.7777777777777777
                               }
                             },
@@ -2629,9 +2013,9 @@ window.lunrData = {
                                   "docs": {},
                                   "p": {
                                     "docs": {
-                                      "module-djipav.VideoInput.html#capabilities": {
-                                        "ref": "module-djipav.VideoInput.html#capabilities",
-                                        "tf": 100
+                                      "VideoInput.html#capabilities": {
+                                        "ref": "VideoInput.html#capabilities",
+                                        "tf": 1150
                                       }
                                     },
                                     "t": {
@@ -2640,9 +2024,9 @@ window.lunrData = {
                                         "docs": {},
                                         "r": {
                                           "docs": {
-                                            "module-djipav.VideoInput.html#capture": {
-                                              "ref": "module-djipav.VideoInput.html#capture",
-                                              "tf": 100
+                                            "VideoInput.html#capture": {
+                                              "ref": "VideoInput.html#capture",
+                                              "tf": 1150
                                             }
                                           }
                                         }
@@ -2663,9 +2047,9 @@ window.lunrData = {
                                               "docs": {},
                                               "d": {
                                                 "docs": {
-                                                  "module-djipav.VideoInput.html#cancelFade": {
-                                                    "ref": "module-djipav.VideoInput.html#cancelFade",
-                                                    "tf": 100
+                                                  "VideoInput.html#cancelFade": {
+                                                    "ref": "VideoInput.html#cancelFade",
+                                                    "tf": 1150
                                                   }
                                                 }
                                               }
@@ -2694,9 +2078,9 @@ window.lunrData = {
                                                 "docs": {},
                                                 "t": {
                                                   "docs": {
-                                                    "module-djipav.VideoInput.html#constraints": {
-                                                      "ref": "module-djipav.VideoInput.html#constraints",
-                                                      "tf": 100
+                                                    "VideoInput.html#constraints": {
+                                                      "ref": "VideoInput.html#constraints",
+                                                      "tf": 1150
                                                     }
                                                   }
                                                 }
@@ -2717,9 +2101,9 @@ window.lunrData = {
                                     "docs": {},
                                     "c": {
                                       "docs": {
-                                        "module-djipav.VideoInput.html#opacity": {
-                                          "ref": "module-djipav.VideoInput.html#opacity",
-                                          "tf": 100
+                                        "VideoInput.html#opacity": {
+                                          "ref": "VideoInput.html#opacity",
+                                          "tf": 1150
                                         }
                                       }
                                     }
@@ -2732,9 +2116,9 @@ window.lunrData = {
                                   "docs": {},
                                   "t": {
                                     "docs": {
-                                      "module-djipav.VideoInput.html#settings": {
-                                        "ref": "module-djipav.VideoInput.html#settings",
-                                        "tf": 100
+                                      "VideoInput.html#settings": {
+                                        "ref": "VideoInput.html#settings",
+                                        "tf": 1150
                                       }
                                     }
                                   }
@@ -2747,13 +2131,13 @@ window.lunrData = {
                                       "docs": {},
                                       "t": {
                                         "docs": {
-                                          "module-djipav.VideoInput.html#started": {
-                                            "ref": "module-djipav.VideoInput.html#started",
-                                            "tf": 100
+                                          "VideoInput.html#started": {
+                                            "ref": "VideoInput.html#started",
+                                            "tf": 1150
                                           },
-                                          "module-djipav.VideoInput.html#start": {
-                                            "ref": "module-djipav.VideoInput.html#start",
-                                            "tf": 100
+                                          "VideoInput.html#start": {
+                                            "ref": "VideoInput.html#start",
+                                            "tf": 1150
                                           }
                                         }
                                       }
@@ -2767,9 +2151,9 @@ window.lunrData = {
                                         "docs": {},
                                         "m": {
                                           "docs": {
-                                            "module-djipav.VideoInput.html#stream": {
-                                              "ref": "module-djipav.VideoInput.html#stream",
-                                              "tf": 100
+                                            "VideoInput.html#stream": {
+                                              "ref": "VideoInput.html#stream",
+                                              "tf": 1150
                                             }
                                           }
                                         }
@@ -2780,9 +2164,9 @@ window.lunrData = {
                                     "docs": {},
                                     "p": {
                                       "docs": {
-                                        "module-djipav.VideoInput.html#stop": {
-                                          "ref": "module-djipav.VideoInput.html#stop",
-                                          "tf": 100
+                                        "VideoInput.html#stop": {
+                                          "ref": "VideoInput.html#stop",
+                                          "tf": 1150
                                         }
                                       }
                                     }
@@ -2803,9 +2187,9 @@ window.lunrData = {
                                           "docs": {},
                                           "t": {
                                             "docs": {
-                                              "module-djipav.VideoInput.html#timeouts": {
-                                                "ref": "module-djipav.VideoInput.html#timeouts",
-                                                "tf": 100
+                                              "VideoInput.html#timeouts": {
+                                                "ref": "VideoInput.html#timeouts",
+                                                "tf": 1150
                                               }
                                             }
                                           }
@@ -2822,9 +2206,9 @@ window.lunrData = {
                                       "docs": {},
                                       "k": {
                                         "docs": {
-                                          "module-djipav.VideoInput.html#track": {
-                                            "ref": "module-djipav.VideoInput.html#track",
-                                            "tf": 100
+                                          "VideoInput.html#track": {
+                                            "ref": "VideoInput.html#track",
+                                            "tf": 1150
                                           }
                                         }
                                       }
@@ -2842,9 +2226,9 @@ window.lunrData = {
                                       "docs": {},
                                       "o": {
                                         "docs": {
-                                          "module-djipav.VideoInput.html#video": {
-                                            "ref": "module-djipav.VideoInput.html#video",
-                                            "tf": 100
+                                          "VideoInput.html#video": {
+                                            "ref": "VideoInput.html#video",
+                                            "tf": 1150
                                           }
                                         }
                                       }
@@ -2866,9 +2250,9 @@ window.lunrData = {
                                           "docs": {},
                                           "y": {
                                             "docs": {
-                                              "module-djipav.VideoInput.html#destroy": {
-                                                "ref": "module-djipav.VideoInput.html#destroy",
-                                                "tf": 100
+                                              "VideoInput.html#destroy": {
+                                                "ref": "VideoInput.html#destroy",
+                                                "tf": 1150
                                               }
                                             }
                                           }
@@ -2884,9 +2268,9 @@ window.lunrData = {
                                   "docs": {},
                                   "d": {
                                     "docs": {
-                                      "module-djipav.VideoInput.html#fade": {
-                                        "ref": "module-djipav.VideoInput.html#fade",
-                                        "tf": 100
+                                      "VideoInput.html#fade": {
+                                        "ref": "VideoInput.html#fade",
+                                        "tf": 1150
                                       }
                                     },
                                     "e": {
@@ -2895,9 +2279,9 @@ window.lunrData = {
                                         "docs": {},
                                         "n": {
                                           "docs": {
-                                            "module-djipav.VideoInput.html#fadeIn": {
-                                              "ref": "module-djipav.VideoInput.html#fadeIn",
-                                              "tf": 100
+                                            "VideoInput.html#fadeIn": {
+                                              "ref": "VideoInput.html#fadeIn",
+                                              "tf": 1150
                                             }
                                           }
                                         }
@@ -2908,9 +2292,9 @@ window.lunrData = {
                                           "docs": {},
                                           "t": {
                                             "docs": {
-                                              "module-djipav.VideoInput.html#fadeOut": {
-                                                "ref": "module-djipav.VideoInput.html#fadeOut",
-                                                "tf": 100
+                                              "VideoInput.html#fadeOut": {
+                                                "ref": "VideoInput.html#fadeOut",
+                                                "tf": 1150
                                               }
                                             }
                                           }
@@ -2936,9 +2320,9 @@ window.lunrData = {
                                             "docs": {},
                                             "m": {
                                               "docs": {
-                                                "module-djipav.VideoInput.html#grabFrame": {
-                                                  "ref": "module-djipav.VideoInput.html#grabFrame",
-                                                  "tf": 100
+                                                "VideoInput.html#grabFrame": {
+                                                  "ref": "VideoInput.html#grabFrame",
+                                                  "tf": 1150
                                                 }
                                               }
                                             }
@@ -2960,8 +2344,8 @@ window.lunrData = {
             },
             "a": {
               "docs": {
-                "module-djipav.VideoInput.html": {
-                  "ref": "module-djipav.VideoInput.html",
+                "VideoInput.html": {
+                  "ref": "VideoInput.html",
                   "tf": 1.1111111111111112
                 }
               }
@@ -2970,8 +2354,8 @@ window.lunrData = {
               "docs": {},
               "w": {
                 "docs": {
-                  "module-djipav.VideoInput.html": {
-                    "ref": "module-djipav.VideoInput.html",
+                  "VideoInput.html": {
+                    "ref": "VideoInput.html",
                     "tf": 1.1111111111111112
                   }
                 }
@@ -2985,8 +2369,8 @@ window.lunrData = {
                   "docs": {},
                   "l": {
                     "docs": {
-                      "module-djipav.VideoInput.html": {
-                        "ref": "module-djipav.VideoInput.html",
+                      "VideoInput.html": {
+                        "ref": "VideoInput.html",
                         "tf": 1.1111111111111112
                       }
                     }
@@ -3001,12 +2385,12 @@ window.lunrData = {
               "docs": {},
               "u": {
                 "docs": {
-                  "module-djipav.VideoInput.html": {
-                    "ref": "module-djipav.VideoInput.html",
+                  "VideoInput.html": {
+                    "ref": "VideoInput.html",
                     "tf": 1.1111111111111112
                   },
-                  "module-djipav.VideoInput.html#constraints": {
-                    "ref": "module-djipav.VideoInput.html#constraints",
+                  "VideoInput.html#constraints": {
+                    "ref": "VideoInput.html#constraints",
                     "tf": 4.166666666666666
                   }
                 }
@@ -3062,8 +2446,8 @@ window.lunrData = {
                     "docs": {},
                     "r": {
                       "docs": {
-                        "module-djipav.VideoInput.html#started": {
-                          "ref": "module-djipav.VideoInput.html#started",
+                        "VideoInput.html#started": {
+                          "ref": "VideoInput.html#started",
                           "tf": 10
                         }
                       }
@@ -3102,12 +2486,12 @@ window.lunrData = {
               "docs": {},
               "b": {
                 "docs": {
-                  "module-djipav.VideoInput.html#capture": {
-                    "ref": "module-djipav.VideoInput.html#capture",
+                  "VideoInput.html#capture": {
+                    "ref": "VideoInput.html#capture",
                     "tf": 6.25
                   },
-                  "module-djipav.VideoInput.html#grabFrame": {
-                    "ref": "module-djipav.VideoInput.html#grabFrame",
+                  "VideoInput.html#grabFrame": {
+                    "ref": "VideoInput.html#grabFrame",
                     "tf": 6.25
                   }
                 },
@@ -3119,9 +2503,9 @@ window.lunrData = {
                       "docs": {},
                       "m": {
                         "docs": {
-                          "module-djipav.VideoInput.html#grabFrame": {
-                            "ref": "module-djipav.VideoInput.html#grabFrame",
-                            "tf": 625
+                          "VideoInput.html#grabFrame": {
+                            "ref": "VideoInput.html#grabFrame",
+                            "tf": 675
                           }
                         }
                       }
@@ -3146,21 +2530,17 @@ window.lunrData = {
                       "ref": "list_class.html",
                       "tf": 635
                     },
-                    "module-djipav.AudioMeter.html": {
-                      "ref": "module-djipav.AudioMeter.html",
+                    "AudioMeter_AudioMeter.html": {
+                      "ref": "AudioMeter_AudioMeter.html",
                       "tf": 110
                     },
-                    "module-djipav.VideoInput.html": {
-                      "ref": "module-djipav.VideoInput.html",
+                    "VideoInput.html": {
+                      "ref": "VideoInput.html",
                       "tf": 110
                     },
-                    "module-djipav.VideoInput.html#timeouts": {
-                      "ref": "module-djipav.VideoInput.html#timeouts",
+                    "VideoInput.html#timeouts": {
+                      "ref": "VideoInput.html#timeouts",
                       "tf": 5.555555555555555
-                    },
-                    "module-djipav-AudioMeter.html": {
-                      "ref": "module-djipav-AudioMeter.html",
-                      "tf": 110
                     }
                   }
                 }
@@ -3175,8 +2555,8 @@ window.lunrData = {
                 "docs": {},
                 "n": {
                   "docs": {
-                    "module-djipav.AudioMeter.html": {
-                      "ref": "module-djipav.AudioMeter.html",
+                    "AudioMeter_AudioMeter.html": {
+                      "ref": "AudioMeter_AudioMeter.html",
                       "tf": 3.3333333333333335
                     }
                   }
@@ -3196,8 +2576,8 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-djipav.AudioMeter.html": {
-                          "ref": "module-djipav.AudioMeter.html",
+                        "AudioMeter_AudioMeter.html": {
+                          "ref": "AudioMeter_AudioMeter.html",
                           "tf": 3.3333333333333335
                         }
                       }
@@ -3219,16 +2599,16 @@ window.lunrData = {
                           "docs": {},
                           "t": {
                             "docs": {
-                              "module-djipav.VideoInput.html": {
-                                "ref": "module-djipav.VideoInput.html",
+                              "VideoInput.html": {
+                                "ref": "VideoInput.html",
                                 "tf": 1.1111111111111112
                               },
-                              "module-djipav.VideoInput.html#constraints": {
-                                "ref": "module-djipav.VideoInput.html#constraints",
-                                "tf": 654.1666666666666
+                              "VideoInput.html#constraints": {
+                                "ref": "VideoInput.html#constraints",
+                                "tf": 704.1666666666666
                               },
-                              "module-djipav.VideoInput.html#start": {
-                                "ref": "module-djipav.VideoInput.html#start",
+                              "VideoInput.html#start": {
+                                "ref": "VideoInput.html#start",
                                 "tf": 2.7777777777777777
                               }
                             }
@@ -3242,8 +2622,8 @@ window.lunrData = {
                         "docs": {},
                         "t": {
                           "docs": {
-                            "module-djipav.VideoInput.html#start": {
-                              "ref": "module-djipav.VideoInput.html#start",
+                            "VideoInput.html#start": {
+                              "ref": "VideoInput.html#start",
                               "tf": 2.7777777777777777
                             }
                           }
@@ -3261,8 +2641,8 @@ window.lunrData = {
                     "docs": {},
                     "n": {
                       "docs": {
-                        "module-djipav.VideoInput.html#timeouts": {
-                          "ref": "module-djipav.VideoInput.html#timeouts",
+                        "VideoInput.html#timeouts": {
+                          "ref": "VideoInput.html#timeouts",
                           "tf": 5.555555555555555
                         }
                       }
@@ -3280,12 +2660,12 @@ window.lunrData = {
                 "docs": {},
                 "t": {
                   "docs": {
-                    "module-djipav.AudioMeter.html": {
-                      "ref": "module-djipav.AudioMeter.html",
+                    "AudioMeter_AudioMeter.html": {
+                      "ref": "AudioMeter_AudioMeter.html",
                       "tf": 3.3333333333333335
                     },
-                    "module-djipav.VideoInput.html": {
-                      "ref": "module-djipav.VideoInput.html",
+                    "VideoInput.html": {
+                      "ref": "VideoInput.html",
                       "tf": 3.3333333333333335
                     }
                   }
@@ -3303,9 +2683,9 @@ window.lunrData = {
                   "docs": {},
                   "l": {
                     "docs": {
-                      "module-djipav.VideoInput.html#capabilities": {
-                        "ref": "module-djipav.VideoInput.html#capabilities",
-                        "tf": 654.1666666666666
+                      "VideoInput.html#capabilities": {
+                        "ref": "VideoInput.html#capabilities",
+                        "tf": 704.1666666666666
                       }
                     }
                   }
@@ -3317,9 +2697,9 @@ window.lunrData = {
                   "docs": {},
                   "r": {
                     "docs": {
-                      "module-djipav.VideoInput.html#capture": {
-                        "ref": "module-djipav.VideoInput.html#capture",
-                        "tf": 650
+                      "VideoInput.html#capture": {
+                        "ref": "VideoInput.html#capture",
+                        "tf": 700
                       }
                     }
                   }
@@ -3334,8 +2714,8 @@ window.lunrData = {
                   "docs": {},
                   "l": {
                     "docs": {
-                      "module-djipav.VideoInput.html#cancelFade": {
-                        "ref": "module-djipav.VideoInput.html#cancelFade",
+                      "VideoInput.html#cancelFade": {
+                        "ref": "VideoInput.html#cancelFade",
                         "tf": 7.142857142857142
                       }
                     },
@@ -3345,9 +2725,9 @@ window.lunrData = {
                         "docs": {},
                         "d": {
                           "docs": {
-                            "module-djipav.VideoInput.html#cancelFade": {
-                              "ref": "module-djipav.VideoInput.html#cancelFade",
-                              "tf": 700
+                            "VideoInput.html#cancelFade": {
+                              "ref": "VideoInput.html#cancelFade",
+                              "tf": 750
                             }
                           }
                         }
@@ -3361,8 +2741,8 @@ window.lunrData = {
               "docs": {},
               "l": {
                 "docs": {
-                  "module-djipav.VideoInput.html#destroy": {
-                    "ref": "module-djipav.VideoInput.html#destroy",
+                  "VideoInput.html#destroy": {
+                    "ref": "VideoInput.html#destroy",
                     "tf": 3.8461538461538463
                   }
                 }
@@ -3381,24 +2761,24 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-djipav.VideoInput.html#capabilities": {
-                          "ref": "module-djipav.VideoInput.html#capabilities",
+                        "VideoInput.html#capabilities": {
+                          "ref": "VideoInput.html#capabilities",
                           "tf": 4.166666666666666
                         },
-                        "module-djipav.VideoInput.html#started": {
-                          "ref": "module-djipav.VideoInput.html#started",
+                        "VideoInput.html#started": {
+                          "ref": "VideoInput.html#started",
                           "tf": 10
                         },
-                        "module-djipav.VideoInput.html#stream": {
-                          "ref": "module-djipav.VideoInput.html#stream",
+                        "VideoInput.html#stream": {
+                          "ref": "VideoInput.html#stream",
                           "tf": 8.333333333333332
                         },
-                        "module-djipav.VideoInput.html#track": {
-                          "ref": "module-djipav.VideoInput.html#track",
+                        "VideoInput.html#track": {
+                          "ref": "VideoInput.html#track",
                           "tf": 6.25
                         },
-                        "module-djipav.VideoInput.html#cancelFade": {
-                          "ref": "module-djipav.VideoInput.html#cancelFade",
+                        "VideoInput.html#cancelFade": {
+                          "ref": "VideoInput.html#cancelFade",
                           "tf": 7.142857142857142
                         }
                       }
@@ -3415,12 +2795,12 @@ window.lunrData = {
             "docs": {},
             "w": {
               "docs": {
-                "module-djipav.AudioMeter.html": {
-                  "ref": "module-djipav.AudioMeter.html",
+                "AudioMeter_AudioMeter.html": {
+                  "ref": "AudioMeter_AudioMeter.html",
                   "tf": 3.3333333333333335
                 },
-                "module-djipav.VideoInput.html": {
-                  "ref": "module-djipav.VideoInput.html",
+                "VideoInput.html": {
+                  "ref": "VideoInput.html",
                   "tf": 2.2222222222222223
                 }
               }
@@ -3432,8 +2812,8 @@ window.lunrData = {
               "docs": {},
               "e": {
                 "docs": {
-                  "module-djipav.AudioMeter.html": {
-                    "ref": "module-djipav.AudioMeter.html",
+                  "AudioMeter_AudioMeter.html": {
+                    "ref": "AudioMeter_AudioMeter.html",
                     "tf": 3.3333333333333335
                   }
                 }
@@ -3443,8 +2823,8 @@ window.lunrData = {
               "docs": {},
               "e": {
                 "docs": {
-                  "module-djipav.VideoInput.html#video": {
-                    "ref": "module-djipav.VideoInput.html#video",
+                  "VideoInput.html#video": {
+                    "ref": "VideoInput.html#video",
                     "tf": 5.555555555555555
                   }
                 }
@@ -3457,20 +2837,20 @@ window.lunrData = {
               "docs": {},
               "l": {
                 "docs": {
-                  "module-djipav.VideoInput.html#capabilities": {
-                    "ref": "module-djipav.VideoInput.html#capabilities",
+                  "VideoInput.html#capabilities": {
+                    "ref": "VideoInput.html#capabilities",
                     "tf": 4.166666666666666
                   },
-                  "module-djipav.VideoInput.html#settings": {
-                    "ref": "module-djipav.VideoInput.html#settings",
+                  "VideoInput.html#settings": {
+                    "ref": "VideoInput.html#settings",
                     "tf": 5
                   },
-                  "module-djipav.VideoInput.html#track": {
-                    "ref": "module-djipav.VideoInput.html#track",
+                  "VideoInput.html#track": {
+                    "ref": "VideoInput.html#track",
                     "tf": 6.25
                   },
-                  "module-djipav.VideoInput.html#video": {
-                    "ref": "module-djipav.VideoInput.html#video",
+                  "VideoInput.html#video": {
+                    "ref": "VideoInput.html#video",
                     "tf": 5.555555555555555
                   }
                 }
@@ -3484,8 +2864,8 @@ window.lunrData = {
                   "docs": {},
                   "r": {
                     "docs": {
-                      "module-djipav.VideoInput.html#opacity": {
-                        "ref": "module-djipav.VideoInput.html#opacity",
+                      "VideoInput.html#opacity": {
+                        "ref": "VideoInput.html#opacity",
                         "tf": 50
                       }
                     }
@@ -3507,36 +2887,36 @@ window.lunrData = {
                   "docs": {},
                   "t": {
                     "docs": {
-                      "module-djipav.AudioMeter.html": {
-                        "ref": "module-djipav.AudioMeter.html",
+                      "AudioMeter_AudioMeter.html": {
+                        "ref": "AudioMeter_AudioMeter.html",
                         "tf": 3.3333333333333335
                       },
-                      "module-djipav.VideoInput.html": {
-                        "ref": "module-djipav.VideoInput.html",
+                      "VideoInput.html": {
+                        "ref": "VideoInput.html",
                         "tf": 1.1111111111111112
                       },
-                      "module-djipav.VideoInput.html#capabilities": {
-                        "ref": "module-djipav.VideoInput.html#capabilities",
+                      "VideoInput.html#capabilities": {
+                        "ref": "VideoInput.html#capabilities",
                         "tf": 4.166666666666666
                       },
-                      "module-djipav.VideoInput.html#capture": {
-                        "ref": "module-djipav.VideoInput.html#capture",
+                      "VideoInput.html#capture": {
+                        "ref": "VideoInput.html#capture",
                         "tf": 6.25
                       },
-                      "module-djipav.VideoInput.html#settings": {
-                        "ref": "module-djipav.VideoInput.html#settings",
+                      "VideoInput.html#settings": {
+                        "ref": "VideoInput.html#settings",
                         "tf": 5
                       },
-                      "module-djipav.VideoInput.html#timeouts": {
-                        "ref": "module-djipav.VideoInput.html#timeouts",
+                      "VideoInput.html#timeouts": {
+                        "ref": "VideoInput.html#timeouts",
                         "tf": 55.55555555555556
                       },
-                      "module-djipav.VideoInput.html#destroy": {
-                        "ref": "module-djipav.VideoInput.html#destroy",
+                      "VideoInput.html#destroy": {
+                        "ref": "VideoInput.html#destroy",
                         "tf": 7.6923076923076925
                       },
-                      "module-djipav.VideoInput.html#start": {
-                        "ref": "module-djipav.VideoInput.html#start",
+                      "VideoInput.html#start": {
+                        "ref": "VideoInput.html#start",
                         "tf": 2.7777777777777777
                       }
                     }
@@ -3551,12 +2931,12 @@ window.lunrData = {
               "docs": {},
               "n": {
                 "docs": {
-                  "module-djipav.VideoInput.html#capabilities": {
-                    "ref": "module-djipav.VideoInput.html#capabilities",
+                  "VideoInput.html#capabilities": {
+                    "ref": "VideoInput.html#capabilities",
                     "tf": 4.166666666666666
                   },
-                  "module-djipav.VideoInput.html#settings": {
-                    "ref": "module-djipav.VideoInput.html#settings",
+                  "VideoInput.html#settings": {
+                    "ref": "VideoInput.html#settings",
                     "tf": 5
                   }
                 }
@@ -3566,9 +2946,9 @@ window.lunrData = {
               "docs": {},
               "c": {
                 "docs": {
-                  "module-djipav.VideoInput.html#opacity": {
-                    "ref": "module-djipav.VideoInput.html#opacity",
-                    "tf": 655
+                  "VideoInput.html#opacity": {
+                    "ref": "VideoInput.html#opacity",
+                    "tf": 705
                   }
                 }
               }
@@ -3581,12 +2961,12 @@ window.lunrData = {
                   "docs": {},
                   "n": {
                     "docs": {
-                      "module-djipav.VideoInput.html#grabFrame": {
-                        "ref": "module-djipav.VideoInput.html#grabFrame",
+                      "VideoInput.html#grabFrame": {
+                        "ref": "VideoInput.html#grabFrame",
                         "tf": 25
                       },
-                      "module-djipav.VideoInput.html#start": {
-                        "ref": "module-djipav.VideoInput.html#start",
+                      "VideoInput.html#start": {
+                        "ref": "VideoInput.html#start",
                         "tf": 25
                       }
                     }
@@ -3597,8 +2977,8 @@ window.lunrData = {
           },
           "n": {
             "docs": {
-              "module-djipav.VideoInput.html#start": {
-                "ref": "module-djipav.VideoInput.html#start",
+              "VideoInput.html#start": {
+                "ref": "VideoInput.html#start",
                 "tf": 2.7777777777777777
               }
             },
@@ -3606,8 +2986,8 @@ window.lunrData = {
               "docs": {},
               "o": {
                 "docs": {
-                  "module-djipav.VideoInput.html#cancelFade": {
-                    "ref": "module-djipav.VideoInput.html#cancelFade",
+                  "VideoInput.html#cancelFade": {
+                    "ref": "VideoInput.html#cancelFade",
                     "tf": 7.142857142857142
                   }
                 }
@@ -3618,16 +2998,16 @@ window.lunrData = {
             "docs": {},
             "t": {
               "docs": {
-                "module-djipav.VideoInput.html#cancelFade": {
-                  "ref": "module-djipav.VideoInput.html#cancelFade",
+                "VideoInput.html#cancelFade": {
+                  "ref": "VideoInput.html#cancelFade",
                   "tf": 7.142857142857142
                 },
-                "module-djipav.VideoInput.html#fade": {
-                  "ref": "module-djipav.VideoInput.html#fade",
+                "VideoInput.html#fade": {
+                  "ref": "VideoInput.html#fade",
                   "tf": 8.333333333333332
                 },
-                "module-djipav.VideoInput.html#fadeOut": {
-                  "ref": "module-djipav.VideoInput.html#fadeOut",
+                "VideoInput.html#fadeOut": {
+                  "ref": "VideoInput.html#fadeOut",
                   "tf": 6.25
                 }
               }
@@ -3650,12 +3030,12 @@ window.lunrData = {
                       "docs": {},
                       "i": {
                         "docs": {
-                          "module-djipav.AudioMeter.html": {
-                            "ref": "module-djipav.AudioMeter.html",
+                          "AudioMeter_AudioMeter.html": {
+                            "ref": "AudioMeter_AudioMeter.html",
                             "tf": 3.3333333333333335
                           },
-                          "module-djipav.VideoInput.html": {
-                            "ref": "module-djipav.VideoInput.html",
+                          "VideoInput.html": {
+                            "ref": "VideoInput.html",
                             "tf": 1.1111111111111112
                           }
                         }
@@ -3665,8 +3045,8 @@ window.lunrData = {
                       "docs": {},
                       "i": {
                         "docs": {
-                          "module-djipav.VideoInput.html#destroy": {
-                            "ref": "module-djipav.VideoInput.html#destroy",
+                          "VideoInput.html#destroy": {
+                            "ref": "VideoInput.html#destroy",
                             "tf": 3.8461538461538463
                           }
                         }
@@ -3683,8 +3063,8 @@ window.lunrData = {
                     "docs": {},
                     "s": {
                       "docs": {
-                        "module-djipav.VideoInput.html#destroy": {
-                          "ref": "module-djipav.VideoInput.html#destroy",
+                        "VideoInput.html#destroy": {
+                          "ref": "VideoInput.html#destroy",
                           "tf": 3.8461538461538463
                         }
                       }
@@ -3724,28 +3104,28 @@ window.lunrData = {
                                             "docs": {},
                                             "t": {
                                               "docs": {
-                                                "module-djipav.VideoInput.html#destroy": {
-                                                  "ref": "module-djipav.VideoInput.html#destroy",
+                                                "VideoInput.html#destroy": {
+                                                  "ref": "VideoInput.html#destroy",
                                                   "tf": 33.33333333333333
                                                 },
-                                                "module-djipav.VideoInput.html#fade": {
-                                                  "ref": "module-djipav.VideoInput.html#fade",
+                                                "VideoInput.html#fade": {
+                                                  "ref": "VideoInput.html#fade",
                                                   "tf": 20
                                                 },
-                                                "module-djipav.VideoInput.html#fadeIn": {
-                                                  "ref": "module-djipav.VideoInput.html#fadeIn",
+                                                "VideoInput.html#fadeIn": {
+                                                  "ref": "VideoInput.html#fadeIn",
                                                   "tf": 25
                                                 },
-                                                "module-djipav.VideoInput.html#fadeOut": {
-                                                  "ref": "module-djipav.VideoInput.html#fadeOut",
+                                                "VideoInput.html#fadeOut": {
+                                                  "ref": "VideoInput.html#fadeOut",
                                                   "tf": 25
                                                 },
-                                                "module-djipav.VideoInput.html#start": {
-                                                  "ref": "module-djipav.VideoInput.html#start",
+                                                "VideoInput.html#start": {
+                                                  "ref": "VideoInput.html#start",
                                                   "tf": 25
                                                 },
-                                                "module-djipav.VideoInput.html#stop": {
-                                                  "ref": "module-djipav.VideoInput.html#stop",
+                                                "VideoInput.html#stop": {
+                                                  "ref": "VideoInput.html#stop",
                                                   "tf": 33.33333333333333
                                                 }
                                               }
@@ -3818,8 +3198,8 @@ window.lunrData = {
                                                                                             "docs": {},
                                                                                             "t": {
                                                                                               "docs": {
-                                                                                                "module-djipav.VideoInput.html#grabFrame": {
-                                                                                                  "ref": "module-djipav.VideoInput.html#grabFrame",
+                                                                                                "VideoInput.html#grabFrame": {
+                                                                                                  "ref": "VideoInput.html#grabFrame",
                                                                                                   "tf": 25
                                                                                                 }
                                                                                               }
@@ -3872,8 +3252,8 @@ window.lunrData = {
                   "docs": {},
                   "s": {
                     "docs": {
-                      "module-djipav.VideoInput.html#settings": {
-                        "ref": "module-djipav.VideoInput.html#settings",
+                      "VideoInput.html#settings": {
+                        "ref": "VideoInput.html#settings",
                         "tf": 5
                       }
                     }
@@ -3894,8 +3274,8 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-djipav.VideoInput.html": {
-                          "ref": "module-djipav.VideoInput.html",
+                        "VideoInput.html": {
+                          "ref": "VideoInput.html",
                           "tf": 1.1111111111111112
                         }
                       }
@@ -3909,8 +3289,8 @@ window.lunrData = {
             "docs": {},
             "r": {
               "docs": {
-                "module-djipav.VideoInput.html#capture": {
-                  "ref": "module-djipav.VideoInput.html#capture",
+                "VideoInput.html#capture": {
+                  "ref": "VideoInput.html#capture",
                   "tf": 6.25
                 }
               }
@@ -3921,48 +3301,48 @@ window.lunrData = {
           "docs": {},
           "s": {
             "docs": {
-              "module-djipav.AudioMeter.html": {
-                "ref": "module-djipav.AudioMeter.html",
+              "AudioMeter_AudioMeter.html": {
+                "ref": "AudioMeter_AudioMeter.html",
                 "tf": 3.3333333333333335
               },
-              "module-djipav.VideoInput.html": {
-                "ref": "module-djipav.VideoInput.html",
+              "VideoInput.html": {
+                "ref": "VideoInput.html",
                 "tf": 2.2222222222222223
               },
-              "module-djipav.VideoInput.html#capture": {
-                "ref": "module-djipav.VideoInput.html#capture",
+              "VideoInput.html#capture": {
+                "ref": "VideoInput.html#capture",
                 "tf": 6.25
               },
-              "module-djipav.VideoInput.html#constraints": {
-                "ref": "module-djipav.VideoInput.html#constraints",
+              "VideoInput.html#constraints": {
+                "ref": "VideoInput.html#constraints",
                 "tf": 4.166666666666666
               },
-              "module-djipav.VideoInput.html#opacity": {
-                "ref": "module-djipav.VideoInput.html#opacity",
+              "VideoInput.html#opacity": {
+                "ref": "VideoInput.html#opacity",
                 "tf": 5
               },
-              "module-djipav.VideoInput.html#stream": {
-                "ref": "module-djipav.VideoInput.html#stream",
+              "VideoInput.html#stream": {
+                "ref": "VideoInput.html#stream",
                 "tf": 8.333333333333332
               },
-              "module-djipav.VideoInput.html#timeouts": {
-                "ref": "module-djipav.VideoInput.html#timeouts",
+              "VideoInput.html#timeouts": {
+                "ref": "VideoInput.html#timeouts",
                 "tf": 11.11111111111111
               },
-              "module-djipav.VideoInput.html#track": {
-                "ref": "module-djipav.VideoInput.html#track",
+              "VideoInput.html#track": {
+                "ref": "VideoInput.html#track",
                 "tf": 6.25
               },
-              "module-djipav.VideoInput.html#video": {
-                "ref": "module-djipav.VideoInput.html#video",
+              "VideoInput.html#video": {
+                "ref": "VideoInput.html#video",
                 "tf": 11.11111111111111
               },
-              "module-djipav.VideoInput.html#fadeIn": {
-                "ref": "module-djipav.VideoInput.html#fadeIn",
+              "VideoInput.html#fadeIn": {
+                "ref": "VideoInput.html#fadeIn",
                 "tf": 7.142857142857142
               },
-              "module-djipav.VideoInput.html#fadeOut": {
-                "ref": "module-djipav.VideoInput.html#fadeOut",
+              "VideoInput.html#fadeOut": {
+                "ref": "VideoInput.html#fadeOut",
                 "tf": 6.25
               }
             }
@@ -3973,8 +3353,8 @@ window.lunrData = {
               "docs": {},
               "n": {
                 "docs": {
-                  "module-djipav.VideoInput.html#start": {
-                    "ref": "module-djipav.VideoInput.html#start",
+                  "VideoInput.html#start": {
+                    "ref": "VideoInput.html#start",
                     "tf": 2.7777777777777777
                   }
                 }
@@ -3996,32 +3376,32 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-djipav.VideoInput.html": {
-                          "ref": "module-djipav.VideoInput.html",
+                        "VideoInput.html": {
+                          "ref": "VideoInput.html",
                           "tf": 4.444444444444445
                         },
-                        "module-djipav.VideoInput.html#opacity": {
-                          "ref": "module-djipav.VideoInput.html#opacity",
+                        "VideoInput.html#opacity": {
+                          "ref": "VideoInput.html#opacity",
                           "tf": 5
                         },
-                        "module-djipav.VideoInput.html#video": {
-                          "ref": "module-djipav.VideoInput.html#video",
+                        "VideoInput.html#video": {
+                          "ref": "VideoInput.html#video",
                           "tf": 5.555555555555555
                         },
-                        "module-djipav.VideoInput.html#fade": {
-                          "ref": "module-djipav.VideoInput.html#fade",
+                        "VideoInput.html#fade": {
+                          "ref": "VideoInput.html#fade",
                           "tf": 8.333333333333332
                         },
-                        "module-djipav.VideoInput.html#fadeIn": {
-                          "ref": "module-djipav.VideoInput.html#fadeIn",
+                        "VideoInput.html#fadeIn": {
+                          "ref": "VideoInput.html#fadeIn",
                           "tf": 7.142857142857142
                         },
-                        "module-djipav.VideoInput.html#fadeOut": {
-                          "ref": "module-djipav.VideoInput.html#fadeOut",
+                        "VideoInput.html#fadeOut": {
+                          "ref": "VideoInput.html#fadeOut",
                           "tf": 6.25
                         },
-                        "module-djipav.VideoInput.html#start": {
-                          "ref": "module-djipav.VideoInput.html#start",
+                        "VideoInput.html#start": {
+                          "ref": "VideoInput.html#start",
                           "tf": 2.7777777777777777
                         }
                       }
@@ -4039,8 +3419,8 @@ window.lunrData = {
                 "docs": {},
                 "t": {
                   "docs": {
-                    "module-djipav.VideoInput.html#capabilities": {
-                      "ref": "module-djipav.VideoInput.html#capabilities",
+                    "VideoInput.html#capabilities": {
+                      "ref": "VideoInput.html#capabilities",
                       "tf": 4.166666666666666
                     }
                   }
@@ -4057,12 +3437,12 @@ window.lunrData = {
               "docs": {},
               "d": {
                 "docs": {
-                  "module-djipav.VideoInput.html": {
-                    "ref": "module-djipav.VideoInput.html",
+                  "VideoInput.html": {
+                    "ref": "VideoInput.html",
                     "tf": 1.1111111111111112
                   },
-                  "module-djipav.VideoInput.html#start": {
-                    "ref": "module-djipav.VideoInput.html#start",
+                  "VideoInput.html#start": {
+                    "ref": "VideoInput.html#start",
                     "tf": 2.7777777777777777
                   }
                 }
@@ -4074,8 +3454,8 @@ window.lunrData = {
                 "docs": {},
                 "t": {
                   "docs": {
-                    "module-djipav.VideoInput.html": {
-                      "ref": "module-djipav.VideoInput.html",
+                    "VideoInput.html": {
+                      "ref": "VideoInput.html",
                       "tf": 1.1111111111111112
                     }
                   }
@@ -4091,12 +3471,12 @@ window.lunrData = {
                 "docs": {},
                 "e": {
                   "docs": {
-                    "module-djipav.VideoInput.html#capture": {
-                      "ref": "module-djipav.VideoInput.html#capture",
+                    "VideoInput.html#capture": {
+                      "ref": "VideoInput.html#capture",
                       "tf": 6.25
                     },
-                    "module-djipav.VideoInput.html#grabFrame": {
-                      "ref": "module-djipav.VideoInput.html#grabFrame",
+                    "VideoInput.html#grabFrame": {
+                      "ref": "VideoInput.html#grabFrame",
                       "tf": 6.25
                     }
                   }
@@ -4110,16 +3490,16 @@ window.lunrData = {
               "docs": {},
               "d": {
                 "docs": {
-                  "module-djipav.VideoInput.html#video": {
-                    "ref": "module-djipav.VideoInput.html#video",
+                  "VideoInput.html#video": {
+                    "ref": "VideoInput.html#video",
                     "tf": 5.555555555555555
                   },
-                  "module-djipav.VideoInput.html#fadeIn": {
-                    "ref": "module-djipav.VideoInput.html#fadeIn",
+                  "VideoInput.html#fadeIn": {
+                    "ref": "VideoInput.html#fadeIn",
                     "tf": 7.142857142857142
                   },
-                  "module-djipav.VideoInput.html#fadeOut": {
-                    "ref": "module-djipav.VideoInput.html#fadeOut",
+                  "VideoInput.html#fadeOut": {
+                    "ref": "VideoInput.html#fadeOut",
                     "tf": 6.25
                   }
                 }
@@ -4132,20 +3512,20 @@ window.lunrData = {
               "docs": {},
               "e": {
                 "docs": {
-                  "module-djipav.VideoInput.html#cancelFade": {
-                    "ref": "module-djipav.VideoInput.html#cancelFade",
+                  "VideoInput.html#cancelFade": {
+                    "ref": "VideoInput.html#cancelFade",
                     "tf": 14.285714285714285
                   },
-                  "module-djipav.VideoInput.html#fade": {
-                    "ref": "module-djipav.VideoInput.html#fade",
-                    "tf": 628.3333333333334
+                  "VideoInput.html#fade": {
+                    "ref": "VideoInput.html#fade",
+                    "tf": 678.3333333333334
                   },
-                  "module-djipav.VideoInput.html#fadeIn": {
-                    "ref": "module-djipav.VideoInput.html#fadeIn",
+                  "VideoInput.html#fadeIn": {
+                    "ref": "VideoInput.html#fadeIn",
                     "tf": 7.142857142857142
                   },
-                  "module-djipav.VideoInput.html#fadeOut": {
-                    "ref": "module-djipav.VideoInput.html#fadeOut",
+                  "VideoInput.html#fadeOut": {
+                    "ref": "VideoInput.html#fadeOut",
                     "tf": 6.25
                   }
                 },
@@ -4153,9 +3533,9 @@ window.lunrData = {
                   "docs": {},
                   "n": {
                     "docs": {
-                      "module-djipav.VideoInput.html#fadeIn": {
-                        "ref": "module-djipav.VideoInput.html#fadeIn",
-                        "tf": 625
+                      "VideoInput.html#fadeIn": {
+                        "ref": "VideoInput.html#fadeIn",
+                        "tf": 675
                       }
                     }
                   }
@@ -4166,9 +3546,9 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-djipav.VideoInput.html#fadeOut": {
-                          "ref": "module-djipav.VideoInput.html#fadeOut",
-                          "tf": 625
+                        "VideoInput.html#fadeOut": {
+                          "ref": "VideoInput.html#fadeOut",
+                          "tf": 675
                         }
                       }
                     }
@@ -4191,36 +3571,36 @@ window.lunrData = {
                       "docs": {},
                       "n": {
                         "docs": {
-                          "module-djipav.VideoInput.html#cancelFade": {
-                            "ref": "module-djipav.VideoInput.html#cancelFade",
+                          "VideoInput.html#cancelFade": {
+                            "ref": "VideoInput.html#cancelFade",
                             "tf": 110
                           },
-                          "module-djipav.VideoInput.html#destroy": {
-                            "ref": "module-djipav.VideoInput.html#destroy",
+                          "VideoInput.html#destroy": {
+                            "ref": "VideoInput.html#destroy",
                             "tf": 110
                           },
-                          "module-djipav.VideoInput.html#fade": {
-                            "ref": "module-djipav.VideoInput.html#fade",
+                          "VideoInput.html#fade": {
+                            "ref": "VideoInput.html#fade",
                             "tf": 110
                           },
-                          "module-djipav.VideoInput.html#fadeIn": {
-                            "ref": "module-djipav.VideoInput.html#fadeIn",
+                          "VideoInput.html#fadeIn": {
+                            "ref": "VideoInput.html#fadeIn",
                             "tf": 110
                           },
-                          "module-djipav.VideoInput.html#fadeOut": {
-                            "ref": "module-djipav.VideoInput.html#fadeOut",
+                          "VideoInput.html#fadeOut": {
+                            "ref": "VideoInput.html#fadeOut",
                             "tf": 110
                           },
-                          "module-djipav.VideoInput.html#grabFrame": {
-                            "ref": "module-djipav.VideoInput.html#grabFrame",
+                          "VideoInput.html#grabFrame": {
+                            "ref": "VideoInput.html#grabFrame",
                             "tf": 110
                           },
-                          "module-djipav.VideoInput.html#start": {
-                            "ref": "module-djipav.VideoInput.html#start",
+                          "VideoInput.html#start": {
+                            "ref": "VideoInput.html#start",
                             "tf": 110
                           },
-                          "module-djipav.VideoInput.html#stop": {
-                            "ref": "module-djipav.VideoInput.html#stop",
+                          "VideoInput.html#stop": {
+                            "ref": "VideoInput.html#stop",
                             "tf": 110
                           }
                         }
@@ -4241,8 +3621,8 @@ window.lunrData = {
                   "docs": {},
                   "t": {
                     "docs": {
-                      "module-djipav.VideoInput.html#grabFrame": {
-                        "ref": "module-djipav.VideoInput.html#grabFrame",
+                      "VideoInput.html#grabFrame": {
+                        "ref": "VideoInput.html#grabFrame",
                         "tf": 6.25
                       }
                     }
@@ -4256,8 +3636,8 @@ window.lunrData = {
                 "docs": {},
                 "d": {
                   "docs": {
-                    "module-djipav.VideoInput.html#start": {
-                      "ref": "module-djipav.VideoInput.html#start",
+                    "VideoInput.html#start": {
+                      "ref": "VideoInput.html#start",
                       "tf": 2.7777777777777777
                     }
                   }
@@ -4276,28 +3656,28 @@ window.lunrData = {
                 "docs": {},
                 "k": {
                   "docs": {
-                    "module-djipav.VideoInput.html": {
-                      "ref": "module-djipav.VideoInput.html",
+                    "VideoInput.html": {
+                      "ref": "VideoInput.html",
                       "tf": 1.1111111111111112
                     },
-                    "module-djipav.VideoInput.html#capabilities": {
-                      "ref": "module-djipav.VideoInput.html#capabilities",
+                    "VideoInput.html#capabilities": {
+                      "ref": "VideoInput.html#capabilities",
                       "tf": 8.333333333333332
                     },
-                    "module-djipav.VideoInput.html#constraints": {
-                      "ref": "module-djipav.VideoInput.html#constraints",
+                    "VideoInput.html#constraints": {
+                      "ref": "VideoInput.html#constraints",
                       "tf": 4.166666666666666
                     },
-                    "module-djipav.VideoInput.html#settings": {
-                      "ref": "module-djipav.VideoInput.html#settings",
+                    "VideoInput.html#settings": {
+                      "ref": "VideoInput.html#settings",
                       "tf": 5
                     },
-                    "module-djipav.VideoInput.html#track": {
-                      "ref": "module-djipav.VideoInput.html#track",
-                      "tf": 656.25
+                    "VideoInput.html#track": {
+                      "ref": "VideoInput.html#track",
+                      "tf": 706.25
                     },
-                    "module-djipav.VideoInput.html#stop": {
-                      "ref": "module-djipav.VideoInput.html#stop",
+                    "VideoInput.html#stop": {
+                      "ref": "VideoInput.html#stop",
                       "tf": 8.333333333333332
                     }
                   }
@@ -4308,8 +3688,8 @@ window.lunrData = {
               "docs": {},
               "e": {
                 "docs": {
-                  "module-djipav.VideoInput.html#constraints": {
-                    "ref": "module-djipav.VideoInput.html#constraints",
+                  "VideoInput.html#constraints": {
+                    "ref": "VideoInput.html#constraints",
                     "tf": 4.166666666666666
                   }
                 }
@@ -4317,8 +3697,8 @@ window.lunrData = {
             },
             "i": {
               "docs": {
-                "module-djipav.VideoInput.html#start": {
-                  "ref": "module-djipav.VideoInput.html#start",
+                "VideoInput.html#start": {
+                  "ref": "VideoInput.html#start",
                   "tf": 2.7777777777777777
                 }
               }
@@ -4342,8 +3722,8 @@ window.lunrData = {
                           "docs": {},
                           "t": {
                             "docs": {
-                              "module-djipav.VideoInput.html#timeouts": {
-                                "ref": "module-djipav.VideoInput.html#timeouts",
+                              "VideoInput.html#timeouts": {
+                                "ref": "VideoInput.html#timeouts",
                                 "tf": 5.555555555555555
                               }
                             }
@@ -4368,9 +3748,9 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-djipav.VideoInput.html#timeouts": {
-                          "ref": "module-djipav.VideoInput.html#timeouts",
-                          "tf": 655.5555555555555
+                        "VideoInput.html#timeouts": {
+                          "ref": "VideoInput.html#timeouts",
+                          "tf": 705.5555555555555
                         }
                       }
                     }
@@ -4385,8 +3765,8 @@ window.lunrData = {
               "docs": {},
               "e": {
                 "docs": {
-                  "module-djipav.VideoInput.html#fade": {
-                    "ref": "module-djipav.VideoInput.html#fade",
+                  "VideoInput.html#fade": {
+                    "ref": "VideoInput.html#fade",
                     "tf": 20
                   }
                 }
@@ -4398,12 +3778,12 @@ window.lunrData = {
           "docs": {},
           "e": {
             "docs": {
-              "module-djipav.VideoInput.html#stream": {
-                "ref": "module-djipav.VideoInput.html#stream",
+              "VideoInput.html#stream": {
+                "ref": "VideoInput.html#stream",
                 "tf": 8.333333333333332
               },
-              "module-djipav.VideoInput.html#track": {
-                "ref": "module-djipav.VideoInput.html#track",
+              "VideoInput.html#track": {
+                "ref": "VideoInput.html#track",
                 "tf": 6.25
               }
             },
@@ -4417,8 +3797,8 @@ window.lunrData = {
                     "docs": {},
                     "n": {
                       "docs": {
-                        "module-djipav.VideoInput.html#opacity": {
-                          "ref": "module-djipav.VideoInput.html#opacity",
+                        "VideoInput.html#opacity": {
+                          "ref": "VideoInput.html#opacity",
                           "tf": 5
                         }
                       }
@@ -4440,8 +3820,8 @@ window.lunrData = {
                     "docs": {},
                     "n": {
                       "docs": {
-                        "module-djipav.VideoInput.html#started": {
-                          "ref": "module-djipav.VideoInput.html#started",
+                        "VideoInput.html#started": {
+                          "ref": "VideoInput.html#started",
                           "tf": 50
                         }
                       }
@@ -4474,8 +3854,8 @@ window.lunrData = {
                             "docs": {},
                             "l": {
                               "docs": {
-                                "module-djipav.VideoInput.html#video": {
-                                  "ref": "module-djipav.VideoInput.html#video",
+                                "VideoInput.html#video": {
+                                  "ref": "VideoInput.html#video",
                                   "tf": 50
                                 }
                               }
@@ -4491,7 +3871,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 318
+      "length": 286
     },
     "corpusTokens": [
       "0",
@@ -4506,6 +3886,7 @@ window.lunrData = {
       "attach",
       "audio",
       "audiomet",
+      "audiometer#audiomet",
       "audiometer(context",
       "audiometerobject",
       "be",
@@ -4531,9 +3912,6 @@ window.lunrData = {
       "disconnect",
       "display",
       "djipav",
-      "djipav.audiomet",
-      "djipav.videoinput",
-      "djipav~audiomet",
       "document",
       "done",
       "durat",
@@ -4563,7 +3941,6 @@ window.lunrData = {
       "linger",
       "list",
       "list:class",
-      "list:modul",
       "listen",
       "lt;async&gt",
       "lt;body&gt",
@@ -4581,28 +3958,6 @@ window.lunrData = {
       "method",
       "microphon",
       "minimum",
-      "modul",
-      "module:djipav",
-      "module:djipav.audiomet",
-      "module:djipav.videoinput",
-      "module:djipav.videoinput#cancelfad",
-      "module:djipav.videoinput#cap",
-      "module:djipav.videoinput#captur",
-      "module:djipav.videoinput#constraint",
-      "module:djipav.videoinput#destroy",
-      "module:djipav.videoinput#fad",
-      "module:djipav.videoinput#fadein",
-      "module:djipav.videoinput#fadeout",
-      "module:djipav.videoinput#grabfram",
-      "module:djipav.videoinput#opac",
-      "module:djipav.videoinput#set",
-      "module:djipav.videoinput#start",
-      "module:djipav.videoinput#stop",
-      "module:djipav.videoinput#stream",
-      "module:djipav.videoinput#timeout",
-      "module:djipav.videoinput#track",
-      "module:djipav.videoinput#video",
-      "module:djipav~audiomet",
       "mostli",
       "new",
       "node",
@@ -4713,240 +4068,207 @@ window.lunrData = {
       "description": "",
       "body": ""
     },
-    "list_module.html": {
-      "id": "list_module.html",
-      "kind": "list",
-      "title": "Modules",
-      "longname": "list:module",
-      "name": "Modules",
-      "tags": "list:module",
-      "summary": "All documented modules.",
-      "description": "",
-      "body": ""
-    },
-    "module-djipav.AudioMeter.html": {
-      "id": "module-djipav.AudioMeter.html",
+    "AudioMeter_AudioMeter.html": {
+      "id": "AudioMeter_AudioMeter.html",
       "kind": "class",
-      "title": "~djipav.AudioMeter",
-      "longname": "module:djipav.AudioMeter",
+      "title": "AudioMeter",
+      "longname": "AudioMeter#AudioMeter",
       "name": "AudioMeter",
-      "tags": "module:djipav.AudioMeter AudioMeter",
+      "tags": "AudioMeter#AudioMeter AudioMeter",
       "summary": "",
       "description": "Creates an AudioMeterobject. The resulting object can then be used in an audio chain by connecting a source node to its input property: let am = new AudioMeter(context); someSourceAudioNode.connect(am.input);",
       "body": ""
     },
-    "module-djipav.VideoInput.html": {
-      "id": "module-djipav.VideoInput.html",
+    "VideoInput.html": {
+      "id": "VideoInput.html",
       "kind": "class",
-      "title": "~djipav.VideoInput",
-      "longname": "module:djipav.VideoInput",
+      "title": "VideoInput",
+      "longname": "VideoInput",
       "name": "VideoInput",
-      "tags": "module:djipav.VideoInput VideoInput",
+      "tags": "VideoInput",
       "summary": "",
       "description": "Creates a new VideoInput object and attaches it to the specified &lt;video&gt; element for viewing. If no &lt;video&gt; element is specified, the stream will not be visible. If the special value \"create\" is used, a new &lt;video&gt; element is created and appended to the &lt;body&gt;. A reference to the video element is accessible via the video property. By default, the first video input track will be used. To find a specific video input, a MediaTrackConstraints must be specified in the constraints parameter.",
       "body": ""
     },
-    "module-djipav.VideoInput.html#capabilities": {
-      "id": "module-djipav.VideoInput.html#capabilities",
+    "VideoInput.html#capabilities": {
+      "id": "VideoInput.html#capabilities",
       "kind": "member",
       "title": "capabilities :MediaTrackCapabilities",
-      "longname": "module:djipav.VideoInput#capabilities",
+      "longname": "VideoInput#capabilities",
       "name": "capabilities",
-      "tags": "module:djipav.VideoInput#capabilities VideoInput#capabilities capabilities",
+      "tags": "VideoInput#capabilities capabilities",
       "summary": "",
       "description": "A MediaTrackCapabilities object detailing the exact capabilities of the video track (or null if no video track is currently open)."
     },
-    "module-djipav.VideoInput.html#capture": {
-      "id": "module-djipav.VideoInput.html#capture",
+    "VideoInput.html#capture": {
+      "id": "VideoInput.html#capture",
       "kind": "member",
       "title": "capture :ImageCapture",
-      "longname": "module:djipav.VideoInput#capture",
+      "longname": "VideoInput#capture",
       "name": "capture",
-      "tags": "module:djipav.VideoInput#capture VideoInput#capture capture",
+      "tags": "VideoInput#capture capture",
       "summary": "",
       "description": "An ImageCapture object used to grab frames per the ImageCapture API."
     },
-    "module-djipav.VideoInput.html#constraints": {
-      "id": "module-djipav.VideoInput.html#constraints",
+    "VideoInput.html#constraints": {
+      "id": "VideoInput.html#constraints",
       "kind": "member",
       "title": "constraints :MediaTrackConstraints",
-      "longname": "module:djipav.VideoInput#constraints",
+      "longname": "VideoInput#constraints",
       "name": "constraints",
-      "tags": "module:djipav.VideoInput#constraints VideoInput#constraints constraints",
+      "tags": "VideoInput#constraints constraints",
       "summary": "",
       "description": "The constraints which must be met by the video track. At the minimum, the value true is used which means all input video streams."
     },
-    "module-djipav.VideoInput.html#opacity": {
-      "id": "module-djipav.VideoInput.html#opacity",
+    "VideoInput.html#opacity": {
+      "id": "VideoInput.html#opacity",
       "kind": "member",
       "title": "opacity :number",
-      "longname": "module:djipav.VideoInput#opacity",
+      "longname": "VideoInput#opacity",
       "name": "opacity",
-      "tags": "module:djipav.VideoInput#opacity VideoInput#opacity opacity",
+      "tags": "VideoInput#opacity opacity",
       "summary": "",
       "description": "The opacity of the &lt;video&gt; element used to display the video stream (between 0 and 1)."
     },
-    "module-djipav.VideoInput.html#settings": {
-      "id": "module-djipav.VideoInput.html#settings",
+    "VideoInput.html#settings": {
+      "id": "VideoInput.html#settings",
       "kind": "member",
       "title": "settings :MediaTrackSettings",
-      "longname": "module:djipav.VideoInput#settings",
+      "longname": "VideoInput#settings",
       "name": "settings",
-      "tags": "module:djipav.VideoInput#settings VideoInput#settings settings",
+      "tags": "VideoInput#settings settings",
       "summary": "",
       "description": "A MediaTrackSettings object detailing the precise settings of the video track (or null if no stream is open)."
     },
-    "module-djipav.VideoInput.html#started": {
-      "id": "module-djipav.VideoInput.html#started",
+    "VideoInput.html#started": {
+      "id": "VideoInput.html#started",
       "kind": "member",
       "title": "started :boolean",
-      "longname": "module:djipav.VideoInput#started",
+      "longname": "VideoInput#started",
       "name": "started",
-      "tags": "module:djipav.VideoInput#started VideoInput#started started",
+      "tags": "VideoInput#started started",
       "summary": "",
       "description": "Whether or not the video input is currently started."
     },
-    "module-djipav.VideoInput.html#stream": {
-      "id": "module-djipav.VideoInput.html#stream",
+    "VideoInput.html#stream": {
+      "id": "VideoInput.html#stream",
       "kind": "member",
       "title": "stream :MediaStream",
-      "longname": "module:djipav.VideoInput#stream",
+      "longname": "VideoInput#stream",
       "name": "stream",
-      "tags": "module:djipav.VideoInput#stream VideoInput#stream stream",
+      "tags": "VideoInput#stream stream",
       "summary": "",
       "description": "The actual media stream that is currently being used."
     },
-    "module-djipav.VideoInput.html#timeouts": {
-      "id": "module-djipav.VideoInput.html#timeouts",
+    "VideoInput.html#timeouts": {
+      "id": "VideoInput.html#timeouts",
       "kind": "member",
       "title": "timeouts :Object",
-      "longname": "module:djipav.VideoInput#timeouts",
+      "longname": "VideoInput#timeouts",
       "name": "timeouts",
-      "tags": "module:djipav.VideoInput#timeouts VideoInput#timeouts timeouts",
+      "tags": "VideoInput#timeouts timeouts",
       "summary": "",
       "description": "An object containing the timeouts used throughout this class (mostly for internal use)"
     },
-    "module-djipav.VideoInput.html#track": {
-      "id": "module-djipav.VideoInput.html#track",
+    "VideoInput.html#track": {
+      "id": "VideoInput.html#track",
       "kind": "member",
       "title": "track :MediaStreamTrack",
-      "longname": "module:djipav.VideoInput#track",
+      "longname": "VideoInput#track",
       "name": "track",
-      "tags": "module:djipav.VideoInput#track VideoInput#track track",
+      "tags": "VideoInput#track track",
       "summary": "",
       "description": "The video track currently being used. This will be null if there are no active stream."
     },
-    "module-djipav.VideoInput.html#video": {
-      "id": "module-djipav.VideoInput.html#video",
+    "VideoInput.html#video": {
+      "id": "VideoInput.html#video",
       "kind": "member",
       "title": "video :HTMLMediaElement",
-      "longname": "module:djipav.VideoInput#video",
+      "longname": "VideoInput#video",
       "name": "video",
-      "tags": "module:djipav.VideoInput#video VideoInput#video video",
+      "tags": "VideoInput#video video",
       "summary": "",
       "description": "The &lt;video&gt; element used to display the video feed (may be null if none is used)"
     },
-    "module-djipav.VideoInput.html#cancelFade": {
-      "id": "module-djipav.VideoInput.html#cancelFade",
+    "VideoInput.html#cancelFade": {
+      "id": "VideoInput.html#cancelFade",
       "kind": "function",
       "title": "cancelFade()",
-      "longname": "module:djipav.VideoInput#cancelFade",
+      "longname": "VideoInput#cancelFade",
       "name": "cancelFade",
-      "tags": "module:djipav.VideoInput#cancelFade VideoInput#cancelFade cancelFade",
+      "tags": "VideoInput#cancelFade cancelFade",
       "summary": "",
       "description": "Cancels any fade ins or fade outs that are currently ongoing."
     },
-    "module-djipav.VideoInput.html#destroy": {
-      "id": "module-djipav.VideoInput.html#destroy",
+    "VideoInput.html#destroy": {
+      "id": "VideoInput.html#destroy",
       "kind": "function",
       "title": "&lt;async&gt; destroy() → {Promise.&lt;void&gt;}",
-      "longname": "module:djipav.VideoInput#destroy",
+      "longname": "VideoInput#destroy",
       "name": "destroy",
-      "tags": "module:djipav.VideoInput#destroy VideoInput#destroy destroy",
+      "tags": "VideoInput#destroy destroy",
       "summary": "",
       "description": "Properly destroys this object and all internal references. By calling this method when you are done with this object, you insure there are no lingering listeners or processes."
     },
-    "module-djipav.VideoInput.html#fade": {
-      "id": "module-djipav.VideoInput.html#fade",
+    "VideoInput.html#fade": {
+      "id": "VideoInput.html#fade",
       "kind": "function",
       "title": "&lt;async&gt; fade( [ type [, duration ] ] ) → {Promise.&lt;void&gt;}",
-      "longname": "module:djipav.VideoInput#fade",
+      "longname": "VideoInput#fade",
       "name": "fade",
-      "tags": "module:djipav.VideoInput#fade VideoInput#fade fade",
+      "tags": "VideoInput#fade fade",
       "summary": "",
       "description": "Fades the &lt;video&gt; element in or out for the specified duration."
     },
-    "module-djipav.VideoInput.html#fadeIn": {
-      "id": "module-djipav.VideoInput.html#fadeIn",
+    "VideoInput.html#fadeIn": {
+      "id": "VideoInput.html#fadeIn",
       "kind": "function",
       "title": "&lt;async&gt; fadeIn( [ duration ] ) → {Promise.&lt;void&gt;}",
-      "longname": "module:djipav.VideoInput#fadeIn",
+      "longname": "VideoInput#fadeIn",
       "name": "fadeIn",
-      "tags": "module:djipav.VideoInput#fadeIn VideoInput#fadeIn fadeIn",
+      "tags": "VideoInput#fadeIn fadeIn",
       "summary": "",
       "description": "Fades in the &lt;video&gt; element used to display the video feed."
     },
-    "module-djipav.VideoInput.html#fadeOut": {
-      "id": "module-djipav.VideoInput.html#fadeOut",
+    "VideoInput.html#fadeOut": {
+      "id": "VideoInput.html#fadeOut",
       "kind": "function",
       "title": "&lt;async&gt; fadeOut( [ duration ] ) → {Promise.&lt;void&gt;}",
-      "longname": "module:djipav.VideoInput#fadeOut",
+      "longname": "VideoInput#fadeOut",
       "name": "fadeOut",
-      "tags": "module:djipav.VideoInput#fadeOut VideoInput#fadeOut fadeOut",
+      "tags": "VideoInput#fadeOut fadeOut",
       "summary": "",
       "description": "Fades out the &lt;video&gt; element used to display the video feed."
     },
-    "module-djipav.VideoInput.html#grabFrame": {
-      "id": "module-djipav.VideoInput.html#grabFrame",
+    "VideoInput.html#grabFrame": {
+      "id": "VideoInput.html#grabFrame",
       "kind": "function",
       "title": "&lt;async&gt; grabFrame( [ options ] ) → {Promise.&lt;(ImageBitmap|DOMString|Blob)&gt;}",
-      "longname": "module:djipav.VideoInput#grabFrame",
+      "longname": "VideoInput#grabFrame",
       "name": "grabFrame",
-      "tags": "module:djipav.VideoInput#grabFrame VideoInput#grabFrame grabFrame",
+      "tags": "VideoInput#grabFrame grabFrame",
       "summary": "",
       "description": "Grabs a frame from the video stream and returns it in the specified data format."
     },
-    "module-djipav.VideoInput.html#start": {
-      "id": "module-djipav.VideoInput.html#start",
+    "VideoInput.html#start": {
+      "id": "VideoInput.html#start",
       "kind": "function",
       "title": "&lt;async&gt; start( [ options ] ) → {Promise.&lt;void&gt;}",
-      "longname": "module:djipav.VideoInput#start",
+      "longname": "VideoInput#start",
       "name": "start",
-      "tags": "module:djipav.VideoInput#start VideoInput#start start",
+      "tags": "VideoInput#start start",
       "summary": "",
       "description": "Tries to find a video stream matching the specified constraints. If one is found, the stream is attached to the &lt;video&gt; element specified upon construction of the VideoInput object (if any)."
     },
-    "module-djipav.VideoInput.html#stop": {
-      "id": "module-djipav.VideoInput.html#stop",
+    "VideoInput.html#stop": {
+      "id": "VideoInput.html#stop",
       "kind": "function",
       "title": "&lt;async&gt; stop() → {Promise.&lt;void&gt;}",
-      "longname": "module:djipav.VideoInput#stop",
+      "longname": "VideoInput#stop",
       "name": "stop",
-      "tags": "module:djipav.VideoInput#stop VideoInput#stop stop",
+      "tags": "VideoInput#stop stop",
       "summary": "",
       "description": "Disconnects the video input and stops all associated tracks."
-    },
-    "module-djipav-AudioMeter.html": {
-      "id": "module-djipav-AudioMeter.html",
-      "kind": "class",
-      "title": "~djipav~AudioMeter",
-      "longname": "module:djipav~AudioMeter",
-      "name": "AudioMeter",
-      "tags": "module:djipav~AudioMeter",
-      "summary": "",
-      "description": "",
-      "body": ""
-    },
-    "module-djipav.html": {
-      "id": "module-djipav.html",
-      "kind": "module",
-      "title": "djipav",
-      "longname": "module:djipav",
-      "name": "djipav",
-      "tags": "module:djipav",
-      "summary": "",
-      "description": "",
-      "body": ""
     }
   }
 };
