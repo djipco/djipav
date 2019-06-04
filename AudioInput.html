@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Globals</title>
+		<title>AudioInput</title>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -66,61 +66,26 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">global</span>
-				<h1><span class="name">Globals</span></h1>
-				<div class="summary"><p>All documented globals.</p></div>			</div>
+				<span class="kind">class</span>
+				<h1><span class="name">AudioInput</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
 			<div class="col-md-9 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li class="active">Globals</li>
+							<li><a href="list_class.html">Classes</a></li>
+							<li class="active">AudioInput</li>
 						</ol>
 					<section>
-							<article class="secondary">
-									<h3>Methods</h3>
-									<dl class="symbol">
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="getInputs" class="function public"><span class="name">getInputs</span><span class="signature-params">( [&nbsp;<span class="signature-param">type</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;Array.&lt;InputDeviceInfo>>}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
+							<dl class="symbol primary">
+								<dt class="symbol-title class collapsible-symbol expanded">
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">AudioInput</span><span class="signature-params">()</span><span class="signature-type"></span></h2>
+</dt>
+<dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Returns a promise fulfilled with an array of <code>InputDeviceInfo</code> objects detailing the currently
-			available inputs.</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-							<th>Attributes</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>type</code></td>
-							<td><span class="param-type">string</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-							<td class="last">
-									<p>The type of input devices to return (<code>&quot;audio&quot;</code> or <code>&quot;video&quot;</code>). If no type
-			is specified, all input devices are returned.</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;Array.&lt;InputDeviceInfo>></span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>The <code>AudioInput</code> class facilitates the connextion to available audio inputs such as microphones.</p></div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -141,7 +106,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-600">line 600</a></p>
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-410">line 410</a></p>
 								</div>
 							</div>
 			
@@ -151,51 +116,17 @@
 					</form>
 			</div>	</div>
 </dd>
+							</dl>
+							<article class="secondary">
+									<h3>Classes</h3>
+									<dl class="symbol">
 											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="getSupportedConstraints" class="function public"><span class="name">getSupportedConstraints</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{MediaTrackSupportedConstraints}</span></h4>
+											<dt class="symbol-title class public">
+			<h4 id="AudioInput" class="class public"><a href="AudioInput.html"><span class="signature-new">new&nbsp;</span><span class="name">AudioInput</span><span class="signature-params">()</span><span class="signature-type"></span></a></h4>
 		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
+<dd class="symbol-details class public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Returns an object whose properties identify which constraints are supported by the current
-			environment.</p></div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">MediaTrackSupportedConstraints</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-577">line 577</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
+	</div>
 </dd>
 									</dl>
 							</article>
