@@ -12,6 +12,7 @@
   "sourceType": "module",
 
   "plugins": [
+    "./node_modules/jsdoc-export-default-interop/dist/index.js",
     "plugins/markdown"
   ],
 
@@ -26,7 +27,7 @@
     "dateFormat": "MMMM Do YYYY, H:mm:ss",
 
     "systemName": "DjipAV",
-    "systemSummary": "A library to simplify working with video and audio inputs (a.k.a. webcams and microphones).",
+    "systemSummary": "A library to simplify working with audio and video inputs (a.k.a. webcams and microphones) on the web",
     "copyright": "DjipAV is a creation of Jean-Philippe Côté and is released under the MIT license.",
     "collapseSymbols": true,
 

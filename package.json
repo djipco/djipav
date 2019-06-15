@@ -1,28 +1,34 @@
 {
   "name": "djipav",
-  "version": "0.0.1",
-  "description": "A simple library to simplify working with WebRTC audio/video input devices (a.k.a. mics and webcams)",
-  "scripts": {
-    "lint": "eslint ./src/*.js"
-  },
+  "version": "0.1.0",
+  "description": "A library to simplify working with audio and video inputs (a.k.a. webcams and microphones) on the web",
   "main": "./dist/djipav.min.js",
   "keywords": [
     "webcam",
     "webrtc",
     "video inpupts",
-    "video devices"
+    "video devices",
+    "microphone",
+    "mic",
+    "audio inputs",
+    "audio devices",
+    "webrtc"
   ],
   "author": "Jean-Philippe Côté <jp@djip.co>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "djipevents": "^0.3.0"
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.2.0",
     "foodoc": "0.0.9",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^5.0.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-jsdoc3": "^2.0.0",
-    "gulp-minify": "^3.1.0"
+    "gulp-minify": "^3.1.0",
+    "jsdoc-export-default-interop": "^0.3.1"
   }
 }
