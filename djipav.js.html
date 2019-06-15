@@ -490,141 +490,141 @@ export class VideoInput extends EventEmitter {
  * someSourceAudioNode.connect(meter);
  * ```
  */
-// export class AudioMeter extends mix(AnalyserNode, new EventEmitter()) {
-export class AudioMeter extends EventEmitter {
+export class AudioMeter extends mix(AnalyserNode, new EventEmitter()) {
+// export class AudioMeter extends EventEmitter {
 
-  // /**
-  //  * @param {AudioContext} context The `AudioContext` that this object belongs to.
-  //  * @param {Object} [options={}]
-  //  * @param {number} [options.smoothingTimeConstant=0.8] A number between 0 and 1 to quantify the
-  //  * amount of smoothing applied to the calculated volume.
-  //  * @param {number} [options.minDecibels=-100] A number representing the minimum decibel value
-  //  * for scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default
-  //  * value is -100 dB.
-  //  * @param {number} [options.maxDecibels=-30] A number representing the maximum decibel value
-  //  * for scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default
-  //  * value is-30 dB.
-  //  * @param {number} [options.fftSize=2048] An unsigned integer, representing the window size
-  //  * of the FFT, given in number of samples. A higher value will result in more details in the
-  //  * frequency domain but fewer details in the time domain.
-  //  */
-  // constructor(context, options = {}) {
-  //
-  //   super(context, options);
-  //
-  //   this.volume = 0;
-  //
-  //   this.processor = this.context.createScriptProcessor(2048, 1, 1);
-  //   this.connect(this.processor);
-  //   this.processor.onaudioprocess = this.processAudioVolumeEvent.bind(this);
-  //
-  //   // This fixes a still-standing bug in Chrome!
-  //   this.processor.connect(this.context.destination);
-  //
-  // }
-  //
-  // destroy() {
-  //   this.disconnect();
-  //   this.processor.onaudioprocess = null;
-  //   this.processor.disconnect();
-  //   this.processor = null;
-  //   this.removeAllListeners();
-  // }
-  //
-  // processAudioVolumeEvent() {
-  //
-  //   let array = new Uint8Array(this.frequencyBinCount);
-  //   this.getByteFrequencyData(array);
-  //
-  //   let total = 0;
-  //
-  //   var length = array.length;
-  //   for (let i = 0; i &lt; length; i++) {
-  //     total += (array[i] / 255);
-  //   }
-  //
-  //   // let average = parseFloat((total / length).toFixed(3));
-  //   let average = total / length;
-  //
-  //   if (average !== this.volume) {
-  //
-  //     this.volume = average;
-  //
-  //     // Emit a `change` event when volume changes
-  //     // this.emit(
-  //     //   "change",
-  //     //   {type: "change", target: this, volume: this.volume}
-  //     // );
-  //
-  //   }
-  //
-  // }
+  /**
+   * @param {AudioContext} context The `AudioContext` that this object belongs to.
+   * @param {Object} [options={}]
+   * @param {number} [options.smoothingTimeConstant=0.8] A number between 0 and 1 to quantify the
+   * amount of smoothing applied to the calculated volume.
+   * @param {number} [options.minDecibels=-100] A number representing the minimum decibel value
+   * for scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default
+   * value is -100 dB.
+   * @param {number} [options.maxDecibels=-30] A number representing the maximum decibel value
+   * for scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default
+   * value is-30 dB.
+   * @param {number} [options.fftSize=2048] An unsigned integer, representing the window size
+   * of the FFT, given in number of samples. A higher value will result in more details in the
+   * frequency domain but fewer details in the time domain.
+   */
+  constructor(context, options = {}) {
 
-  constructor(context, clippingLevel = 0.98, averaging = 0.95, clippingDelay = 750) {
+    super(context, options);
 
-    super();
-
-    this.clippingLevel = clippingLevel;
-    this.clippingDelay = clippingDelay;
-    this.averaging = averaging;
-
-    this.clipping = false;
-    this.lastClip = 0;
     this.volume = 0;
 
-    this.context = context;
-    this.input = this.context.createScriptProcessor(512);
-    this.input.onaudioprocess = this.processAudioVolumeEvent.bind(this);
+    this.processor = this.context.createScriptProcessor(2048, 1, 1);
+    this.connect(this.processor);
+    this.processor.onaudioprocess = this.processAudioVolumeEvent.bind(this);
 
     // This fixes a still-standing bug in Chrome!
-    this.input.connect(this.context.destination);
+    this.processor.connect(this.context.destination);
 
   }
 
   destroy() {
-    this.input.disconnect();
-    this.input.onaudioprocess = null;
+    this.disconnect();
+    this.processor.onaudioprocess = null;
+    this.processor.disconnect();
+    this.processor = null;
     this.removeAllListeners();
   }
 
-  processAudioVolumeEvent(e) {
+  processAudioVolumeEvent() {
 
-    let buf = e.inputBuffer.getChannelData(0);
-    let bufLength = buf.length;
-    let sum = 0;
-    let x;
+    let array = new Uint8Array(this.frequencyBinCount);
+    this.getByteFrequencyData(array);
 
-    // Do a root-mean-square on the samples: sum up the squares...
-    for (let i = 0; i &lt; bufLength; i++) {
+    let total = 0;
 
-      x = buf[i];
-
-      if (Math.abs(x) >= this.clippingLevel) {
-        this.clipping = true;
-        this.lastClip = window.performance.now();
-      }
-
-      sum += x * x;
-
+    var length = array.length;
+    for (let i = 0; i &lt; length; i++) {
+      total += (array[i] / 255);
     }
 
-    // Reset clipping if clipping delay expired
-    if (!this.clipping &amp;&amp; this.lastClip + this.clippingDelay &lt; window.performance.now()) {
-      this.clipping = false;
+    // let average = parseFloat((total / length).toFixed(3));
+    let average = total / length;
+
+    if (average !== this.volume) {
+
+      this.volume = average;
+
+      // Emit a `change` event when volume changes
+      this.emit(
+        "change",
+        {type: "change", target: this, volume: this.volume}
+      );
+
     }
-
-    // Calculate RMS and smooth it out with the averaging factor. We use the max to have a fast
-    // attack and a slow release.
-    let rms = Math.sqrt(sum / bufLength);
-    this.volume = Math.max(rms, this.volume * this.averaging);
-
-    // Emit a `change` event when new data is received
-    this.emit(
-      "change",
-      {type: "change", target: this, volume: this.volume, clipping: this.clipping}
-    );
 
   }
+
+  // constructor(context, clippingLevel = 0.98, averaging = 0.95, clippingDelay = 750) {
+  //
+  //   super();
+  //
+  //   this.clippingLevel = clippingLevel;
+  //   this.clippingDelay = clippingDelay;
+  //   this.averaging = averaging;
+  //
+  //   this.clipping = false;
+  //   this.lastClip = 0;
+  //   this.volume = 0;
+  //
+  //   this.context = context;
+  //   this.input = this.context.createScriptProcessor(512);
+  //   this.input.onaudioprocess = this.processAudioVolumeEvent.bind(this);
+  //
+  //   // This fixes a still-standing bug in Chrome!
+  //   this.input.connect(this.context.destination);
+  //
+  // }
+  //
+  // destroy() {
+  //   this.input.disconnect();
+  //   this.input.onaudioprocess = null;
+  //   this.removeAllListeners();
+  // }
+  //
+  // processAudioVolumeEvent(e) {
+  //
+  //   let buf = e.inputBuffer.getChannelData(0);
+  //   let bufLength = buf.length;
+  //   let sum = 0;
+  //   let x;
+  //
+  //   // Do a root-mean-square on the samples: sum up the squares...
+  //   for (let i = 0; i &lt; bufLength; i++) {
+  //
+  //     x = buf[i];
+  //
+  //     if (Math.abs(x) >= this.clippingLevel) {
+  //       this.clipping = true;
+  //       this.lastClip = window.performance.now();
+  //     }
+  //
+  //     sum += x * x;
+  //
+  //   }
+  //
+  //   // Reset clipping if clipping delay expired
+  //   if (!this.clipping &amp;&amp; this.lastClip + this.clippingDelay &lt; window.performance.now()) {
+  //     this.clipping = false;
+  //   }
+  //
+  //   // Calculate RMS and smooth it out with the averaging factor. We use the max to have a fast
+  //   // attack and a slow release.
+  //   let rms = Math.sqrt(sum / bufLength);
+  //   this.volume = Math.max(rms, this.volume * this.averaging);
+  //
+  //   // Emit a `change` event when new data is received
+  //   this.emit(
+  //     "change",
+  //     {type: "change", target: this, volume: this.volume, clipping: this.clipping}
+  //   );
+  //
+  // }
 
 }
 
@@ -687,24 +687,6 @@ export class AudioInput extends EventEmitter {
     this.meter.on("change", e => this.emit("volume", e.volume));
 
 
-
-
-    // this.analyzer = new AnalyserNode(this.source.context);
-    // this.analyzer.fftSize = 2048;
-
-    // var tailleMemoireTampon = this.analyzer.frequencyBinCount;
-    // var tableauDonnees = new Uint8Array(tailleMemoireTampon);
-    // this.analyzer.getByteTimeDomainData(tableauDonnees);
-
-    // this.source.connect(this.analyzer);
-
-    // dessiner();
-    //
-    //
-    // var canvas = document.getElementById("oscilloscope");
-    // var contexteCanvas = canvas.getContext("2d");
-    //
-    //
     // function dessiner() {
     //
     //   dessin = requestAnimationFrame(dessiner);
@@ -876,7 +858,7 @@ export function mix(parent, ...mixins) {
 	</div>
 	<footer>
 				<div class="copyright">DjipAV is a creation of Jean-Philippe Côté and is released under the MIT license.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on June 14th 2019, 21:41:40 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on June 14th 2019, 22:03:46 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
