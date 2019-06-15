@@ -40,6 +40,7 @@
 									<ul class="dropdown-menu">
 											<li><a href="global.html#getInputs">getInputs</a></li>
 											<li><a href="global.html#getSupportedConstraints">getSupportedConstraints</a></li>
+											<li><a href="global.html#mix">mix</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -481,6 +482,152 @@ export class VideoInput extends EventEmitter {
 }
 
 /**
+ * The `AudioMeter` class analyzes audio input and reports on its level (volume). It can be used in
+ * a WebAudio chain by connecting a source node to the `AudioMeter` object.
+ *
+ * ```javascript
+ * let meter = new AudioMeter(context);
+ * someSourceAudioNode.connect(meter);
+ * ```
+ */
+export class AudioMeter extends mix(AnalyserNode, new EventEmitter()) {
+
+  /**
+   * @param {AudioContext} context The `AudioContext` that this object belongs to.
+   * @param {Object} [options={}]
+   * @param {number} [options.smoothingTimeConstant=0.8] A number between 0 and 1 to quantify the
+   * amount of smoothing applied to the calculated volume.
+   * @param {number} [options.minDecibels=-100] A number representing the minimum decibel value for
+   * scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default value is
+   * -100 dB.
+   * @param {number} [options.maxDecibels=-30] A number representing the maximum decibel value for
+   * scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default value is
+   * -30 dB.
+   * @param {number} [options.fftSize=2048] An unsigned integer, representing the window size of
+   * the FFT, given in number of samples. A higher value will result in more details in the
+   * frequency domain but fewer details in the time domain.
+   */
+  constructor(context, options = {}) {
+
+    super(context, options);
+
+    this.volume = 0;
+
+    this.processor = this.context.createScriptProcessor(2048, 1, 1);
+    this.connect(this.processor);
+    this.processor.onaudioprocess = this.processAudioVolumeEvent.bind(this);
+
+    // This fixes a still-standing bug in Chrome!
+    this.processor.connect(this.context.destination);
+
+  }
+
+  destroy() {
+    this.disconnect();
+    this.processor.onaudioprocess = null;
+    this.processor.disconnect();
+    this.processor = null;
+    this.removeAllListeners();
+  }
+
+  processAudioVolumeEvent() {
+
+    let array = new Uint8Array(this.frequencyBinCount);
+    this.getByteFrequencyData(array);
+
+    let total = 0;
+
+    var length = array.length;
+    for (let i = 0; i &lt; length; i++) {
+      total += (array[i] / 255);
+    }
+
+    // let average = parseFloat((total / length).toFixed(3));
+    let average = total / length;
+
+    if (average !== this.volume) {
+
+      this.volume = average;
+
+      // Emit a `change` event when volume changes
+      this.emit(
+        "change",
+        {type: "change", target: this, volume: this.volume}
+      );
+
+    }
+
+  }
+
+  // constructor(context, clippingLevel = 0.98, averaging = 0.95, clippingDelay = 750) {
+  //
+  //   super();
+  //
+  //   this.clippingLevel = clippingLevel;
+  //   this.clippingDelay = clippingDelay;
+  //   this.averaging = averaging;
+  //
+  //   this.clipping = false;
+  //   this.lastClip = 0;
+  //   this.volume = 0;
+  //
+  //   this.context = context;
+  //   this.input = this.context.createScriptProcessor(512);
+  //   this.input.onaudioprocess = this.processAudioVolumeEvent.bind(this);
+  //
+  //   // This fixes a still-standing bug in Chrome!
+  //   this.input.connect(this.context.destination);
+  //
+  // }
+  //
+  // destroy() {
+  //   this.input.disconnect();
+  //   this.input.onaudioprocess = null;
+  //   this.removeAllListeners();
+  // }
+  //
+  // processAudioVolumeEvent(e) {
+  //
+  //   let buf = e.inputBuffer.getChannelData(0);
+  //   let bufLength = buf.length;
+  //   let sum = 0;
+  //   let x;
+  //
+  //   // Do a root-mean-square on the samples: sum up the squares...
+  //   for (let i = 0; i &lt; bufLength; i++) {
+  //
+  //     x = buf[i];
+  //
+  //     if (Math.abs(x) >= this.clippingLevel) {
+  //       this.clipping = true;
+  //       this.lastClip = window.performance.now();
+  //     }
+  //
+  //     sum += x * x;
+  //
+  //   }
+  //
+  //   // Reset clipping if clipping delay expired
+  //   if (!this.clipping &amp;&amp; this.lastClip + this.clippingDelay &lt; window.performance.now()) {
+  //     this.clipping = false;
+  //   }
+  //
+  //   // Calculate RMS and smooth it out with the averaging factor. We use the max to have a fast
+  //   // attack and a slow release.
+  //   let rms = Math.sqrt(sum / bufLength);
+  //   this.volume = Math.max(rms, this.volume * this.averaging);
+  //
+  //   // Emit a `change` event when new data is received
+  //   this.emit(
+  //     "change",
+  //     {type: "change", target: this, volume: this.volume, clipping: this.clipping}
+  //   );
+  //
+  // }
+
+}
+
+/**
  * The `AudioInput` class facilitates the use of available audio inputs such as physical microphones
  * or other virtual audio input devices.
  */
@@ -534,11 +681,9 @@ export class AudioInput extends EventEmitter {
     this.source = this.context.createMediaStreamSource(this.stream);
 
     // Add audio meter
-    // this.meter = new AudioMeter(this.source);
     this.meter = new AudioMeter(this.context);
-    this.source.connect(this.meter.input);
-    this.meter.addListener("change", e => this.emit("volume", e));
-
+    this.source.connect(this.meter);
+    this.meter.on("change", e => this.emit("volume", e.volume));
 
 
 
@@ -596,128 +741,28 @@ export class AudioInput extends EventEmitter {
     //
     //
 
-
-
-
-
-
-
-
-
-
-
   }
 
+  /**
+   * Stops the currently playing audio input device.
+   */
   stop() {
-
     this.stream.getTracks().forEach(track => track.stop());
     this.stream = null;
     this.constraints = true;
-
-
-
-    // This is the source AudioNode whose media is obtained from the specified input audio stream
-    this.source = this.context.createMediaStreamSource(this.stream);
-
-    // Add audio meter
+    this.source.disconnect();
     this.meter.destroy();
     this.meter = null;
-
-    this.meter.addListener("change", e => this.emit("volume", e));
-
-
   }
 
 }
 
-/**
- * The `AudioMeter` class analyzes audio input and reports on its level (volume). It can be used in
- * a WebAudio chain by connecting a source node to the audio meter's `input` property:
- *
- * ```javascript
- * let meter = new AudioMeter(context);
- * someSourceAudioNode.connect(meter.input);
- * ```
- *
- * @todo when there is wider support, this should be rewritten as an AudioWorklet
- *
- * @param {AudioContext} context The `AudioContext` that this object belongs to.
- * @param {number} [clippingLevel=0.98] The threshold above which a sound is considered to clip
- * (float between 0 and 1).
- * @param {number} [averaging=0.95] An averaging factor to smooth out the actual RMS volume in order
- * to have a fast attack and a slow release.
- * @param {number} [clippingDelay=750] The number of milliseconds to keep the clipping indicator on
- * after a clipping event.
- */
-export class AudioMeter extends EventEmitter {
 
-  constructor(context, clippingLevel = 0.98, averaging = 0.95, clippingDelay = 750) {
 
-    super();
 
-    this.clippingLevel = clippingLevel;
-    this.clippingDelay = clippingDelay;
-    this.averaging = averaging;
 
-    this.clipping = false;
-    this.lastClip = 0;
-    this.volume = 0;
 
-    this.context = context;
-    this.input = this.context.createScriptProcessor(512);
-    this.input.onaudioprocess = this.processAudioVolumeEvent.bind(this);
 
-    // This fixes a still-standing bug in Chrome!
-    this.input.connect(this.context.destination);
-
-  }
-
-  destroy() {
-    this.input.disconnect();
-    this.input.onaudioprocess = null;
-    this.removeAllListeners();
-  }
-
-  processAudioVolumeEvent(e) {
-
-    let buf = e.inputBuffer.getChannelData(0);
-    let bufLength = buf.length;
-    let sum = 0;
-    let x;
-
-    // Do a root-mean-square on the samples: sum up the squares...
-    for (let i = 0; i &lt; bufLength; i++) {
-
-      x = buf[i];
-
-      if (Math.abs(x) >= this.clippingLevel) {
-        this.clipping = true;
-        this.lastClip = window.performance.now();
-      }
-
-      sum += x * x;
-
-    }
-
-    // Reset clipping if clipping delay expired
-    if (!this.clipping &amp;&amp; this.lastClip + this.clippingDelay &lt; window.performance.now()) {
-      this.clipping = false;
-    }
-
-    // Calculate RMS and smooth it out with the averaging factor. We use the max to have a fast
-    // attack and a slow release.
-    let rms = Math.sqrt(sum / bufLength);
-    this.volume = Math.max(rms, this.volume * this.averaging);
-
-    // Emit a `change` event when new data is received
-    this.emit(
-      "change",
-      {type: "change", target: this, volume: this.volume, clipping: this.clipping}
-    );
-
-  }
-
-}
 
 /**
  * Returns an object whose properties identify which constraints are supported by the current
@@ -776,14 +821,61 @@ export async function getInputs(type) {
     return inputDevices;
   }
 
-}</code></pre>
+}
+
+
+// let mix = function(Parent, ...mixins) {
+//
+//   class Mixed extends Parent {}
+//
+//   mixins.forEach(mixin => {
+//
+//     for (let prop in mixin) {
+//       Mixed.prototype[prop] = mixin[prop];
+//     }
+//
+//     Object.getOwnPropertyNames(Object.getPrototypeOf(mixin)).forEach(prop => {
+//       Mixed.prototype[prop] = mixin[prop];
+//     });
+//
+//   });
+//
+//   return Mixed;
+//
+// };
+
+/**
+ * This function mixes into the parent class the properties of specified objects. The mixins must be
+ * objects (and not classes).
+ *
+ * @param {Class} parent The parent class (superclass)
+ * @param {...Object} mixins Objects whose properties should be mixed into the parent class.
+ * @returns {Class}
+ */
+export function mix(parent, ...mixins) {
+
+  class Mixed extends parent {}
+
+  mixins.forEach(mixin => {
+
+    for (let prop in mixin) Mixed.prototype[prop] = mixin[prop];
+
+    Object.getOwnPropertyNames(Object.getPrototypeOf(mixin)).forEach(prop => {
+      Mixed.prototype[prop] = mixin[prop];
+    });
+
+  });
+
+  return Mixed;
+
+};</code></pre>
 		</section>
 			</div>
 		</div>
 	</div>
 	<footer>
 				<div class="copyright">DjipAV is a creation of Jean-Philippe Côté and is released under the MIT license.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on June 4th 2019, 16:04:29 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on June 14th 2019, 20:37:14 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

@@ -92,6 +92,16 @@ window.lunrData = {
           "promise.&lt;(promise.&lt;never&gt;|undefined)&gt",
           "start"
         ],
+        "AudioInput.html#stop": [
+          "audio",
+          "audioinput#stop",
+          "current",
+          "devic",
+          "function",
+          "input",
+          "play",
+          "stop"
+        ],
         "AudioMeter.html": [
           "analyz",
           "audio",
@@ -103,12 +113,11 @@ window.lunrData = {
           "input",
           "level",
           "meter",
-          "meter'",
           "new",
           "node",
-          "properti",
+          "object",
           "report",
-          "somesourceaudionode.connect(meter.input",
+          "somesourceaudionode.connect(met",
           "sourc",
           "us",
           "volum",
@@ -403,7 +412,7 @@ window.lunrData = {
           "videoinput#stop"
         ]
       },
-      "length": 25
+      "length": 26
     },
     "tokenStore": {
       "root": {
@@ -463,9 +472,13 @@ window.lunrData = {
                       "ref": "AudioInput.html#start",
                       "tf": 8.333333333333332
                     },
+                    "AudioInput.html#stop": {
+                      "ref": "AudioInput.html#stop",
+                      "tf": 8.333333333333332
+                    },
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 4.545454545454546
+                      "tf": 2.5
                     }
                   },
                   "i": {
@@ -502,6 +515,17 @@ window.lunrData = {
                                         }
                                       }
                                     }
+                                  },
+                                  "o": {
+                                    "docs": {},
+                                    "p": {
+                                      "docs": {
+                                        "AudioInput.html#stop": {
+                                          "ref": "AudioInput.html#stop",
+                                          "tf": 1150
+                                        }
+                                      }
+                                    }
                                   }
                                 }
                               }
@@ -519,7 +543,7 @@ window.lunrData = {
                         "docs": {
                           "AudioMeter.html": {
                             "ref": "AudioMeter.html",
-                            "tf": 1902.2727272727273
+                            "tf": 1905
                           }
                         },
                         "e": {
@@ -544,7 +568,7 @@ window.lunrData = {
                                             "docs": {
                                               "AudioMeter.html": {
                                                 "ref": "AudioMeter.html",
-                                                "tf": 2.272727272727273
+                                                "tf": 2.5
                                               }
                                             }
                                           }
@@ -593,7 +617,7 @@ window.lunrData = {
                     "docs": {
                       "AudioMeter.html": {
                         "ref": "AudioMeter.html",
-                        "tf": 2.272727272727273
+                        "tf": 2.5
                       }
                     }
                   }
@@ -796,6 +820,10 @@ window.lunrData = {
                     "AudioInput.html": {
                       "ref": "AudioInput.html",
                       "tf": 3.571428571428571
+                    },
+                    "AudioInput.html#stop": {
+                      "ref": "AudioInput.html#stop",
+                      "tf": 8.333333333333332
                     }
                   }
                 }
@@ -1005,9 +1033,13 @@ window.lunrData = {
                       "ref": "AudioInput.html#start",
                       "tf": 8.333333333333332
                     },
+                    "AudioInput.html#stop": {
+                      "ref": "AudioInput.html#stop",
+                      "tf": 8.333333333333332
+                    },
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 4.545454545454546
+                      "tf": 2.5
                     },
                     "VideoInput.html": {
                       "ref": "VideoInput.html",
@@ -1340,7 +1372,7 @@ window.lunrData = {
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.272727272727273
+                      "tf": 2.5
                     }
                   }
                 }
@@ -1439,15 +1471,7 @@ window.lunrData = {
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.272727272727273
-                    }
-                  },
-                  "'": {
-                    "docs": {
-                      "AudioMeter.html": {
-                        "ref": "AudioMeter.html",
-                        "tf": 2.272727272727273
-                      }
+                      "tf": 2.5
                     }
                   }
                 }
@@ -1717,7 +1741,7 @@ window.lunrData = {
                     "docs": {
                       "AudioMeter.html": {
                         "ref": "AudioMeter.html",
-                        "tf": 2.272727272727273
+                        "tf": 2.5
                       }
                     }
                   }
@@ -1827,6 +1851,21 @@ window.lunrData = {
                 }
               }
             },
+            "o": {
+              "docs": {},
+              "p": {
+                "docs": {
+                  "AudioInput.html#stop": {
+                    "ref": "AudioInput.html#stop",
+                    "tf": 758.3333333333334
+                  },
+                  "VideoInput.html#stop": {
+                    "ref": "VideoInput.html#stop",
+                    "tf": 691.6666666666667
+                  }
+                }
+              }
+            },
             "r": {
               "docs": {},
               "e": {
@@ -1868,17 +1907,6 @@ window.lunrData = {
                         "tf": 5.555555555555555
                       }
                     }
-                  }
-                }
-              }
-            },
-            "o": {
-              "docs": {},
-              "p": {
-                "docs": {
-                  "VideoInput.html#stop": {
-                    "ref": "VideoInput.html#stop",
-                    "tf": 691.6666666666667
                   }
                 }
               }
@@ -1943,34 +1971,10 @@ window.lunrData = {
                                                                   "e": {
                                                                     "docs": {},
                                                                     "t": {
-                                                                      "docs": {},
-                                                                      "e": {
-                                                                        "docs": {},
-                                                                        "r": {
-                                                                          "docs": {},
-                                                                          ".": {
-                                                                            "docs": {},
-                                                                            "i": {
-                                                                              "docs": {},
-                                                                              "n": {
-                                                                                "docs": {},
-                                                                                "p": {
-                                                                                  "docs": {},
-                                                                                  "u": {
-                                                                                    "docs": {},
-                                                                                    "t": {
-                                                                                      "docs": {
-                                                                                        "AudioMeter.html": {
-                                                                                          "ref": "AudioMeter.html",
-                                                                                          "tf": 2.272727272727273
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
+                                                                      "docs": {
+                                                                        "AudioMeter.html": {
+                                                                          "ref": "AudioMeter.html",
+                                                                          "tf": 2.5
                                                                         }
                                                                       }
                                                                     }
@@ -2010,7 +2014,7 @@ window.lunrData = {
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.272727272727273
+                      "tf": 2.5
                     }
                   }
                 }
@@ -2570,7 +2574,7 @@ window.lunrData = {
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.272727272727273
+                      "tf": 2.5
                     }
                   }
                 }
@@ -2633,7 +2637,7 @@ window.lunrData = {
                         "docs": {
                           "AudioMeter.html": {
                             "ref": "AudioMeter.html",
-                            "tf": 2.272727272727273
+                            "tf": 2.5
                           }
                         }
                       }
@@ -2759,7 +2763,7 @@ window.lunrData = {
                     },
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 112.27272727272727
+                      "tf": 112.5
                     },
                     "VideoInput.html": {
                       "ref": "VideoInput.html",
@@ -2792,7 +2796,7 @@ window.lunrData = {
                         },
                         "AudioMeter.html": {
                           "ref": "AudioMeter.html",
-                          "tf": 2.272727272727273
+                          "tf": 2.5
                         }
                       }
                     }
@@ -2870,6 +2874,49 @@ window.lunrData = {
               }
             }
           },
+          "u": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "AudioInput.html#stop": {
+                          "ref": "AudioInput.html#stop",
+                          "tf": 8.333333333333332
+                        },
+                        "VideoInput.html#capabilities": {
+                          "ref": "VideoInput.html#capabilities",
+                          "tf": 4.166666666666666
+                        },
+                        "VideoInput.html#started": {
+                          "ref": "VideoInput.html#started",
+                          "tf": 10
+                        },
+                        "VideoInput.html#stream": {
+                          "ref": "VideoInput.html#stream",
+                          "tf": 8.333333333333332
+                        },
+                        "VideoInput.html#track": {
+                          "ref": "VideoInput.html#track",
+                          "tf": 6.25
+                        },
+                        "VideoInput.html#cancelFade": {
+                          "ref": "VideoInput.html#cancelFade",
+                          "tf": 7.142857142857142
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "h": {
             "docs": {},
             "a": {
@@ -2880,7 +2927,7 @@ window.lunrData = {
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.272727272727273
+                      "tf": 2.5
                     }
                   }
                 }
@@ -2975,45 +3022,6 @@ window.lunrData = {
                   "VideoInput.html#destroy": {
                     "ref": "VideoInput.html#destroy",
                     "tf": 3.8461538461538463
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "r": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "n": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "VideoInput.html#capabilities": {
-                          "ref": "VideoInput.html#capabilities",
-                          "tf": 4.166666666666666
-                        },
-                        "VideoInput.html#started": {
-                          "ref": "VideoInput.html#started",
-                          "tf": 10
-                        },
-                        "VideoInput.html#stream": {
-                          "ref": "VideoInput.html#stream",
-                          "tf": 8.333333333333332
-                        },
-                        "VideoInput.html#track": {
-                          "ref": "VideoInput.html#track",
-                          "tf": 6.25
-                        },
-                        "VideoInput.html#cancelFade": {
-                          "ref": "VideoInput.html#cancelFade",
-                          "tf": 7.142857142857142
-                        }
-                      }
-                    }
                   }
                 }
               }
@@ -3145,6 +3153,10 @@ window.lunrData = {
                         "docs": {
                           "AudioInput.html#start": {
                             "ref": "AudioInput.html#start",
+                            "tf": 110
+                          },
+                          "AudioInput.html#stop": {
+                            "ref": "AudioInput.html#stop",
                             "tf": 110
                           },
                           "VideoInput.html#cancelFade": {
@@ -3582,10 +3594,6 @@ window.lunrData = {
                       "docs": {},
                       "i": {
                         "docs": {
-                          "AudioMeter.html": {
-                            "ref": "AudioMeter.html",
-                            "tf": 2.272727272727273
-                          },
                           "VideoInput.html": {
                             "ref": "VideoInput.html",
                             "tf": 1.1111111111111112
@@ -3643,6 +3651,20 @@ window.lunrData = {
               }
             }
           },
+          "l": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "y": {
+                "docs": {
+                  "AudioInput.html#stop": {
+                    "ref": "AudioInput.html#stop",
+                    "tf": 8.333333333333332
+                  }
+                }
+              }
+            }
+          },
           "a": {
             "docs": {},
             "r": {
@@ -3688,7 +3710,7 @@ window.lunrData = {
               },
               "AudioMeter.html": {
                 "ref": "AudioMeter.html",
-                "tf": 2.272727272727273
+                "tf": 2.5
               },
               "VideoInput.html": {
                 "ref": "VideoInput.html",
@@ -3813,6 +3835,10 @@ window.lunrData = {
                   "docs": {},
                   "t": {
                     "docs": {
+                      "AudioMeter.html": {
+                        "ref": "AudioMeter.html",
+                        "tf": 2.5
+                      },
                       "VideoInput.html": {
                         "ref": "VideoInput.html",
                         "tf": 1.1111111111111112
@@ -3894,7 +3920,7 @@ window.lunrData = {
               "docs": {
                 "AudioMeter.html": {
                   "ref": "AudioMeter.html",
-                  "tf": 2.272727272727273
+                  "tf": 2.5
                 },
                 "VideoInput.html": {
                   "ref": "VideoInput.html",
@@ -3911,7 +3937,7 @@ window.lunrData = {
                 "docs": {
                   "AudioMeter.html": {
                     "ref": "AudioMeter.html",
-                    "tf": 2.272727272727273
+                    "tf": 2.5
                   }
                 }
               }
@@ -4264,7 +4290,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 313
+      "length": 320
     },
     "corpusTokens": [
       "0",
@@ -4281,6 +4307,7 @@ window.lunrData = {
       "audio",
       "audioinput",
       "audioinput#start",
+      "audioinput#stop",
       "audiomet",
       "audiometer(context",
       "avail",
@@ -4354,7 +4381,6 @@ window.lunrData = {
       "member",
       "met",
       "meter",
-      "meter'",
       "method",
       "microphon",
       "minimum",
@@ -4374,6 +4400,7 @@ window.lunrData = {
       "paramet",
       "per",
       "physic",
+      "play",
       "precis",
       "process",
       "promise.&lt;(imagebitmap|domstring|blob)&gt",
@@ -4387,7 +4414,7 @@ window.lunrData = {
       "return",
       "set",
       "simplifi",
-      "somesourceaudionode.connect(meter.input",
+      "somesourceaudionode.connect(met",
       "sourc",
       "special",
       "specif",
@@ -4496,6 +4523,16 @@ window.lunrData = {
       "summary": "",
       "description": "Connects to the first audio input matching the constraints."
     },
+    "AudioInput.html#stop": {
+      "id": "AudioInput.html#stop",
+      "kind": "function",
+      "title": "stop()",
+      "longname": "AudioInput#stop",
+      "name": "stop",
+      "tags": "AudioInput#stop stop",
+      "summary": "",
+      "description": "Stops the currently playing audio input device."
+    },
     "AudioMeter.html": {
       "id": "AudioMeter.html",
       "kind": "class",
@@ -4504,7 +4541,7 @@ window.lunrData = {
       "name": "AudioMeter",
       "tags": "AudioMeter",
       "summary": "",
-      "description": "The AudioMeter class analyzes audio input and reports on its level (volume). It can be used in a WebAudio chain by connecting a source node to the audio meter's input property: let meter = new AudioMeter(context); someSourceAudioNode.connect(meter.input);",
+      "description": "The AudioMeter class analyzes audio input and reports on its level (volume). It can be used in a WebAudio chain by connecting a source node to the AudioMeter object. let meter = new AudioMeter(context); someSourceAudioNode.connect(meter);",
       "body": ""
     },
     "VideoInput.html": {
