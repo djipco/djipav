@@ -1,355 +1,24 @@
-/**
- * EventEmitter Module
- *
- * This module is simply a refactoring of the great `eventemitter3` library created by primus
- * (https://github.com/primus/eventemitter3) The library was refactored as an ES6 module and cleaned
- * up a bit for my own purposes.
- *
- * @module eventemitter
- * @private
- */
-
+import EventEmitter from "../node_modules/djipevents/dist/djipevents.js";
 
 /**
- * The `Listener` class represents a single event listener object. Such objects store the callback
- * (listener) function, the context to execute the function in (often `this`) and whether or not
- * the callback should only be executed once.
+ * Creates a new `VideoInput` object and attaches it to the specified `<video>` element for
+ * viewing. If no `<video>` element is specified, the stream will not be visible. If the special
+ * value `"create"` is used, a new `<video>` element is created and appended to the `<body>`. A
+ * reference to the video element is accessible via the `video` property.
  *
- * @private
- */
-class Listener {
-
-  /**
-   * Creates a `Listener` object which keeps track of the callback function to execute, the context
-   * to execute it in and whether or not it is a single execution callback (a.k.a. `once`).
-   *
-   * @param {Function} callback The listener function
-   * @param {*} context The context to invoke the listener in
-   * @param {Boolean} [once=false] Whether the callback function should be executed only once
-   */
-  constructor(callback, context, once = false) {
-    this.fn = callback;
-    this.context = context;
-    this.once = once === true || false;
-  }
-
-}
-
-/**
- * The `EventEmitter` class provides methods to implement the observable design pattern. It is meant
- * to be extended on or mixed in to add methods such as `addListener()`, `removeListener()`,
- * `emit()`, etc.
+ * By default, the first video input track will be used. To find a specific video input, a
+ * [MediaTrackConstraints](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints)
+ * must be specified in the `constraints` parameter.
  *
- * @private
- * @mixin
- */
-export class EventEmitter {
-
-  /**
-   * Creates an `EventEmitter` instance
-   */
-  constructor() {
-    this._events = {};
-    this._eventsCount = 0;
-  }
-
-  /**
-   * Add a listener for a given event.
-   *
-   * @param {(String|Symbol)} event The event name.
-   * @param {Function} fn The listener function (i.e. callback)
-   * @param {*} context The context to invoke the listener in.
-   * @param {Boolean} once Specify if the listener is a one-time listener.
-   * @returns {EventEmitter}
-   */
-  addListener(event, fn, context, once = false) {
-
-    if (typeof fn !== "function") throw new TypeError("The listener must be a function");
-
-    let listener = new Listener(fn, context || this, once);
-
-    if (!this._events[event]) {
-      this._events[event] = listener;
-      this._eventsCount++;
-    } else if (!this._events[event].fn) {
-      this._events[event].push(listener);
-    } else {
-      this._events[event] = [this._events[event], listener];
-    }
-
-    return this;
-  }
-
-  /**
-   * Clear event by name.
-   *
-   * @param {(String|Symbol)} event The Event name
-   */
-  clearEvent(event) {
-
-    if (--this._eventsCount === 0) {
-      this._events = {};
-    } else {
-      delete this._events[event];
-    }
-
-  }
-
-  /**
-   * Array of all the unique events for which the emitter has registered listeners.
-   *
-   * @type {Array}
-   * @readonly
-   */
-  get eventNames() {
-    let names = []
-      , events
-      , name;
-
-    if (this._eventsCount === 0) return names;
-
-    for (name in (events = this._events)) {
-      if (Object.prototype.hasOwnProperty.call(events, name)) {
-        names.push(name);
-      }
-    }
-
-    if (Object.getOwnPropertySymbols) {
-      return names.concat(Object.getOwnPropertySymbols(events));
-    }
-
-    return names;
-  };
-
-  /**
-   * Return the listeners registered for a given event.
-   *
-   * @param {(String|Symbol)} event The event name.
-   * @returns {Array} The registered listeners.
-   */
-  getListeners(event) {
-
-    let ee = [];
-    let handlers = this._events[event];
-
-    if (!handlers) return [];
-    if (handlers.fn) return [handlers.fn];
-
-    for (let i = 0; i < handlers.length; i++) {
-      ee[i] = handlers[i].fn;
-    }
-
-    return ee;
-
-  };
-
-  /**
-   * Return the number of listeners listening to a given event.
-   *
-   * @param {(String|Symbol)} event The event name.
-   * @returns {Number} The number of listeners.
-   */
-  getListenerCount(event) {
-
-    // let evt = PREFIX ? PREFIX + event : event;
-    let listeners = this._events[event];
-
-    if (!listeners) return 0;
-    if (listeners.fn) return 1;
-    return listeners.length;
-
-  };
-
-  /**
-   * Calls each of the listeners registered for a given event.
-   *
-   * @param {(String|Symbol)} event The event name.
-   * @returns {Boolean} `true` if the event had listeners, else `false`.
-   */
-  emit(event, a1, a2, a3, a4, a5) {
-
-    // let evt = PREFIX ? PREFIX + event : event;
-
-    if (!this._events[event]) return false;
-
-    let listeners = this._events[event]
-      , len = arguments.length
-      , args
-      , i;
-
-    if (listeners.fn) {
-
-      if (listeners.once) this.removeListener(event, listeners.fn, undefined, true);
-
-      switch (len) {
-        case 1: return listeners.fn.call(listeners.context), true;
-        case 2: return listeners.fn.call(listeners.context, a1), true;
-        case 3: return listeners.fn.call(listeners.context, a1, a2), true;
-        case 4: return listeners.fn.call(listeners.context, a1, a2, a3), true;
-        case 5: return listeners.fn.call(listeners.context, a1, a2, a3, a4), true;
-        case 6: return listeners.fn.call(listeners.context, a1, a2, a3, a4, a5), true;
-      }
-
-      for (i = 1, args = new Array(len -1); i < len; i++) {
-        args[i - 1] = arguments[i];
-      }
-
-      listeners.fn.apply(listeners.context, args);
-
-    } else {
-
-      let length = listeners.length
-        , j;
-
-      for (i = 0; i < length; i++) {
-        if (listeners[i].once) this.removeListener(event, listeners[i].fn, undefined, true);
-
-        switch (len) {
-          case 1: listeners[i].fn.call(listeners[i].context); break;
-          case 2: listeners[i].fn.call(listeners[i].context, a1); break;
-          case 3: listeners[i].fn.call(listeners[i].context, a1, a2); break;
-          case 4: listeners[i].fn.call(listeners[i].context, a1, a2, a3); break;
-          default:
-            if (!args) for (j = 1, args = new Array(len -1); j < len; j++) {
-              args[j - 1] = arguments[j];
-            }
-
-            listeners[i].fn.apply(listeners[i].context, args);
-        }
-      }
-
-    }
-
-    return true;
-
-  };
-
-  /**
-   * Add a listener for a given event.
-   *
-   * @param {(String|Symbol)} event The event name.
-   * @param {Function} callback The listener function.
-   * @param {*} [context=this] The context to invoke the listener with.
-   *
-   * @returns {EventEmitter} `this`
-   */
-  on(event, callback, context) {
-    return this.addListener(event, callback, context, false);
-  };
-
-  /**
-   * Add a one-time listener for a given event.
-   *
-   * @param {(String|Symbol)} event The event name.
-   * @param {Function} callback The listener function.
-   * @param {*} [context=this] The context to invoke the listener with.
-   *
-   * @returns {EventEmitter} `this`
-   */
-  once(event, callback, context) {
-    return this.addListener(event, callback, context, true);
-  };
-
-  /**
-   * Remove the listeners of a given event.
-   *
-   * @param {(String|Symbol)} event The event name.
-   * @param {Function} fn Only remove the listeners that match this function.
-   * @param {*} context Only remove the listeners that have this context.
-   * @param {Boolean} once Only remove one-time listeners.
-   *
-   * @returns {EventEmitter} `this`
-   */
-  removeListener(event, fn, context, once) {
-
-    let events = [];
-
-    if (!this._events[event]) return this;
-    if (!fn) {
-      this.clearEvent(event);
-      return this;
-    }
-
-    let listeners = this._events[event];
-
-    if (listeners.fn) {
-      if (
-        listeners.fn === fn &&
-        (!once || listeners.once) &&
-        (!context || listeners.context === context)
-      ) {
-        this.clearEvent(event);
-      }
-    } else {
-      for (let i = 0, events = [], length = listeners.length; i < length; i++) {
-        if (
-          listeners[i].fn !== fn ||
-          (once && !listeners[i].once) ||
-          (context && listeners[i].context !== context)
-        ) {
-          events.push(listeners[i]);
-        }
-      }
-
-      // Reset the array, or remove it completely if we have no more listeners.
-      if (events.length) this._events[event] = events.length === 1 ? events[0] : events;
-      else this.clearEvent(event);
-    }
-
-    return this;
-
-  }
-
-  /**
-   * Remove all listeners, or those for the specified event (if present).
-   *
-   * @param {(String|Symbol)} [event] The event name.
-   *
-   * @returns {EventEmitter} `this`
-   */
-  removeAllListeners(event) {
-
-    if (event) {
-      if (this._events[event]) this.clearEvent(event);
-    } else {
-      this._events = {};
-      this._eventsCount = 0;
-    }
-
-    return this;
-
-  }
-
-}
-
-
-
-
-
-
-
-/**
- * @module djipav
+ * @param {{}} [options]
+ * @param {HTMLVideoElement|"create"} [options.element] The `<video>` element to attach the video
+ * stream to. If none is supplied, the video feed will not be visible. If the special value
+ * `"create"` is used, a new `<video>` element will be created and appended to the body.
+ * @param {string} [options.elementId] The `id` attribute of the new `<video>` element (if a new
+ * `<video>` element is created).
  */
 export class VideoInput extends EventEmitter {
 
-  /**
-   * Creates a new `VideoInput` object and attaches it to the specified `<video>` element for
-   * viewing. If no `<video>` element is specified, the stream will not be visible. If the special
-   * value `"create"` is used, a new `<video>` element is created and appended to the `<body>`. A
-   * reference to the video element is accessible via the `video` property.
-   *
-   * By default, the first video input track will be used. To find a specific video input, a
-   * [MediaTrackConstraints](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints)
-   * must be specified in the `constraints` parameter.
-   *
-   * @param {{}} [options]
-   * @param {HTMLVideoElement|"create"} [options.element] The `<video>` element to attach the video
-   * stream to. If none is supplied, the video feed will not be visible. If the special value
-   * `"create"` is used, a new `<video>` element will be created and appended to the body.
-   * @param {string} [options.elementId] The `id` attribute of the new `<video>` element (if a new
-   * `<video>` element is created).
-   */
   constructor(options = {}) {
 
     super();
@@ -733,12 +402,156 @@ export class VideoInput extends EventEmitter {
 
 }
 
+/**
+ * The `AudioMeter` class analyzes audio input and reports on its level (volume). It can be used in
+ * a WebAudio chain by connecting a source node to the `AudioMeter` object.
+ *
+ * ```javascript
+ * let meter = new AudioMeter(context);
+ * someSourceAudioNode.connect(meter);
+ * ```
+ */
+export class AudioMeter extends mix(AnalyserNode, new EventEmitter()) {
 
+  /**
+   * @param {AudioContext} context The `AudioContext` that this object belongs to.
+   * @param {Object} [options={}]
+   * @param {number} [options.smoothingTimeConstant=0.8] A number between 0 and 1 to quantify the
+   * amount of smoothing applied to the calculated volume.
+   * @param {number} [options.minDecibels=-100] A number representing the minimum decibel value for
+   * scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default value is
+   * -100 dB.
+   * @param {number} [options.maxDecibels=-30] A number representing the maximum decibel value for
+   * scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default value is
+   * -30 dB.
+   * @param {number} [options.fftSize=2048] An unsigned integer, representing the window size of
+   * the FFT, given in number of samples. A higher value will result in more details in the
+   * frequency domain but fewer details in the time domain.
+   */
+  constructor(context, options = {}) {
 
+    super(context, options);
 
+    this.volume = 0;
 
+    this.processor = this.context.createScriptProcessor(2048, 1, 1);
+    this.connect(this.processor);
+    this.processor.onaudioprocess = this.processAudioVolumeEvent.bind(this);
 
+    // This fixes a still-standing bug in Chrome!
+    this.processor.connect(this.context.destination);
 
+  }
+
+  destroy() {
+    this.disconnect();
+    this.processor.onaudioprocess = null;
+    this.processor.disconnect();
+    this.processor = null;
+    this.removeAllListeners();
+  }
+
+  processAudioVolumeEvent() {
+
+    let array = new Uint8Array(this.frequencyBinCount);
+    this.getByteFrequencyData(array);
+
+    let total = 0;
+
+    var length = array.length;
+    for (let i = 0; i < length; i++) {
+      total += (array[i] / 255);
+    }
+
+    // let average = parseFloat((total / length).toFixed(3));
+    let average = total / length;
+
+    if (average !== this.volume) {
+
+      this.volume = average;
+
+      // Emit a `change` event when volume changes
+      this.emit(
+        "change",
+        {type: "change", target: this, volume: this.volume}
+      );
+
+    }
+
+  }
+
+  // constructor(context, clippingLevel = 0.98, averaging = 0.95, clippingDelay = 750) {
+  //
+  //   super();
+  //
+  //   this.clippingLevel = clippingLevel;
+  //   this.clippingDelay = clippingDelay;
+  //   this.averaging = averaging;
+  //
+  //   this.clipping = false;
+  //   this.lastClip = 0;
+  //   this.volume = 0;
+  //
+  //   this.context = context;
+  //   this.input = this.context.createScriptProcessor(512);
+  //   this.input.onaudioprocess = this.processAudioVolumeEvent.bind(this);
+  //
+  //   // This fixes a still-standing bug in Chrome!
+  //   this.input.connect(this.context.destination);
+  //
+  // }
+  //
+  // destroy() {
+  //   this.input.disconnect();
+  //   this.input.onaudioprocess = null;
+  //   this.removeAllListeners();
+  // }
+  //
+  // processAudioVolumeEvent(e) {
+  //
+  //   let buf = e.inputBuffer.getChannelData(0);
+  //   let bufLength = buf.length;
+  //   let sum = 0;
+  //   let x;
+  //
+  //   // Do a root-mean-square on the samples: sum up the squares...
+  //   for (let i = 0; i < bufLength; i++) {
+  //
+  //     x = buf[i];
+  //
+  //     if (Math.abs(x) >= this.clippingLevel) {
+  //       this.clipping = true;
+  //       this.lastClip = window.performance.now();
+  //     }
+  //
+  //     sum += x * x;
+  //
+  //   }
+  //
+  //   // Reset clipping if clipping delay expired
+  //   if (!this.clipping && this.lastClip + this.clippingDelay < window.performance.now()) {
+  //     this.clipping = false;
+  //   }
+  //
+  //   // Calculate RMS and smooth it out with the averaging factor. We use the max to have a fast
+  //   // attack and a slow release.
+  //   let rms = Math.sqrt(sum / bufLength);
+  //   this.volume = Math.max(rms, this.volume * this.averaging);
+  //
+  //   // Emit a `change` event when new data is received
+  //   this.emit(
+  //     "change",
+  //     {type: "change", target: this, volume: this.volume, clipping: this.clipping}
+  //   );
+  //
+  // }
+
+}
+
+/**
+ * The `AudioInput` class facilitates the use of available audio inputs such as physical microphones
+ * or other virtual audio input devices.
+ */
 export class AudioInput extends EventEmitter {
 
   constructor() {
@@ -755,6 +568,11 @@ export class AudioInput extends EventEmitter {
     this.stop();
   }
 
+  /**
+   * Connects to the first audio input matching the constraints.
+   * @param options
+   * @returns {Promise<Promise<never>|undefined>}
+   */
   async start(options = {}) {
 
     if (!navigator.mediaDevices) return Promise.reject("MediaDevices API not supported.");
@@ -784,11 +602,9 @@ export class AudioInput extends EventEmitter {
     this.source = this.context.createMediaStreamSource(this.stream);
 
     // Add audio meter
-    // this.meter = new AudioMeter(this.source);
     this.meter = new AudioMeter(this.context);
-    this.source.connect(this.meter.input);
-    this.meter.addListener("change", e => this.emit("volume", e));
-
+    this.source.connect(this.meter);
+    this.meter.on("change", e => this.emit("volume", e.volume));
 
 
 
@@ -846,54 +662,21 @@ export class AudioInput extends EventEmitter {
     //
     //
 
-
-
-
-
-
-
-
-
-
-
   }
 
+  /**
+   * Stops the currently playing audio input device.
+   */
   stop() {
-
     this.stream.getTracks().forEach(track => track.stop());
     this.stream = null;
     this.constraints = true;
-
-
-
-    // This is the source AudioNode whose media is obtained from the specified input audio stream
-    this.source = this.context.createMediaStreamSource(this.stream);
-
-    // Add audio meter
+    this.source.disconnect();
     this.meter.destroy();
     this.meter = null;
-
-    this.meter.addListener("change", e => this.emit("volume", e));
-
-
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -927,7 +710,7 @@ function _parseWebcamInfoFromLabel(label = "") {
  * Returns a promise fulfilled with an array of `InputDeviceInfo` objects detailing the currently
  * available inputs.
  *
- * @param {string} [type] The type of input devices to return (`"audio"` or `"video"`). If no type
+ * @param {string} [type] The type (`"audio"` or `"video"`) of input devices to return. If no type
  * is specified, all input devices are returned.
  * @returns {Promise<InputDeviceInfo[]>}
  */
@@ -961,92 +744,49 @@ export async function getInputs(type) {
 
 }
 
+
+// let mix = function(Parent, ...mixins) {
+//
+//   class Mixed extends Parent {}
+//
+//   mixins.forEach(mixin => {
+//
+//     for (let prop in mixin) {
+//       Mixed.prototype[prop] = mixin[prop];
+//     }
+//
+//     Object.getOwnPropertyNames(Object.getPrototypeOf(mixin)).forEach(prop => {
+//       Mixed.prototype[prop] = mixin[prop];
+//     });
+//
+//   });
+//
+//   return Mixed;
+//
+// };
+
 /**
- * @class AudioMeter
+ * This function mixes into the parent class the properties of specified objects. The mixins must be
+ * objects (and not classes).
+ *
+ * @param {Class} parent The parent class (superclass)
+ * @param {...Object} mixins Objects whose properties should be mixed into the parent class.
+ * @returns {Class}
  */
-export class AudioMeter extends EventEmitter {
+export function mix(parent, ...mixins) {
 
-  /**
-   *
-   * Creates an `AudioMeter`object. The resulting object can then be used in an audio chain by
-   * connecting a source node to its `input` property:
-   *
-   *  let am = new AudioMeter(context);
-   *  someSourceAudioNode.connect(am.input);
-   *
-   * @todo when there is wider support, this should be rewritten as an AudioWorklet
-   *
-   * @param {AudioContext} context The `AudioContext` that this object belongs to.
-   * @param {number} clippingLevel The threshold above which a sound is considered to clip (float
-   * between 0 and 1). The default is 0.98.
-   * @param {number} averaging
-   * @param {number} clippingDelay The number of milliseconds to hold the clipping indicator after a
-   * clipping event.
-   */
-  constructor(context, clippingLevel = 0.98, averaging = 0.95, clippingDelay = 750) {
+  class Mixed extends parent {}
 
-    super();
+  mixins.forEach(mixin => {
 
-    this.clippingLevel = clippingLevel;
-    this.clippingDelay = clippingDelay;
-    this.averaging = averaging;
+    for (let prop in mixin) Mixed.prototype[prop] = mixin[prop];
 
-    this.clipping = false;
-    this.lastClip = 0;
-    this.volume = 0;
+    Object.getOwnPropertyNames(Object.getPrototypeOf(mixin)).forEach(prop => {
+      Mixed.prototype[prop] = mixin[prop];
+    });
 
-    this.context = context;
-    this.input = this.context.createScriptProcessor(512);
-    this.input.onaudioprocess = this.processAudioVolumeEvent.bind(this);
+  });
 
-    // This fixes a still-standing bug in Chrome!
-    this.input.connect(this.context.destination);
+  return Mixed;
 
-  }
-
-  destroy() {
-    this.input.disconnect();
-    this.input.onaudioprocess = null;
-    this.removeAllListeners();
-  }
-
-  processAudioVolumeEvent(e) {
-
-    let buf = e.inputBuffer.getChannelData(0);
-    let bufLength = buf.length;
-    let sum = 0;
-    let x;
-
-    // Do a root-mean-square on the samples: sum up the squares...
-    for (let i = 0; i < bufLength; i++) {
-
-      x = buf[i];
-
-      if (Math.abs(x) >= this.clippingLevel) {
-        this.clipping = true;
-        this.lastClip = window.performance.now();
-      }
-
-      sum += x * x;
-
-    }
-
-    // Reset clipping if clipping delay expired
-    if (!this.clipping && this.lastClip + this.clippingDelay < window.performance.now()) {
-      this.clipping = false;
-    }
-
-    // Calculate RMS and smooth it out with the averaging factor. We use the max to have a fast
-    // attack and a slow release.
-    let rms = Math.sqrt(sum / bufLength);
-    this.volume = Math.max(rms, this.volume * this.averaging);
-
-    // Emit a `change` event when new data is received
-    this.emit(
-      "change",
-      {type: "change", target: this, volume: this.volume, clipping: this.clipping}
-    );
-
-  }
-
-}
+};
