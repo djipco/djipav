@@ -102,12 +102,13 @@
           "connect",
           "input",
           "level",
+          "meter",
           "meter'",
           "new",
           "node",
           "properti",
           "report",
-          "somesourceaudionode.connect(am.input",
+          "somesourceaudionode.connect(meter.input",
           "sourc",
           "us",
           "volum",
@@ -464,7 +465,7 @@
                     },
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 4.761904761904762
+                      "tf": 4.545454545454546
                     }
                   },
                   "i": {
@@ -518,7 +519,7 @@
                         "docs": {
                           "AudioMeter.html": {
                             "ref": "AudioMeter.html",
-                            "tf": 1902.3809523809523
+                            "tf": 1902.2727272727273
                           }
                         },
                         "e": {
@@ -543,7 +544,7 @@
                                             "docs": {
                                               "AudioMeter.html": {
                                                 "ref": "AudioMeter.html",
-                                                "tf": 2.380952380952381
+                                                "tf": 2.272727272727273
                                               }
                                             }
                                           }
@@ -592,7 +593,7 @@
                     "docs": {
                       "AudioMeter.html": {
                         "ref": "AudioMeter.html",
-                        "tf": 2.380952380952381
+                        "tf": 2.272727272727273
                       }
                     }
                   }
@@ -1006,7 +1007,7 @@
                     },
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 4.761904761904762
+                      "tf": 4.545454545454546
                     },
                     "VideoInput.html": {
                       "ref": "VideoInput.html",
@@ -1339,7 +1340,7 @@
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.380952380952381
+                      "tf": 2.272727272727273
                     }
                   }
                 }
@@ -1435,12 +1436,17 @@
               "e": {
                 "docs": {},
                 "r": {
-                  "docs": {},
+                  "docs": {
+                    "AudioMeter.html": {
+                      "ref": "AudioMeter.html",
+                      "tf": 2.272727272727273
+                    }
+                  },
                   "'": {
                     "docs": {
                       "AudioMeter.html": {
                         "ref": "AudioMeter.html",
-                        "tf": 2.380952380952381
+                        "tf": 2.272727272727273
                       }
                     }
                   }
@@ -1711,7 +1717,7 @@
                     "docs": {
                       "AudioMeter.html": {
                         "ref": "AudioMeter.html",
-                        "tf": 2.380952380952381
+                        "tf": 2.272727272727273
                       }
                     }
                   }
@@ -1932,25 +1938,34 @@
                                                               "docs": {},
                                                               "(": {
                                                                 "docs": {},
-                                                                "a": {
+                                                                "m": {
                                                                   "docs": {},
-                                                                  "m": {
+                                                                  "e": {
                                                                     "docs": {},
-                                                                    ".": {
+                                                                    "t": {
                                                                       "docs": {},
-                                                                      "i": {
+                                                                      "e": {
                                                                         "docs": {},
-                                                                        "n": {
+                                                                        "r": {
                                                                           "docs": {},
-                                                                          "p": {
+                                                                          ".": {
                                                                             "docs": {},
-                                                                            "u": {
+                                                                            "i": {
                                                                               "docs": {},
-                                                                              "t": {
-                                                                                "docs": {
-                                                                                  "AudioMeter.html": {
-                                                                                    "ref": "AudioMeter.html",
-                                                                                    "tf": 2.380952380952381
+                                                                              "n": {
+                                                                                "docs": {},
+                                                                                "p": {
+                                                                                  "docs": {},
+                                                                                  "u": {
+                                                                                    "docs": {},
+                                                                                    "t": {
+                                                                                      "docs": {
+                                                                                        "AudioMeter.html": {
+                                                                                          "ref": "AudioMeter.html",
+                                                                                          "tf": 2.272727272727273
+                                                                                        }
+                                                                                      }
+                                                                                    }
                                                                                   }
                                                                                 }
                                                                               }
@@ -1995,7 +2010,7 @@
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.380952380952381
+                      "tf": 2.272727272727273
                     }
                   }
                 }
@@ -2555,7 +2570,7 @@
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.380952380952381
+                      "tf": 2.272727272727273
                     }
                   }
                 }
@@ -2618,7 +2633,7 @@
                         "docs": {
                           "AudioMeter.html": {
                             "ref": "AudioMeter.html",
-                            "tf": 2.380952380952381
+                            "tf": 2.272727272727273
                           }
                         }
                       }
@@ -2744,7 +2759,7 @@
                     },
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 112.38095238095238
+                      "tf": 112.27272727272727
                     },
                     "VideoInput.html": {
                       "ref": "VideoInput.html",
@@ -2777,7 +2792,7 @@
                         },
                         "AudioMeter.html": {
                           "ref": "AudioMeter.html",
-                          "tf": 2.380952380952381
+                          "tf": 2.272727272727273
                         }
                       }
                     }
@@ -2865,7 +2880,7 @@
                   "docs": {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
-                      "tf": 2.380952380952381
+                      "tf": 2.272727272727273
                     }
                   }
                 }
@@ -3569,7 +3584,7 @@
                         "docs": {
                           "AudioMeter.html": {
                             "ref": "AudioMeter.html",
-                            "tf": 2.380952380952381
+                            "tf": 2.272727272727273
                           },
                           "VideoInput.html": {
                             "ref": "VideoInput.html",
@@ -3673,7 +3688,7 @@
               },
               "AudioMeter.html": {
                 "ref": "AudioMeter.html",
-                "tf": 2.380952380952381
+                "tf": 2.272727272727273
               },
               "VideoInput.html": {
                 "ref": "VideoInput.html",
@@ -3879,7 +3894,7 @@
               "docs": {
                 "AudioMeter.html": {
                   "ref": "AudioMeter.html",
-                  "tf": 2.380952380952381
+                  "tf": 2.272727272727273
                 },
                 "VideoInput.html": {
                   "ref": "VideoInput.html",
@@ -3896,7 +3911,7 @@
                 "docs": {
                   "AudioMeter.html": {
                     "ref": "AudioMeter.html",
-                    "tf": 2.380952380952381
+                    "tf": 2.272727272727273
                   }
                 }
               }
@@ -4249,7 +4264,7 @@
           }
         }
       },
-      "length": 312
+      "length": 313
     },
     "corpusTokens": [
       "0",
@@ -4338,6 +4353,7 @@
       "mediatrackset",
       "member",
       "met",
+      "meter",
       "meter'",
       "method",
       "microphon",
@@ -4371,7 +4387,7 @@
       "return",
       "set",
       "simplifi",
-      "somesourceaudionode.connect(am.input",
+      "somesourceaudionode.connect(meter.input",
       "sourc",
       "special",
       "specif",
@@ -4488,7 +4504,7 @@
       "name": "AudioMeter",
       "tags": "AudioMeter",
       "summary": "",
-      "description": "The AudioMeter class analyzes audio input and reports on its level (volume). It can be used in a WebAudio chain by connecting a source node to the audio meter's input property: let am = new AudioMeter(context); someSourceAudioNode.connect(am.input);",
+      "description": "The AudioMeter class analyzes audio input and reports on its level (volume). It can be used in a WebAudio chain by connecting a source node to the audio meter's input property: let meter = new AudioMeter(context); someSourceAudioNode.connect(meter.input);",
       "body": ""
     },
     "VideoInput.html": {
