@@ -3,7 +3,7 @@
 The DjipAV library provides objects to work with video and audio inputs in the browser. It is 
 **currently in early alpha and is definitely not production ready**.  
 
-DjipAV uses the very last APIs (such as 
+DjipAV uses the latest APIs (such as 
 [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) and 
 [ImageCapture](https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture)) and will only work in 
 a narrow subset of browsers. Since I'm using it in projects based on NW.js and Electron, this works 
@@ -37,7 +37,7 @@ Here's an example of how to open the first audio input and display its volume an
 import {AudioInput} from "./djipav.js";
 
 let mic = new djipav.AudioInput();
-mic.addListener("volume", e => console.log(e));
+mic.on("volume", e => console.log(e));
 mic.start();
 ```
 

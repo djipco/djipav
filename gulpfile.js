@@ -1,18 +1,10 @@
 const gulp = require("gulp");
 const concat = require("gulp-concat");
-const minify = require("gulp-minify");
+const eslint = require("gulp-eslint");
+const ghPages = require("gulp-gh-pages");
 const jsdoc = require("gulp-jsdoc3");
-const ghPages = require('gulp-gh-pages');
-
-function doc(cb) {
-
-  let config = require("./.jsdoc.json");
-
-  return gulp
-    .src(["README.md", "./src/**/*.js"], {read: false})
-    .pipe(jsdoc(config, cb));
-
-}
+const minify = require("gulp-minify");
+const spawn = require("child_process").spawn;
 
 function bundle() {
 
@@ -23,11 +15,35 @@ function bundle() {
 
 }
 
-function uploadDocs() {
-  return gulp.src('./docs/**/*')
+function generateDoc(cb) {
+
+  let config = require("./.jsdoc.json");
+
+  return gulp
+    .src(["README.md", "./src/**/*.js"], {read: false})
+    .pipe(jsdoc(config, cb));
+
+}
+
+function publishDoc() {
+  return gulp.src("./docs/**/*")
     .pipe(ghPages());
 }
 
+function lint() {
+  return gulp.src(["src/*.js"])
+    .pipe(eslint())
+    .pipe(eslint.failAfterError());
+}
+
+function releaseToNpm(cb) {
+  spawn("npm", ["publish"], { stdio: "inherit" }).on("close", cb);
+}
+
+const doc = gulp.series(generateDoc, publishDoc);
+const build = gulp.series(lint, bundle, generateDoc, publishDoc);
+
+exports.lint = lint;
 exports.doc = doc;
-exports.uploadDocs = uploadDocs;
-exports.build = gulp.series(bundle, doc, uploadDocs);
+exports.build = build;
+exports.release = releaseToNpm;
