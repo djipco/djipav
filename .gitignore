@@ -4,12 +4,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-### Optional npm cache directory ###################################################################
+### Cache directories ##############################################################################
 .npm
 .yarn-integrity
-
-### Optional eslint cache ##########################################################################
 .eslintcache
+.publish
 
 ### Dependency Directories #########################################################################
 /node_modules

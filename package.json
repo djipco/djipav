@@ -2,7 +2,7 @@
   "name": "djipav",
   "version": "0.1.2",
   "description": "A library to simplify working with audio and video inputs (a.k.a. webcams and microphones) on the web",
-  "main": "dist/djipav.iife.min.js",
+  "main": "dist/djipav.esm.min.js",
   "module": "dist/djipav.esm.min.js",
   "keywords": [
     "webcam",
@@ -18,10 +18,8 @@
   "author": "Jean-Philippe Côté <jp@djip.co>",
   "license": "MIT",
   "scripts": {
-    "build-all": "npm run build-esm && npm run build-iife",
-    "build-esm": "BABEL_ENV=esm rollup --config",
-    "build-iife": "BABEL_ENV=iife rollup --config",
-    "rollup-watch": "BABEL_ENV=esm rollup --config --watch"
+    "build": "rollup --config",
+    "rollup-watch": "rollup --config --watch"
   },
   "dependencies": {
     "djipevents": "^0.3.3"
@@ -38,7 +36,6 @@
     "gulp-jsdoc3": "^2.0.0",
     "jsdoc-export-default-interop": "^0.3.1",
     "rollup": "^1.15.5",
-    "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-node-resolve": "^5.0.2",
     "rollup-plugin-terser": "^5.0.0"
   }

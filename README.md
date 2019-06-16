@@ -17,16 +17,9 @@ The prefered way to install the library is by using NPM:
 npm install djipav
 ```
 
-## Linking and importing the library
+## Importing the library
 
-You can link the library via a `<script>` tag directly from the `node_modules` folder. In this case,
-use the IIFE version:
-
-```html
-<script src="node_modules/djipav/dist/djipav.iife.min.js"></script>
-```
-
-You can also import it in modern JavaScript using import syntax:
+The library is imported using JavaScript's module syntax:
 
 ```javascript
 import * as djipav from "./node_modules/dist/djipav.esm.min.js";
