@@ -1,6 +1,6 @@
 {
   "name": "djipav",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A library to simplify working with audio and video inputs (a.k.a. webcams and microphones) on the web",
   "main": "dist/djipav.esm.min.js",
   "module": "dist/djipav.esm.min.js",
@@ -13,7 +13,10 @@
     "mic",
     "audio inputs",
     "audio devices",
-    "webrtc"
+    "webrtc",
+    "audio meter",
+    "amplitude",
+    "volume"
   ],
   "author": "Jean-Philippe Côté <jp@djip.co>",
   "license": "MIT",
