@@ -1,4 +1,4 @@
-import EventEmitter from "../node_modules/djipevents/dist/djipevents.js";
+import EventEmitter from "djipevents";
 
 /**
  * Creates a new `VideoInput` object and attaches it to the specified `<video>` element for
@@ -412,20 +412,21 @@ export class VideoInput extends EventEmitter {
  * ```
  */
 export class AudioMeter extends mix(AnalyserNode, new EventEmitter()) {
+// export class AudioMeter extends EventEmitter {
 
   /**
    * @param {AudioContext} context The `AudioContext` that this object belongs to.
    * @param {Object} [options={}]
    * @param {number} [options.smoothingTimeConstant=0.8] A number between 0 and 1 to quantify the
    * amount of smoothing applied to the calculated volume.
-   * @param {number} [options.minDecibels=-100] A number representing the minimum decibel value for
-   * scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default value is
-   * -100 dB.
-   * @param {number} [options.maxDecibels=-30] A number representing the maximum decibel value for
-   * scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default value is
-   * -30 dB.
-   * @param {number} [options.fftSize=2048] An unsigned integer, representing the window size of
-   * the FFT, given in number of samples. A higher value will result in more details in the
+   * @param {number} [options.minDecibels=-100] A number representing the minimum decibel value
+   * for scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default
+   * value is -100 dB.
+   * @param {number} [options.maxDecibels=-30] A number representing the maximum decibel value
+   * for scaling the FFT analysis data, where 0 dB is the loudest possible sound. The default
+   * value is-30 dB.
+   * @param {number} [options.fftSize=2048] An unsigned integer, representing the window size
+   * of the FFT, given in number of samples. A higher value will result in more details in the
    * frequency domain but fewer details in the time domain.
    */
   constructor(context, options = {}) {
@@ -470,6 +471,8 @@ export class AudioMeter extends mix(AnalyserNode, new EventEmitter()) {
 
       this.volume = average;
 
+      // console.info("process", this.volume, total, length);
+
       // Emit a `change` event when volume changes
       this.emit(
         "change",
@@ -479,6 +482,12 @@ export class AudioMeter extends mix(AnalyserNode, new EventEmitter()) {
     }
 
   }
+
+
+
+
+
+
 
   // constructor(context, clippingLevel = 0.98, averaging = 0.95, clippingDelay = 750) {
   //
@@ -607,24 +616,6 @@ export class AudioInput extends EventEmitter {
     this.meter.on("change", e => this.emit("volume", e.volume));
 
 
-
-
-    // this.analyzer = new AnalyserNode(this.source.context);
-    // this.analyzer.fftSize = 2048;
-
-    // var tailleMemoireTampon = this.analyzer.frequencyBinCount;
-    // var tableauDonnees = new Uint8Array(tailleMemoireTampon);
-    // this.analyzer.getByteTimeDomainData(tableauDonnees);
-
-    // this.source.connect(this.analyzer);
-
-    // dessiner();
-    //
-    //
-    // var canvas = document.getElementById("oscilloscope");
-    // var contexteCanvas = canvas.getContext("2d");
-    //
-    //
     // function dessiner() {
     //
     //   dessin = requestAnimationFrame(dessiner);
@@ -744,26 +735,6 @@ export async function getInputs(type) {
 
 }
 
-
-// let mix = function(Parent, ...mixins) {
-//
-//   class Mixed extends Parent {}
-//
-//   mixins.forEach(mixin => {
-//
-//     for (let prop in mixin) {
-//       Mixed.prototype[prop] = mixin[prop];
-//     }
-//
-//     Object.getOwnPropertyNames(Object.getPrototypeOf(mixin)).forEach(prop => {
-//       Mixed.prototype[prop] = mixin[prop];
-//     });
-//
-//   });
-//
-//   return Mixed;
-//
-// };
 
 /**
  * This function mixes into the parent class the properties of specified objects. The mixins must be

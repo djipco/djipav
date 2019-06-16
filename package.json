@@ -1,8 +1,9 @@
 {
   "name": "djipav",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A library to simplify working with audio and video inputs (a.k.a. webcams and microphones) on the web",
-  "main": "./dist/djipav.min.js",
+  "main": "dist/djipav.iife.min.js",
+  "module": "dist/djipav.esm.min.js",
   "keywords": [
     "webcam",
     "webrtc",
@@ -16,19 +17,29 @@
   ],
   "author": "Jean-Philippe Côté <jp@djip.co>",
   "license": "MIT",
+  "scripts": {
+    "build-all": "npm run build-esm && npm run build-iife",
+    "build-esm": "BABEL_ENV=esm rollup --config",
+    "build-iife": "BABEL_ENV=iife rollup --config",
+    "rollup-watch": "BABEL_ENV=esm rollup --config --watch"
+  },
   "dependencies": {
-    "djipevents": "^0.3.0"
+    "djipevents": "^0.3.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.2.0",
     "foodoc": "0.0.9",
     "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
     "gulp-eslint": "^5.0.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-jsdoc3": "^2.0.0",
-    "gulp-minify": "^3.1.0",
-    "jsdoc-export-default-interop": "^0.3.1"
+    "jsdoc-export-default-interop": "^0.3.1",
+    "rollup": "^1.15.5",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-node-resolve": "^5.0.2",
+    "rollup-plugin-terser": "^5.0.0"
   }
 }

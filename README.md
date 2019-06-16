@@ -9,6 +9,29 @@ DjipAV uses the latest APIs (such as
 a narrow subset of browsers. Since I'm using it in projects based on NW.js and Electron, this works 
 fine for me.
 
+## Installing the library
+
+The prefered way to install the library is by using NPM:
+
+```
+npm install djipav
+```
+
+## Linking and importing the library
+
+You can link the library via a `<script>` tag directly from the `node_modules` folder. In this case,
+use the IIFE version:
+
+```html
+<script src="node_modules/djipav/dist/djipav.iife.min.js"></script>
+```
+
+You can also import it in modern JavaScript using import syntax:
+
+```javascript
+import * as djipav from "./node_modules/dist/djipav.esm.min.js";
+```
+
 ## Basic usage
 
 ### Webcam
@@ -17,7 +40,7 @@ Here's an example of how to open a webcam and display the video feed via an auto
 `<video>` tag:
 
 ```javascript
-import {VideoInput} from "./djipav.js";
+import {VideoInput} from "./node_modules/dist/djipav.esm.min.js";
 
 let cam = new VideoInput({element: "create"});
 cam.start();
@@ -25,7 +48,7 @@ cam.start();
 You can fetch available inputs in this way: 
 
 ```javascript
-import * as djipav from "./djipav.js";
+import * as djipav from "./node_modules/dist/djipav.esm.min.js";
 djipav.getInputs().then(inputs => console.log(inputs));
 ```
 
