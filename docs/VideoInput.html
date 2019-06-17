@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>VideoInput</title>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"MMMM Do YYYY, H:mm:ss","systemName":"DjipAV","systemSummary":"A library to simplify working with audio and video inputs (a.k.a. webcams and microphones) on the web","systemLogo":"","systemColor":"","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"DjipAV is a creation of Jean-Philippe Côté and is released under the MIT license.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"longname, linenum, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"default":{"outputSourceFiles":true}};
+			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">
+					DjipAV
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="global.html#getInputs">getInputs</a></li>
+											<li><a href="global.html#getSupportedConstraints">getSupportedConstraints</a></li>
+											<li><a href="global.html#mix">mix</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="AudioInput.html">AudioInput</a></li>
+											<li><a href="AudioMeter.html">AudioMeter</a></li>
+											<li><a href="VideoInput.html">VideoInput</a></li>
+									</ul>
+								</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">class</span>
+				<h1><span class="name">VideoInput</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-9 main-content">
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="list_class.html">Classes</a></li>
+							<li class="active">VideoInput</li>
+						</ol>
+					<section>
+							<dl class="symbol primary">
+								<dt class="symbol-title class collapsible-symbol expanded">
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">VideoInput</span><span class="signature-params">( [&nbsp;<span class="signature-param">options</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h2>
+</dt>
+<dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>Creates a new <code>VideoInput</code> object and attaches it to the specified <code>&lt;video&gt;</code> element for
+			viewing. If no <code>&lt;video&gt;</code> element is specified, the stream will not be visible. If the special
+			value <code>&quot;create&quot;</code> is used, a new <code>&lt;video&gt;</code> element is created and appended to the <code>&lt;body&gt;</code>. A
+			reference to the video element is accessible via the <code>video</code> property.</p>
+			<p>By default, the first video input track will be used. To find a specific video input, a
+			<a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints">MediaTrackConstraints</a>
+			must be specified in the <code>constraints</code> parameter.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>options</code></td>
+							<td><span class="param-type">Object</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+										<table class="params table table-striped">
+											<thead>
+											<tr>
+													<th>Name</th>
+												<th>Type</th>
+													<th>Attributes</th>
+												<th class="last">Description</th>
+											</tr>
+											</thead>
+											<tbody>
+												<tr>
+														<td><code>element</code></td>
+													<td><span class="param-type">HTMLVideoElement</span> | <span class="param-type">"create"</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+													<td class="last">
+															<p>The <code>&lt;video&gt;</code> element to attach the video
+									stream to. If none is supplied, the video feed will not be visible. If the special value
+									<code>&quot;create&quot;</code> is used, a new <code>&lt;video&gt;</code> element will be created and appended to the body.</p>
+													</td>
+												</tr>
+												<tr>
+														<td><code>elementId</code></td>
+													<td><span class="param-type">string</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+													<td class="last">
+															<p>The <code>id</code> attribute of the new <code>&lt;video&gt;</code> element (if a new
+									<code>&lt;video&gt;</code> element is created).</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-22">line 22</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+							</dl>
+							<article class="secondary">
+									<h3>Classes</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title class public">
+			<h4 id="VideoInput" class="class public"><a href="VideoInput.html"><span class="signature-new">new&nbsp;</span><span class="name">VideoInput</span><span class="signature-params">( [&nbsp;<span class="signature-param">options</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></a></h4>
+		</dt>
+<dd class="symbol-details class public">
+	<div class="symbol-details-inner">
+	</div>
+</dd>
+									</dl>
+									<h3>Members</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="capabilities" class="member public"><span class="name">capabilities</span><span class="signature-type"> :MediaTrackCapabilities</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>A <code>MediaTrackCapabilities</code> object detailing the exact capabilities of the video track (or
+			<code>null</code> if no video track is currently open).</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">MediaTrackCapabilities</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-249">line 249</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="capture" class="member public"><span class="name">capture</span><span class="signature-type"> :ImageCapture</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>An <code>ImageCapture</code> object used to grab frames per the ImageCapture API.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">ImageCapture</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-30">line 30</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="constraints" class="member public"><span class="name">constraints</span><span class="signature-type"> :MediaTrackConstraints</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints">constraints</a>
+			which must be met by the video track. At the minimum, the value <code>true</code> is used which means
+			all input video streams.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">MediaTrackConstraints</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-38">line 38</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="opacity" class="member public"><span class="name">opacity</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The opacity of the <code>&lt;video&gt;</code> element used to display the video stream (between 0 and 1).</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-258">line 258</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="settings" class="member public"><span class="name">settings</span><span class="signature-type"> :MediaTrackSettings</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>A <code>MediaTrackSettings</code> object detailing the precise settings of the video track (or <code>null</code> if
+			no stream is open).</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">MediaTrackSettings</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-273">line 273</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="started" class="member public"><span class="name">started</span><span class="signature-type"> :boolean</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Whether or not the video input is currently started.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-282">line 282</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="stream" class="member public"><span class="name">stream</span><span class="signature-type"> :MediaStream</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The actual media stream that is currently being used.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">MediaStream</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-44">line 44</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="timeouts" class="member public"><span class="name">timeouts</span><span class="signature-type"> :Object</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>An object containing the timeouts used throughout this class (mostly for internal use)</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-50">line 50</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="track" class="member public"><span class="name">track</span><span class="signature-type"> :MediaStreamTrack</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The video track currently being used. This will be <code>null</code> if there are no active stream.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">MediaStreamTrack</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-303">line 303</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="video" class="member public"><span class="name">video</span><span class="signature-type"> :HTMLMediaElement</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The <code>&lt;video&gt;</code> element used to display the video feed (may be <code>null</code> if none is used)</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">HTMLMediaElement</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-56">line 56</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+									<h3>Methods</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="cancelFade" class="function public"><span class="name">cancelFade</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Cancels any fade ins or fade outs that are currently ongoing.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-209">line 209</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="destroy" class="function public"><span class="signature-attribs">&lt;async> </span><span class="name">destroy</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;void>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Properly destroys this object and all internal references. By calling this method when you are
+			done with this object, you insure there are no lingering listeners or processes.</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;void></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-66">line 66</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="fade" class="function public"><span class="signature-attribs">&lt;async> </span><span class="name">fade</span><span class="signature-params">( [&nbsp;<span class="signature-param">type</span> [,&nbsp;<span class="signature-param">duration</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;void>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Fades the <code>&lt;video&gt;</code> element in or out for the specified duration.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>type</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>&quot;in&quot;</td>
+							<td class="last">
+									<p>Type of fade (&quot;in&quot; or &quot;out&quot;)</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>duration</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>5000</td>
+							<td class="last">
+									<p>Duration of fade in milliseconds</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;void></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-182">line 182</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="fadeIn" class="function public"><span class="signature-attribs">&lt;async> </span><span class="name">fadeIn</span><span class="signature-params">( [&nbsp;<span class="signature-param">duration</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;void>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Fades in the <code>&lt;video&gt;</code> element used to display the video feed.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>duration</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>5000</td>
+							<td class="last">
+									<p>Duration of the fade in (in milliseconds)</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;void></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-161">line 161</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="fadeOut" class="function public"><span class="signature-attribs">&lt;async> </span><span class="name">fadeOut</span><span class="signature-params">( [&nbsp;<span class="signature-param">duration</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;void>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Fades out the <code>&lt;video&gt;</code> element used to display the video feed.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>duration</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>5000</td>
+							<td class="last">
+									<p>Duration of the fade out (in milliseconds)</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;void></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-171">line 171</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="grabFrame" class="function public"><span class="signature-attribs">&lt;async> </span><span class="name">grabFrame</span><span class="signature-params">( [&nbsp;<span class="signature-param">options</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;(ImageBitmap|DOMString|Blob)>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Grabs a frame from the video stream and returns it in the specified data format.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>options</code></td>
+							<td><span class="param-type">Object</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+										<table class="params table table-striped">
+											<thead>
+											<tr>
+													<th>Name</th>
+												<th>Type</th>
+													<th>Attributes</th>
+													<th>Default</th>
+												<th class="last">Description</th>
+											</tr>
+											</thead>
+											<tbody>
+												<tr>
+														<td><code>format</code></td>
+													<td><span class="param-type">string</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>&quot;ImageBitmap&quot;</td>
+													<td class="last">
+															<p>The format to return the image data in. Can be:
+									&quot;ImageBitmap&quot; (default), &quot;Blob&quot; or &quot;ObjectURL&quot;.</p>
+													</td>
+												</tr>
+												<tr>
+														<td><code>mimeType</code></td>
+													<td><span class="param-type">string</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>&quot;image/png&quot;</td>
+													<td class="last">
+															<p>If the image is being returned as a <code>Blob</code>, you
+									can specify the MIME type of that blob. Typically, this will be &quot;image/png&quot; (default) or
+									&quot;image/jpeg&quot; but can also be any image MIME type supported by the environment.</p>
+													</td>
+												</tr>
+												<tr>
+														<td><code>quality</code></td>
+													<td><span class="param-type">number</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td></td>
+													<td class="last">
+															<p>For certain MIME types such as <code>image/jpeg</code> or <code>image/webp</code>,
+									a quality parameter can be specified. This should be a float between 0 and 1.</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;(ImageBitmap|DOMString|Blob)></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-368">line 368</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="start" class="function public"><span class="signature-attribs">&lt;async> </span><span class="name">start</span><span class="signature-params">( [&nbsp;<span class="signature-param">options</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;void>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Tries to find a video stream matching the specified constraints. If one is found, the stream is
+			attached to the <code>&lt;video&gt;</code> element specified upon construction of the <code>VideoInput</code> object (if
+			any).</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>options</code></td>
+							<td><span class="param-type">Object</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+										<table class="params table table-striped">
+											<thead>
+											<tr>
+													<th>Name</th>
+												<th>Type</th>
+													<th>Attributes</th>
+													<th>Default</th>
+												<th class="last">Description</th>
+											</tr>
+											</thead>
+											<tbody>
+												<tr>
+														<td><code>deviceId</code></td>
+													<td><span class="param-type">boolean</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td></td>
+													<td class="last">
+															<p>The id of a specific device to connect to. Device IDs
+									can be viewed by calling the <code>getInputs()</code> method.</p>
+													</td>
+												</tr>
+												<tr>
+														<td><code>visible</code></td>
+													<td><span class="param-type">boolean</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>true</td>
+													<td class="last">
+															<p>Whether the <code>&lt;video&gt;</code> element should initially be
+									visible or not.</p>
+													</td>
+												</tr>
+												<tr>
+														<td><code>constraints</code></td>
+													<td><span class="param-type">MediaTrackConstraints</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td></td>
+													<td class="last">
+															<p>The video constraints to apply when
+									looking for an input video track (see
+									<a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints">MediaTrackConstraints</a>
+									for more info).</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;void></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-96">line 96</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="stop" class="function public"><span class="signature-attribs">&lt;async> </span><span class="name">stop</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;void>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Disconnects the video input and stops all associated tracks.</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;void></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="djipav.js.html">djipav.js</a>, <a href="djipav.js.html#line-141">line 141</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+							</article>
+					</section>
+			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
+		</div>
+	</div>
+	<footer>
+				<div class="copyright">DjipAV is a creation of Jean-Philippe Côté and is released under the MIT license.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on June 17th 2019, 12:42:28 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>
