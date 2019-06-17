@@ -1,4 +1,4 @@
-import EventEmitter from "djipevents";
+import {EventEmitter} from "djipevents";
 
 /**
  * Creates a new `VideoInput` object and attaches it to the specified `<video>` element for
