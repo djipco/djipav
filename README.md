@@ -53,7 +53,7 @@ Here's an example of how to open the first audio input and display its volume an
 import {AudioInput} from "./djipav.js";
 
 let mic = new djipav.AudioInput();
-mic.on("volume", e => console.log(e));
+mic.addListener("volume", e => console.log(e));
 mic.start();
 ```
 

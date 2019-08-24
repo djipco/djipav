@@ -25,7 +25,7 @@
     "rollup-watch": "rollup --config --watch"
   },
   "dependencies": {
-    "djipevents": "^0.8.0"
+    "djipevents": "^0.9.7"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
