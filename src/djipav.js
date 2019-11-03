@@ -55,6 +55,15 @@ export class VideoInput extends EventEmitter {
      */
     this.video = this._parseAndBuildVideoElement(options);
 
+    // /**
+    //  * An object containing references to registered listeners
+    //  * @type {{}}
+    //  */
+    // this.listeners = {};
+
+    // this.recorder = null;
+    // this.recordedChunks = [];
+
   }
 
   /**
@@ -130,6 +139,87 @@ export class VideoInput extends EventEmitter {
       if (options.visible != false) await this.fadeIn(200);
 
     }
+
+  }
+
+
+  // /**
+  //  *
+  //  *       mimeType : 'video/mp4'
+  //  *       audioBitsPerSecond : 128000,
+  //  *       videoBitsPerSecond : 2500000,
+  //  *
+  //  * @param options
+  //  */
+  // startRecording(options = {}) {
+  //
+  //   if (!this.started || !this.stream) {
+  //     return;
+  //   }
+  //
+  //   this.recorder = new MediaRecorder(this.stream, options);
+  //
+  //   this.listeners.onDataAvailable = e => {
+  //     if (e.data.size > 0) this.recordedChunks.push(e.data);
+  //   };
+  //
+  //   this.recorder.addEventListener("dataavailable", this.listeners.onDataAvailable);
+  //
+  // }
+  //
+  // stopRecording() {
+  //   if (!this.recorder) return;
+  //   this.recorder.stop();
+  //   this.recorder.removeEventListener("dataavailable", this.listeners.onDataAvailable);
+  //   this.listeners.onDataAvailable = undefined;
+  // }
+  //
+  //
+  // saveRecording() {
+  //   // downloadLink.href = URL.createObjectURL(new Blob(recordedChunks));
+  //   // downloadLink.download = 'acetest.webm';
+  // }
+
+  /**
+   * Return an array of supported MIME types (on the current platform) for audio and video
+   * recording.
+   *
+   * @return {Array}
+   */
+  getSupportedRecordingTypes() {
+
+    if (!MediaRecorder || !MediaRecorder.isTypeSupported) return [];
+
+    let types = [
+
+      "audio/webm",
+      "audio/webm;codecs=opus",
+      "audio/ogg;codecs=opus",              // FF
+
+      "video/webm",
+      "video/webm;codecs=vp8",              // FF
+      "video/webm;codecs=vp8.0",            // FF
+      "video/webm;codecs=vp8,opus",
+      "video/WEBM;codecs=VP8,OPUS",
+      "video/webm;codecs=vp9",
+      "video/webm;codecs=vp9.0",
+      "video/webm;codecs=vp9,opus",
+      "video/webm;codecs=vp8,vp9,opus",
+      "video/webm;codecs=h264",
+      "video/webm;codecs=H264",
+      "video/webm;codecs=avc1",
+      "video/webm;codecs=h264,opus",
+      "video/webm;codecs=h264,vp9,opus",
+      "video/webm;codecs=daala",
+      "video/webm;codecs=h264",
+
+      "video/mpeg",
+
+      "video/x-matroska;codecs=avc1"
+
+    ];
+
+    return types.filter(type => MediaRecorder.isTypeSupported(type));
 
   }
 
