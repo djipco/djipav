@@ -55,14 +55,23 @@ export class VideoInput extends EventEmitter {
      */
     this.video = this._parseAndBuildVideoElement(options);
 
-    // /**
-    //  * An object containing references to registered listeners
-    //  * @type {{}}
-    //  */
-    // this.listeners = {};
+    /**
+     * An object containing references to all currently registereed listeners (for easy removal)
+     * @type {Array}
+     */
+    this.listeners = {};
 
-    // this.recorder = null;
-    // this.recordedChunks = [];
+    /**
+     * The MediaRecorder object used to record audio and video
+     * @type {MediaRecorder}
+     */
+    this.recorder = null;
+
+    /**
+     * An array of currently recorded chunks
+     * @type {Array}
+     */
+    this.recordedChunks = [];
 
   }
 
@@ -142,43 +151,41 @@ export class VideoInput extends EventEmitter {
 
   }
 
+  /**
+   * Starts recording the previously started audio and/or video stream.
+   *
+   *       mimeType : 'video/mp4'
+   *       audioBitsPerSecond : 128000,
+   *       videoBitsPerSecond : 2500000,
+   *
+   * @param options
+   */
+  startRecording(options = {}) {
 
-  // /**
-  //  *
-  //  *       mimeType : 'video/mp4'
-  //  *       audioBitsPerSecond : 128000,
-  //  *       videoBitsPerSecond : 2500000,
-  //  *
-  //  * @param options
-  //  */
-  // startRecording(options = {}) {
-  //
-  //   if (!this.started || !this.stream) {
-  //     return;
-  //   }
-  //
-  //   this.recorder = new MediaRecorder(this.stream, options);
-  //
-  //   this.listeners.onDataAvailable = e => {
-  //     if (e.data.size > 0) this.recordedChunks.push(e.data);
-  //   };
-  //
-  //   this.recorder.addEventListener("dataavailable", this.listeners.onDataAvailable);
-  //
-  // }
-  //
-  // stopRecording() {
-  //   if (!this.recorder) return;
-  //   this.recorder.stop();
-  //   this.recorder.removeEventListener("dataavailable", this.listeners.onDataAvailable);
-  //   this.listeners.onDataAvailable = undefined;
-  // }
-  //
-  //
-  // saveRecording() {
-  //   // downloadLink.href = URL.createObjectURL(new Blob(recordedChunks));
-  //   // downloadLink.download = 'acetest.webm';
-  // }
+    if (!this.started || !this.stream || !window.MediaRecorder) return;
+
+    this.recordedChunks = [];
+
+    this.recorder = new MediaRecorder(this.stream, options);
+
+    this.listeners.onDataAvailable = e => {
+      if (e.data.size > 0) this.recordedChunks.push(e.data);
+    };
+
+    this.recorder.addEventListener("dataavailable", this.listeners.onDataAvailable);
+
+  }
+
+  stopRecording() {
+    if (!this.recorder) return;
+    this.recorder.stop();
+    this.recorder.removeEventListener("dataavailable", this.listeners.onDataAvailable);
+    this.listeners.onDataAvailable = undefined;
+  }
+
+  getRecordedObjectUrl() {
+    return URL.createObjectURL(new Blob(this.recordedChunks));
+  }
 
   /**
    * Disconnects the video input and stops all associated tracks.
