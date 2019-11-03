@@ -173,6 +173,7 @@ export class VideoInput extends EventEmitter {
     };
 
     this.recorder.addEventListener("dataavailable", this.listeners.onDataAvailable);
+    this.recorder.start();
 
   }
 
@@ -184,7 +185,7 @@ export class VideoInput extends EventEmitter {
   }
 
   getRecordedObjectUrl() {
-    return URL.createObjectURL(new Blob(this.recordedChunks));
+    return URL.createObjectURL(new Blob(this.recordedChunks, {type: "video/webm"}));
   }
 
   /**
