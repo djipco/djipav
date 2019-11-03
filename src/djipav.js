@@ -152,38 +152,50 @@ export class VideoInput extends EventEmitter {
   }
 
   /**
-   * Starts recording the previously started audio and/or video stream.
+   * Starts recording a (previously started) audio and/or video stream. Fore details on the options,
+   * go to: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/MediaRecorder
    *
-   *       mimeType : 'video/mp4'
-   *       audioBitsPerSecond : 128000,
-   *       videoBitsPerSecond : 2500000,
-   *
-   * @param options
+   * @param {Object} options
+   * @param {string} options.mimeType
+   * @param {number} options.audioBitsPerSecond
+   * @param {number} options.videoBitsPerSecond
+   * @param {number} options.bitsPerSecond
    */
   startRecording(options = {}) {
 
-    if (!this.started || !this.stream || !window.MediaRecorder) return;
+    if (!this.started || !this.stream || !window.MediaRecorder) {
+      throw new Error("MediaRecorder is not supported in your environment.");
+    };
 
+    // Reset the recorded chunks array buffer each time we start a recording
     this.recordedChunks = [];
 
-    this.recorder = new MediaRecorder(this.stream, options);
-
+    // Prepare listener
     this.listeners.onDataAvailable = e => {
       if (e.data.size > 0) this.recordedChunks.push(e.data);
     };
 
+    // Create MediaRecorder, attach listener and record in slices of 20 ms.
+    this.recorder = new MediaRecorder(this.stream, options);
     this.recorder.addEventListener("dataavailable", this.listeners.onDataAvailable);
-    this.recorder.start();
+    this.recorder.start(20);
 
   }
 
+  /**
+   * Stops recording
+   */
   stopRecording() {
-    if (!this.recorder) return;
+    if (!this.recorder || this.recorder.state !== "recording") return;
     this.recorder.stop();
     this.recorder.removeEventListener("dataavailable", this.listeners.onDataAvailable);
     this.listeners.onDataAvailable = undefined;
   }
 
+  /**
+   * Returns the current recording as an ObjectURL.
+   * @return {string}
+   */
   getRecordedObjectUrl() {
     return URL.createObjectURL(new Blob(this.recordedChunks, {type: "video/webm"}));
   }
