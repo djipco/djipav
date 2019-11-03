@@ -198,6 +198,19 @@ window.lunrData = {
           "video",
           "videoinput#constraint"
         ],
+        "VideoInput.html#listeners": [
+          "array",
+          "contain",
+          "current",
+          "easi",
+          "listen",
+          "member",
+          "object",
+          "refer",
+          "registere",
+          "remov",
+          "videoinput#listen"
+        ],
         "VideoInput.html#opacity": [
           "0",
           "1",
@@ -212,6 +225,25 @@ window.lunrData = {
           "us",
           "video",
           "videoinput#opac"
+        ],
+        "VideoInput.html#recordedChunks": [
+          "array",
+          "chunk",
+          "current",
+          "member",
+          "record",
+          "recordedchunk",
+          "videoinput#recordedchunk"
+        ],
+        "VideoInput.html#recorder": [
+          "audio",
+          "mediarecord",
+          "member",
+          "object",
+          "record",
+          "us",
+          "video",
+          "videoinput#record"
         ],
         "VideoInput.html#settings": [
           "detail",
@@ -359,6 +391,16 @@ window.lunrData = {
           "video",
           "videoinput#fadeout"
         ],
+        "VideoInput.html#getRecordedObjectUrl": [
+          "current",
+          "function",
+          "getrecordedobjecturl",
+          "objecturl",
+          "record",
+          "return",
+          "string",
+          "videoinput#getrecordedobjecturl"
+        ],
         "VideoInput.html#grabFrame": [
           "data",
           "format",
@@ -399,6 +441,24 @@ window.lunrData = {
           "videoinput",
           "videoinput#start"
         ],
+        "VideoInput.html#startRecording": [
+          "and/or",
+          "audio",
+          "detail",
+          "fore",
+          "function",
+          "go",
+          "https://developer.mozilla.org/en",
+          "option",
+          "previous",
+          "record",
+          "start",
+          "startrecord",
+          "stream",
+          "us/docs/web/api/mediarecorder/mediarecord",
+          "video",
+          "videoinput#startrecord"
+        ],
         "VideoInput.html#stop": [
           "associ",
           "disconnect",
@@ -410,9 +470,16 @@ window.lunrData = {
           "track",
           "video",
           "videoinput#stop"
+        ],
+        "VideoInput.html#stopRecording": [
+          "function",
+          "record",
+          "stop",
+          "stoprecord",
+          "videoinput#stoprecord"
         ]
       },
-      "length": 26
+      "length": 32
     },
     "tokenStore": {
       "root": {
@@ -479,6 +546,14 @@ window.lunrData = {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
                       "tf": 2.5
+                    },
+                    "VideoInput.html#recorder": {
+                      "ref": "VideoInput.html#recorder",
+                      "tf": 8.333333333333332
+                    },
+                    "VideoInput.html#startRecording": {
+                      "ref": "VideoInput.html#startRecording",
+                      "tf": 3.571428571428571
                     }
                   },
                   "i": {
@@ -623,6 +698,23 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "d": {
+              "docs": {},
+              "/": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "VideoInput.html#startRecording": {
+                        "ref": "VideoInput.html#startRecording",
+                        "tf": 3.571428571428571
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "c": {
@@ -719,6 +811,27 @@ window.lunrData = {
                         "ref": "VideoInput.html#start",
                         "tf": 2.7777777777777777
                       }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "y": {
+                  "docs": {
+                    "VideoInput.html#listeners": {
+                      "ref": "VideoInput.html#listeners",
+                      "tf": 50
+                    },
+                    "VideoInput.html#recordedChunks": {
+                      "ref": "VideoInput.html#recordedChunks",
+                      "tf": 62.5
                     }
                   }
                 }
@@ -864,6 +977,10 @@ window.lunrData = {
                       "VideoInput.html#settings": {
                         "ref": "VideoInput.html#settings",
                         "tf": 5
+                      },
+                      "VideoInput.html#startRecording": {
+                        "ref": "VideoInput.html#startRecording",
+                        "tf": 3.571428571428571
                       }
                     }
                   }
@@ -1193,6 +1310,10 @@ window.lunrData = {
                   "docs": {},
                   "n": {
                     "docs": {
+                      "VideoInput.html#listeners": {
+                        "ref": "VideoInput.html#listeners",
+                        "tf": 706.25
+                      },
                       "VideoInput.html#destroy": {
                         "ref": "VideoInput.html#destroy",
                         "tf": 3.8461538461538463
@@ -1581,6 +1702,29 @@ window.lunrData = {
                       }
                     }
                   },
+                  "r": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "d": {
+                              "docs": {
+                                "VideoInput.html#recorder": {
+                                  "ref": "VideoInput.html#recorder",
+                                  "tf": 58.33333333333333
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
                   "s": {
                     "docs": {},
                     "t": {
@@ -1647,8 +1791,20 @@ window.lunrData = {
                         "ref": "VideoInput.html#constraints",
                         "tf": 110
                       },
+                      "VideoInput.html#listeners": {
+                        "ref": "VideoInput.html#listeners",
+                        "tf": 110
+                      },
                       "VideoInput.html#opacity": {
                         "ref": "VideoInput.html#opacity",
+                        "tf": 110
+                      },
+                      "VideoInput.html#recordedChunks": {
+                        "ref": "VideoInput.html#recordedChunks",
+                        "tf": 110
+                      },
+                      "VideoInput.html#recorder": {
+                        "ref": "VideoInput.html#recorder",
                         "tf": 110
                       },
                       "VideoInput.html#settings": {
@@ -1758,9 +1914,112 @@ window.lunrData = {
                       "ref": "VideoInput.html",
                       "tf": 1.1111111111111112
                     },
+                    "VideoInput.html#listeners": {
+                      "ref": "VideoInput.html#listeners",
+                      "tf": 6.25
+                    },
                     "VideoInput.html#destroy": {
                       "ref": "VideoInput.html#destroy",
                       "tf": 3.8461538461538463
+                    }
+                  }
+                }
+              }
+            },
+            "g": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "e": {
+                          "docs": {
+                            "VideoInput.html#listeners": {
+                              "ref": "VideoInput.html#listeners",
+                              "tf": 6.25
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "m": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "v": {
+                  "docs": {
+                    "VideoInput.html#listeners": {
+                      "ref": "VideoInput.html#listeners",
+                      "tf": 6.25
+                    }
+                  }
+                }
+              }
+            },
+            "c": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "VideoInput.html#recordedChunks": {
+                        "ref": "VideoInput.html#recordedChunks",
+                        "tf": 12.5
+                      },
+                      "VideoInput.html#recorder": {
+                        "ref": "VideoInput.html#recorder",
+                        "tf": 708.3333333333334
+                      },
+                      "VideoInput.html#getRecordedObjectUrl": {
+                        "ref": "VideoInput.html#getRecordedObjectUrl",
+                        "tf": 12.5
+                      },
+                      "VideoInput.html#startRecording": {
+                        "ref": "VideoInput.html#startRecording",
+                        "tf": 3.571428571428571
+                      },
+                      "VideoInput.html#stopRecording": {
+                        "ref": "VideoInput.html#stopRecording",
+                        "tf": 25
+                      }
+                    },
+                    "e": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "h": {
+                            "docs": {},
+                            "u": {
+                              "docs": {},
+                              "n": {
+                                "docs": {},
+                                "k": {
+                                  "docs": {
+                                    "VideoInput.html#recordedChunks": {
+                                      "ref": "VideoInput.html#recordedChunks",
+                                      "tf": 700
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -1774,6 +2033,10 @@ window.lunrData = {
                   "docs": {},
                   "n": {
                     "docs": {
+                      "VideoInput.html#getRecordedObjectUrl": {
+                        "ref": "VideoInput.html#getRecordedObjectUrl",
+                        "tf": 12.5
+                      },
                       "VideoInput.html#grabFrame": {
                         "ref": "VideoInput.html#grabFrame",
                         "tf": 6.25
@@ -1846,6 +2109,33 @@ window.lunrData = {
                     "VideoInput.html#start": {
                       "ref": "VideoInput.html#start",
                       "tf": 675
+                    },
+                    "VideoInput.html#startRecording": {
+                      "ref": "VideoInput.html#startRecording",
+                      "tf": 7.142857142857142
+                    }
+                  },
+                  "r": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "d": {
+                              "docs": {
+                                "VideoInput.html#startRecording": {
+                                  "ref": "VideoInput.html#startRecording",
+                                  "tf": 700
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -1862,6 +2152,33 @@ window.lunrData = {
                   "VideoInput.html#stop": {
                     "ref": "VideoInput.html#stop",
                     "tf": 691.6666666666667
+                  },
+                  "VideoInput.html#stopRecording": {
+                    "ref": "VideoInput.html#stopRecording",
+                    "tf": 25
+                  }
+                },
+                "r": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "c": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "d": {
+                            "docs": {
+                              "VideoInput.html#stopRecording": {
+                                "ref": "VideoInput.html#stopRecording",
+                                "tf": 750
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -1905,6 +2222,24 @@ window.lunrData = {
                       "VideoInput.html#start": {
                         "ref": "VideoInput.html#start",
                         "tf": 5.555555555555555
+                      },
+                      "VideoInput.html#startRecording": {
+                        "ref": "VideoInput.html#startRecording",
+                        "tf": 3.571428571428571
+                      }
+                    }
+                  }
+                }
+              },
+              "i": {
+                "docs": {},
+                "n": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "VideoInput.html#getRecordedObjectUrl": {
+                        "ref": "VideoInput.html#getRecordedObjectUrl",
+                        "tf": 50
                       }
                     }
                   }
@@ -2114,6 +2449,10 @@ window.lunrData = {
                       "ref": "VideoInput.html#opacity",
                       "tf": 5
                     },
+                    "VideoInput.html#recorder": {
+                      "ref": "VideoInput.html#recorder",
+                      "tf": 8.333333333333332
+                    },
                     "VideoInput.html#settings": {
                       "ref": "VideoInput.html#settings",
                       "tf": 5
@@ -2145,6 +2484,10 @@ window.lunrData = {
                     "VideoInput.html#start": {
                       "ref": "VideoInput.html#start",
                       "tf": 2.7777777777777777
+                    },
+                    "VideoInput.html#startRecording": {
+                      "ref": "VideoInput.html#startRecording",
+                      "tf": 3.571428571428571
                     },
                     "VideoInput.html#stop": {
                       "ref": "VideoInput.html#stop",
@@ -2258,6 +2601,29 @@ window.lunrData = {
                                   }
                                 }
                               },
+                              "l": {
+                                "docs": {},
+                                "i": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {
+                                            "VideoInput.html#listeners": {
+                                              "ref": "VideoInput.html#listeners",
+                                              "tf": 1150
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
                               "o": {
                                 "docs": {},
                                 "p": {
@@ -2269,6 +2635,55 @@ window.lunrData = {
                                         "VideoInput.html#opacity": {
                                           "ref": "VideoInput.html#opacity",
                                           "tf": 1150
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "c": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {
+                                            "VideoInput.html#recorder": {
+                                              "ref": "VideoInput.html#recorder",
+                                              "tf": 1150
+                                            }
+                                          },
+                                          "e": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {},
+                                              "c": {
+                                                "docs": {},
+                                                "h": {
+                                                  "docs": {},
+                                                  "u": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {},
+                                                      "k": {
+                                                        "docs": {
+                                                          "VideoInput.html#recordedChunks": {
+                                                            "ref": "VideoInput.html#recordedChunks",
+                                                            "tf": 1150
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
                                         }
                                       }
                                     }
@@ -2304,6 +2719,29 @@ window.lunrData = {
                                             "ref": "VideoInput.html#start",
                                             "tf": 1150
                                           }
+                                        },
+                                        "r": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "o": {
+                                                "docs": {},
+                                                "r": {
+                                                  "docs": {},
+                                                  "d": {
+                                                    "docs": {
+                                                      "VideoInput.html#startRecording": {
+                                                        "ref": "VideoInput.html#startRecording",
+                                                        "tf": 1150
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
                                         }
                                       }
                                     }
@@ -2332,6 +2770,29 @@ window.lunrData = {
                                         "VideoInput.html#stop": {
                                           "ref": "VideoInput.html#stop",
                                           "tf": 1150
+                                        }
+                                      },
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "c": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {},
+                                                "d": {
+                                                  "docs": {
+                                                    "VideoInput.html#stopRecording": {
+                                                      "ref": "VideoInput.html#stopRecording",
+                                                      "tf": 1150
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
                                         }
                                       }
                                     }
@@ -2471,6 +2932,68 @@ window.lunrData = {
                               },
                               "g": {
                                 "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "r": {
+                                              "docs": {},
+                                              "d": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "d": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "b": {
+                                                        "docs": {},
+                                                        "j": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "c": {
+                                                              "docs": {},
+                                                              "t": {
+                                                                "docs": {},
+                                                                "u": {
+                                                                  "docs": {},
+                                                                  "r": {
+                                                                    "docs": {},
+                                                                    "l": {
+                                                                      "docs": {
+                                                                        "VideoInput.html#getRecordedObjectUrl": {
+                                                                          "ref": "VideoInput.html#getRecordedObjectUrl",
+                                                                          "tf": 1150
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
                                 "r": {
                                   "docs": {},
                                   "a": {
@@ -2741,6 +3264,76 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "e": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "d": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "d": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "b": {
+                                  "docs": {},
+                                  "j": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "c": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "u": {
+                                            "docs": {},
+                                            "r": {
+                                              "docs": {},
+                                              "l": {
+                                                "docs": {
+                                                  "VideoInput.html#getRecordedObjectUrl": {
+                                                    "ref": "VideoInput.html#getRecordedObjectUrl",
+                                                    "tf": 700
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {
+              "VideoInput.html#startRecording": {
+                "ref": "VideoInput.html#startRecording",
+                "tf": 3.571428571428571
+              }
+            }
           }
         },
         "c": {
@@ -2863,6 +3456,10 @@ window.lunrData = {
                     "docs": {},
                     "n": {
                       "docs": {
+                        "VideoInput.html#listeners": {
+                          "ref": "VideoInput.html#listeners",
+                          "tf": 6.25
+                        },
                         "VideoInput.html#timeouts": {
                           "ref": "VideoInput.html#timeouts",
                           "tf": 5.555555555555555
@@ -2894,6 +3491,14 @@ window.lunrData = {
                           "ref": "VideoInput.html#capabilities",
                           "tf": 4.166666666666666
                         },
+                        "VideoInput.html#listeners": {
+                          "ref": "VideoInput.html#listeners",
+                          "tf": 6.25
+                        },
+                        "VideoInput.html#recordedChunks": {
+                          "ref": "VideoInput.html#recordedChunks",
+                          "tf": 12.5
+                        },
                         "VideoInput.html#started": {
                           "ref": "VideoInput.html#started",
                           "tf": 10
@@ -2909,6 +3514,10 @@ window.lunrData = {
                         "VideoInput.html#cancelFade": {
                           "ref": "VideoInput.html#cancelFade",
                           "tf": 7.142857142857142
+                        },
+                        "VideoInput.html#getRecordedObjectUrl": {
+                          "ref": "VideoInput.html#getRecordedObjectUrl",
+                          "tf": 12.5
                         }
                       }
                     }
@@ -2928,6 +3537,20 @@ window.lunrData = {
                     "AudioMeter.html": {
                       "ref": "AudioMeter.html",
                       "tf": 2.5
+                    }
+                  }
+                }
+              }
+            },
+            "u": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "k": {
+                  "docs": {
+                    "VideoInput.html#recordedChunks": {
+                      "ref": "VideoInput.html#recordedChunks",
+                      "tf": 12.5
                     }
                   }
                 }
@@ -3179,6 +3802,10 @@ window.lunrData = {
                             "ref": "VideoInput.html#fadeOut",
                             "tf": 110
                           },
+                          "VideoInput.html#getRecordedObjectUrl": {
+                            "ref": "VideoInput.html#getRecordedObjectUrl",
+                            "tf": 110
+                          },
                           "VideoInput.html#grabFrame": {
                             "ref": "VideoInput.html#grabFrame",
                             "tf": 110
@@ -3187,8 +3814,16 @@ window.lunrData = {
                             "ref": "VideoInput.html#start",
                             "tf": 110
                           },
+                          "VideoInput.html#startRecording": {
+                            "ref": "VideoInput.html#startRecording",
+                            "tf": 110
+                          },
                           "VideoInput.html#stop": {
                             "ref": "VideoInput.html#stop",
+                            "tf": 110
+                          },
+                          "VideoInput.html#stopRecording": {
+                            "ref": "VideoInput.html#stopRecording",
                             "tf": 110
                           }
                         }
@@ -3257,6 +3892,14 @@ window.lunrData = {
                         "tf": 6.25
                       }
                     }
+                  }
+                }
+              },
+              "e": {
+                "docs": {
+                  "VideoInput.html#startRecording": {
+                    "ref": "VideoInput.html#startRecording",
+                    "tf": 3.571428571428571
                   }
                 }
               }
@@ -3648,6 +4291,26 @@ window.lunrData = {
                     }
                   }
                 }
+              },
+              "v": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "u": {
+                      "docs": {},
+                      "s": {
+                        "docs": {
+                          "VideoInput.html#startRecording": {
+                            "ref": "VideoInput.html#startRecording",
+                            "tf": 3.571428571428571
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           },
@@ -3728,6 +4391,10 @@ window.lunrData = {
                 "ref": "VideoInput.html#opacity",
                 "tf": 5
               },
+              "VideoInput.html#recorder": {
+                "ref": "VideoInput.html#recorder",
+                "tf": 8.333333333333332
+              },
               "VideoInput.html#stream": {
                 "ref": "VideoInput.html#stream",
                 "tf": 8.333333333333332
@@ -3751,6 +4418,128 @@ window.lunrData = {
               "VideoInput.html#fadeOut": {
                 "ref": "VideoInput.html#fadeOut",
                 "tf": 6.25
+              }
+            },
+            "/": {
+              "docs": {},
+              "d": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "s": {
+                      "docs": {},
+                      "/": {
+                        "docs": {},
+                        "w": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "b": {
+                              "docs": {},
+                              "/": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "p": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "/": {
+                                        "docs": {},
+                                        "m": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {},
+                                              "i": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "c": {
+                                                        "docs": {},
+                                                        "o": {
+                                                          "docs": {},
+                                                          "r": {
+                                                            "docs": {},
+                                                            "d": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "r": {
+                                                                  "docs": {},
+                                                                  "/": {
+                                                                    "docs": {},
+                                                                    "m": {
+                                                                      "docs": {},
+                                                                      "e": {
+                                                                        "docs": {},
+                                                                        "d": {
+                                                                          "docs": {},
+                                                                          "i": {
+                                                                            "docs": {},
+                                                                            "a": {
+                                                                              "docs": {},
+                                                                              "r": {
+                                                                                "docs": {},
+                                                                                "e": {
+                                                                                  "docs": {},
+                                                                                  "c": {
+                                                                                    "docs": {},
+                                                                                    "o": {
+                                                                                      "docs": {},
+                                                                                      "r": {
+                                                                                        "docs": {},
+                                                                                        "d": {
+                                                                                          "docs": {
+                                                                                            "VideoInput.html#startRecording": {
+                                                                                              "ref": "VideoInput.html#startRecording",
+                                                                                              "tf": 3.571428571428571
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           },
@@ -3792,6 +4581,10 @@ window.lunrData = {
                       "VideoInput.html#start": {
                         "ref": "VideoInput.html#start",
                         "tf": 25
+                      },
+                      "VideoInput.html#startRecording": {
+                        "ref": "VideoInput.html#startRecording",
+                        "tf": 53.57142857142857
                       }
                     }
                   }
@@ -3851,6 +4644,14 @@ window.lunrData = {
                         "ref": "VideoInput.html#capture",
                         "tf": 6.25
                       },
+                      "VideoInput.html#listeners": {
+                        "ref": "VideoInput.html#listeners",
+                        "tf": 6.25
+                      },
+                      "VideoInput.html#recorder": {
+                        "ref": "VideoInput.html#recorder",
+                        "tf": 8.333333333333332
+                      },
                       "VideoInput.html#settings": {
                         "ref": "VideoInput.html#settings",
                         "tf": 5
@@ -3866,6 +4667,20 @@ window.lunrData = {
                       "VideoInput.html#start": {
                         "ref": "VideoInput.html#start",
                         "tf": 2.7777777777777777
+                      }
+                    },
+                    "u": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "l": {
+                          "docs": {
+                            "VideoInput.html#getRecordedObjectUrl": {
+                              "ref": "VideoInput.html#getRecordedObjectUrl",
+                              "tf": 12.5
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -4059,6 +4874,20 @@ window.lunrData = {
                       "ref": "VideoInput.html#capabilities",
                       "tf": 4.166666666666666
                     }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "s": {
+              "docs": {},
+              "i": {
+                "docs": {
+                  "VideoInput.html#listeners": {
+                    "ref": "VideoInput.html#listeners",
+                    "tf": 6.25
                   }
                 }
               }
@@ -4286,11 +5115,106 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "t": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  ":": {
+                    "docs": {},
+                    "/": {
+                      "docs": {},
+                      "/": {
+                        "docs": {},
+                        "d": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "v": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "p": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          ".": {
+                                            "docs": {},
+                                            "m": {
+                                              "docs": {},
+                                              "o": {
+                                                "docs": {},
+                                                "z": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "l": {
+                                                      "docs": {},
+                                                      "l": {
+                                                        "docs": {},
+                                                        "a": {
+                                                          "docs": {},
+                                                          ".": {
+                                                            "docs": {},
+                                                            "o": {
+                                                              "docs": {},
+                                                              "r": {
+                                                                "docs": {},
+                                                                "g": {
+                                                                  "docs": {},
+                                                                  "/": {
+                                                                    "docs": {},
+                                                                    "e": {
+                                                                      "docs": {},
+                                                                      "n": {
+                                                                        "docs": {
+                                                                          "VideoInput.html#startRecording": {
+                                                                            "ref": "VideoInput.html#startRecording",
+                                                                            "tf": 3.571428571428571
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
       },
-      "length": 320
+      "length": 375
     },
     "corpusTokens": [
       "0",
@@ -4300,8 +5224,10 @@ window.lunrData = {
       "activ",
       "actual",
       "analyz",
+      "and/or",
       "api",
       "append",
+      "array",
       "associ",
       "attach",
       "audio",
@@ -4320,6 +5246,7 @@ window.lunrData = {
       "capabl",
       "captur",
       "chain",
+      "chunk",
       "class",
       "connect",
       "constraint",
@@ -4338,6 +5265,7 @@ window.lunrData = {
       "document",
       "done",
       "durat",
+      "easi",
       "element",
       "exact",
       "facilit",
@@ -4347,14 +5275,18 @@ window.lunrData = {
       "feed",
       "find",
       "first",
+      "fore",
       "format",
       "found",
       "frame",
       "function",
+      "getrecordedobjecturl",
       "global",
+      "go",
       "grab",
       "grabfram",
       "htmlmediael",
+      "https://developer.mozilla.org/en",
       "imagecaptur",
       "in",
       "index",
@@ -4373,6 +5305,7 @@ window.lunrData = {
       "match",
       "mean",
       "media",
+      "mediarecord",
       "mediastream",
       "mediastreamtrack",
       "mediatrackcap",
@@ -4391,6 +5324,7 @@ window.lunrData = {
       "null",
       "number",
       "object",
+      "objecturl",
       "on",
       "ongo",
       "opac",
@@ -4402,6 +5336,7 @@ window.lunrData = {
       "physic",
       "play",
       "precis",
+      "previous",
       "process",
       "promise.&lt;(imagebitmap|domstring|blob)&gt",
       "promise.&lt;(promise.&lt;never&gt;|undefined)&gt",
@@ -4409,7 +5344,11 @@ window.lunrData = {
       "properli",
       "properti",
       "readm",
+      "record",
+      "recordedchunk",
       "refer",
+      "registere",
+      "remov",
       "report",
       "return",
       "set",
@@ -4420,8 +5359,11 @@ window.lunrData = {
       "specif",
       "specifi",
       "start",
+      "startrecord",
       "stop",
+      "stoprecord",
       "stream",
+      "string",
       "such",
       "throughout",
       "timeout",
@@ -4431,6 +5373,7 @@ window.lunrData = {
       "type",
       "upon",
       "us",
+      "us/docs/web/api/mediarecorder/mediarecord",
       "valu",
       "via",
       "video",
@@ -4443,11 +5386,17 @@ window.lunrData = {
       "videoinput#fad",
       "videoinput#fadein",
       "videoinput#fadeout",
+      "videoinput#getrecordedobjecturl",
       "videoinput#grabfram",
+      "videoinput#listen",
       "videoinput#opac",
+      "videoinput#record",
+      "videoinput#recordedchunk",
       "videoinput#set",
       "videoinput#start",
+      "videoinput#startrecord",
       "videoinput#stop",
+      "videoinput#stoprecord",
       "videoinput#stream",
       "videoinput#timeout",
       "videoinput#track",
@@ -4585,6 +5534,16 @@ window.lunrData = {
       "summary": "",
       "description": "The constraints which must be met by the video track. At the minimum, the value true is used which means all input video streams."
     },
+    "VideoInput.html#listeners": {
+      "id": "VideoInput.html#listeners",
+      "kind": "member",
+      "title": "listeners :Array",
+      "longname": "VideoInput#listeners",
+      "name": "listeners",
+      "tags": "VideoInput#listeners listeners",
+      "summary": "",
+      "description": "An object containing references to all currently registereed listeners (for easy removal)"
+    },
     "VideoInput.html#opacity": {
       "id": "VideoInput.html#opacity",
       "kind": "member",
@@ -4594,6 +5553,26 @@ window.lunrData = {
       "tags": "VideoInput#opacity opacity",
       "summary": "",
       "description": "The opacity of the &lt;video&gt; element used to display the video stream (between 0 and 1)."
+    },
+    "VideoInput.html#recordedChunks": {
+      "id": "VideoInput.html#recordedChunks",
+      "kind": "member",
+      "title": "recordedChunks :Array",
+      "longname": "VideoInput#recordedChunks",
+      "name": "recordedChunks",
+      "tags": "VideoInput#recordedChunks recordedChunks",
+      "summary": "",
+      "description": "An array of currently recorded chunks"
+    },
+    "VideoInput.html#recorder": {
+      "id": "VideoInput.html#recorder",
+      "kind": "member",
+      "title": "recorder :MediaRecorder",
+      "longname": "VideoInput#recorder",
+      "name": "recorder",
+      "tags": "VideoInput#recorder recorder",
+      "summary": "",
+      "description": "The MediaRecorder object used to record audio and video"
     },
     "VideoInput.html#settings": {
       "id": "VideoInput.html#settings",
@@ -4705,6 +5684,16 @@ window.lunrData = {
       "summary": "",
       "description": "Fades out the &lt;video&gt; element used to display the video feed."
     },
+    "VideoInput.html#getRecordedObjectUrl": {
+      "id": "VideoInput.html#getRecordedObjectUrl",
+      "kind": "function",
+      "title": "getRecordedObjectUrl() → {string}",
+      "longname": "VideoInput#getRecordedObjectUrl",
+      "name": "getRecordedObjectUrl",
+      "tags": "VideoInput#getRecordedObjectUrl getRecordedObjectUrl",
+      "summary": "",
+      "description": "Returns the current recording as an ObjectURL."
+    },
     "VideoInput.html#grabFrame": {
       "id": "VideoInput.html#grabFrame",
       "kind": "function",
@@ -4725,6 +5714,16 @@ window.lunrData = {
       "summary": "",
       "description": "Tries to find a video stream matching the specified constraints. If one is found, the stream is attached to the &lt;video&gt; element specified upon construction of the VideoInput object (if any)."
     },
+    "VideoInput.html#startRecording": {
+      "id": "VideoInput.html#startRecording",
+      "kind": "function",
+      "title": "startRecording( options )",
+      "longname": "VideoInput#startRecording",
+      "name": "startRecording",
+      "tags": "VideoInput#startRecording startRecording",
+      "summary": "",
+      "description": "Starts recording a (previously started) audio and/or video stream. Fore details on the options, go to: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/MediaRecorder"
+    },
     "VideoInput.html#stop": {
       "id": "VideoInput.html#stop",
       "kind": "function",
@@ -4734,6 +5733,16 @@ window.lunrData = {
       "tags": "VideoInput#stop stop",
       "summary": "",
       "description": "Disconnects the video input and stops all associated tracks."
+    },
+    "VideoInput.html#stopRecording": {
+      "id": "VideoInput.html#stopRecording",
+      "kind": "function",
+      "title": "stopRecording()",
+      "longname": "VideoInput#stopRecording",
+      "name": "stopRecording",
+      "tags": "VideoInput#stopRecording stopRecording",
+      "summary": "",
+      "description": "Stops recording"
     }
   }
 };
