@@ -183,13 +183,29 @@ export class VideoInput extends EventEmitter {
   }
 
   /**
-   * Stops recording
+   * Stops recording. This is an asynchronous operation because the last few moments of the media
+   * need to be treated.
    */
-  stopRecording() {
-    if (!this.recorder || this.recorder.state !== "recording") return;
-    this.recorder.stop();
-    this.recorder.removeEventListener("dataavailable", this.listeners.onDataAvailable);
-    this.listeners.onDataAvailable = undefined;
+  async stopRecording() {
+
+    if (!this.recorder || this.recorder.state !== "recording") Promise.resolve();
+
+    return new Promise(resolve => {
+
+      // A "dataavailable" event containing the last batch of data is dispatched after stop() is
+      // called. So, we listen to it to make sure all the data is properly gathered before
+      // destroying the listener.
+      this.recorder.onstop = () => {
+        this.recorder.removeEventListener("dataavailable", this.listeners.onDataAvailable);
+        this.listeners.onDataAvailable = undefined;
+        this.recorder.stop = null;
+        resolve();
+      };
+
+      this.recorder.stop();
+
+    });
+
   }
 
   /**
