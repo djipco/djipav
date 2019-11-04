@@ -197,7 +197,11 @@ export class VideoInput extends EventEmitter {
    * @return {string}
    */
   getRecordedObjectUrl() {
-    return URL.createObjectURL(new Blob(this.recordedChunks, {type: "video/webm"}));
+    return URL.createObjectURL(this.getRecordedBlob());
+  }
+
+  getRecordedBlob() {
+    return new Blob(this.recordedChunks, {type: "video/webm"});
   }
 
   /**
