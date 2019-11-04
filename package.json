@@ -1,6 +1,6 @@
 {
   "name": "djipav",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "A library to simplify working with audio and video inputs (a.k.a. webcams and microphones) on the web",
   "main": "dist/djipav.esm.min.js",
   "module": "dist/djipav.esm.min.js",
