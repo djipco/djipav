@@ -36,7 +36,7 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-jsdoc3": "^2.0.0",
     "jsdoc-export-default-interop": "^0.3.1",
-    "rollup": "^1.15.5",
+    "rollup": "^3.29.5",
     "rollup-plugin-node-resolve": "^5.0.2",
     "rollup-plugin-terser": "^5.0.0"
   }
